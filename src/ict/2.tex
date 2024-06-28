@@ -1,9 +1,9 @@
 IRSTI 50.47.29
 
-\textbf{DEVELOPMENT OF AN ALGORITHM FOR ADAPTING A MATHEMATICAL MODEL OF
-THE PROCESS OF MIXING AND MELTING COPPER CONCENTRATES}
+\sectionwithauthors{U. Imanbekova, A. Kalizhanova, A.Kozbakova, A. Imanbekova, A.Utegenova}{DEVELOPMENT OF AN ALGORITHM FOR ADAPTING A MATHEMATICAL MODEL OF THE PROCESS OF MIXING AND MELTING COPPER CONCENTRATES}
 
-\textbf{U. Imanbekova\textsuperscript{1}, A.
+\begin{center}
+{\bfseries U. Imanbekova\textsuperscript{1}, A.
 Kalizhanova\textsuperscript{2,1}, A.Kozbakova\textsuperscript{2,3}, A.
 Imanbekova\textsuperscript{4}, A.Utegenova\textsuperscript{1,2}}
 
@@ -19,6 +19,7 @@ Technologies CS MSHE RK, Almaty, Kazakhstan,
 Taraz, Kazakhstan,
 
 е-mail: uli.08@mail.ru
+\end{center}
 
 The paper describes the information base of the system, which is formed
 by algorithms of centralized control, automated analytical control
@@ -36,17 +37,16 @@ complexes: a set of programs for "Data collection and processing"; a
 complex for "Optimal process control"; a set of programs for "optimal
 energy regime management".
 
-\textbf{Keywords.} Copper raw materials, blending, smelting,
+{\bfseries Keywords.} Copper raw materials, blending, smelting,
 mathematical model, mixing and melting.
 
-\begin{quote}
-\textbf{МЫС КОНЦЕНТРАТТАРЫН АРАЛАСТЫРУ ЖӘНЕ БАЛҚЫТУ ПРОЦЕСІ ҮШІН
+\begin{center}
+{\large\bfseries МЫС КОНЦЕНТРАТТАРЫН АРАЛАСТЫРУ ЖӘНЕ БАЛҚЫТУ ПРОЦЕСІ ҮШІН
 МАТЕМАТИКАЛЫҚ МОДЕЛЬДІ БЕЙІМДЕУ АЛГОРИТМІН ӘЗІРЛЕУ}
 
-\textbf{У.Иманбекова\textsuperscript{1},А.Калижанова\textsuperscript{2,1},
+{\bfseries У.Иманбекова\textsuperscript{1},А.Калижанова\textsuperscript{2,1},
 А.Козбакова\textsuperscript{2,3}, А.Иманбекова\textsuperscript{4},
 А.Утегенова\textsuperscript{1,2}}
-\end{quote}
 
 \textsuperscript{1}Ғ.Дәукеев атындағы Алматы энергетика және байланыс
 университеті, Алматы, Қазақстан,
@@ -60,6 +60,7 @@ mathematical model, mixing and melting.
 Тараз, Қазақстан,
 
 е-mail: uli.08@mail.ru
+\end{center}
 
 Мақалада орталықтандырылған басқару алгоритмдерімен, аналитикалық
 бақылаудың автоматтандырылған жүйесімен және материалдық Ағындарды
@@ -77,14 +78,14 @@ mathematical model, mixing and melting.
 оңтайлы басқаруға» арналған кешен; «оңтайлы энергетикалық режимді
 басқаруға» арналған бағдарламалар жиынтығы.
 
-\textbf{Түйін сөздер:} мыс шикізаты, араластыру, балқыту, математикалық
+{\bfseries Түйін сөздер:} мыс шикізаты, араластыру, балқыту, математикалық
 модель, араластыру және балқыту.
 
-\begin{quote}
-\textbf{РАЗРАБОТКА АЛГОРИТМА АДАПТАЦИИ МАТЕМАТИЧЕСКОЙ МОДЕЛИ ДЛЯ
+\begin{center}
+{\large\bfseries РАЗРАБОТКА АЛГОРИТМА АДАПТАЦИИ МАТЕМАТИЧЕСКОЙ МОДЕЛИ ДЛЯ
 ПРОЦЕССА СМЕШИВАНИЯ И ПЛАВЛЕНИЯ МЕДНЫХ КОНЦЕНТРАТОВ}
 
-\textbf{У.Иманбекова\textsuperscript{1},А.Калижанова\textsuperscript{2,1},
+{\bfseries У.Иманбекова\textsuperscript{1},А.Калижанова\textsuperscript{2,1},
 А.Козбакова\textsuperscript{2,3}, А.Иманбекова\textsuperscript{4},
 А.Утегенова\textsuperscript{1,2}}
 
@@ -99,9 +100,9 @@ mathematical model, mixing and melting.
 
 \textsuperscript{4}Таразский региональный университет им.М. Х. Дулати,
 Тараз, Казахстан,
-\end{quote}
 
 е-mail: uli.08@mail.ru
+\end{center}
 
 В статье описана информационная база системы, которая формируется
 алгоритмами централизованного управления, автоматизированной системой
@@ -119,10 +120,11 @@ mathematical model, mixing and melting.
 "Оптимального управления технологическим процессом"; набор программ для
 "управления оптимальным энергетическим режимом".
 
-\textbf{Ключевые слова.} Медное сырье, смешивание, плавка,
+{\bfseries Ключевые слова.} Медное сырье, смешивание, плавка,
 математическая модель, смешивание и плавка.
 
-\textbf{Introduction.} To predict process variables using an adaptive
+\begin{multicols}{2}
+{\bfseries Introduction.} To predict process variables using an adaptive
 mathematical model, constant updated samples containing a certain number
 of observations of the process must be stored in the PC memory {[}1{]}.
 When the operator enters the code of a certain equation of the model,
@@ -153,7 +155,7 @@ via communication channels to the information and computing center
 printed out and transmitted to the shift foreman in the form of a task
 for implementation during the process {[}7{]}.
 
-\textbf{Materials and methods.} During the tests, the following values
+{\bfseries Materials and methods.} During the tests, the following values
 characterizing the electric melting process were recorded in the
 observation log: date and shift number, set and actual, number of loaded
 materials (by type), power consumption, electric power of the furnace,
@@ -194,17 +196,19 @@ step of the algorithm.
 
 The output information of the algorithm is the adjusted values of the
 equation parameters to the following Equation 1.
+\end{multicols}
 
-\begin{quote}
-\(\xi = \delta_{0} + \sum_{i = 1}^{m}\delta_{i}\psi_{i}\) (1)
-\end{quote}
+\begin{equation}
+\xi = \delta_{0} + \sum_{i = 1}^{m}\delta_{i}\psi_{i}
+\end{equation}
 
 Minimizing the square of the mismatch between the actual (measured at
 the nth instant of time) value of the output variable to its calculated
 value to the following Equation 2.
 
-\(\Delta\xi = (\xi\lbrack n\rbrack - \delta_{0} - \sum_{i = 1}^{m}{\delta_{i}\psi_{i}}\lbrack n\rbrack)^{2}\)
-(2)
+\begin{equation}
+\Delta\xi = (\xi\lbrack n\rbrack - \delta_{0} - \sum_{i = 1}^{m}{\delta_{i}\psi_{i}}\lbrack n\rbrack)^{2}
+\end{equation}
 
 Where \(\xi\lbrack n\rbrack\) is the output variable of the model, Here:
 
@@ -217,37 +221,40 @@ n=1,2,... - discrete time,
 
 Calculation formulas to the following Equations 3-10:
 
-\begin{quote}
-\(\langle\frac{\delta_{o}\lbrack k\rbrack = \delta_{o}\lbrack k - 1\rbrack + t\lbrack k\rbrack\gamma_{o}\lbrack k\rbrack\Delta\varepsilon\lbrack n,k - 1\rbrack}{\delta_{i}\lbrack k\rbrack = \delta_{i}\lbrack k - 1\rbrack + t\lbrack k\rbrack\gamma_{i}\lbrack k\rbrack\Delta\varepsilon\lbrack n,k - 1\rbrack\psi_{i}\lbrack n\rbrack}\)\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/6}
-	\caption*{}
-\end{figure}
-(3)
-\end{quote}
+\begin{equation}
+\langle\frac{\delta_{o}\lbrack k\rbrack = \delta_{o}\lbrack k - 1\rbrack + t\lbrack k\rbrack\gamma_{o}\lbrack k\rbrack\Delta\varepsilon\lbrack n,k - 1\rbrack}{\delta_{i}\lbrack k\rbrack = \delta_{i}\lbrack k - 1\rbrack + t\lbrack k\rbrack\gamma_{i}\lbrack k\rbrack\Delta\varepsilon\lbrack n,k - 1\rbrack\psi_{i}\lbrack n\rbrack}
+\end{equation}
 
-\(\delta_{i}\lbrack k\rbrack = \delta_{i}\lbrack k - 1\rbrack(i = 0,1,...),\)
-(4)
+\begin{equation}
+\delta_{i}\lbrack k\rbrack = \delta_{i}\lbrack k - 1\rbrack(i = 0,1,...),
+\end{equation}
 
-\(\Delta\varepsilon\lbrack n,k\rbrack = \overline{\varepsilon}\lbrack n\rbrack - \breve{\varepsilon}\lbrack n,k\rbrack\)
-(5)
+\begin{equation}
+\Delta\varepsilon\lbrack n,k\rbrack = \overline{\varepsilon}\lbrack n\rbrack - \breve{\varepsilon}\lbrack n,k\rbrack
+\end{equation}
 
-\(\breve{\varepsilon}\lbrack n,k\rbrack = \delta_{0}\lbrack k\rbrack + \sum_{i = 1}^{m}{\delta_{i}\lbrack k\overline{\rbrack\psi}\lbrack n\rbrack}\)
-(6)
+\begin{equation}
+\breve{\varepsilon}\lbrack n,k\rbrack = \delta_{0}\lbrack k\rbrack + \sum_{i = 1}^{m}{\delta_{i}\lbrack k\overline{\rbrack\psi}\lbrack n\rbrack}
+\end{equation}
 
-\(\overline{\varepsilon}\lbrack n\rbrack = \overline{\varepsilon}\lbrack n - 1\rbrack + \frac{1}{T_{\varepsilon}}(\varepsilon\lbrack n\rbrack - \overline{\varepsilon}\lbrack n - 1\rbrack\),
-\((i = \overline{1,m)}\) (7)
+\begin{equation}
+\overline{\varepsilon}\lbrack n\rbrack = \overline{\varepsilon}\lbrack n - 1\rbrack + \frac{1}{T_{\varepsilon}}(\varepsilon\lbrack n\rbrack - \overline{\varepsilon}\lbrack n - 1\rbrack,\quad (i = \overline{1,m)}
+\end{equation}
 
-\(\overline{\varepsilon}\lbrack n\rbrack = \overline{\varepsilon}\lbrack n - 1\rbrack + \frac{1}{T_{\varepsilon}}(\varepsilon\lbrack n\rbrack - \overline{\varepsilon}\lbrack n - 1\rbrack)\)
-(8)
+\begin{equation}
+\overline{\varepsilon}\lbrack n\rbrack = \overline{\varepsilon}\lbrack n - 1\rbrack + \frac{1}{T_{\varepsilon}}(\varepsilon\lbrack n\rbrack - \overline{\varepsilon}\lbrack n - 1\rbrack)
+\end{equation}
 
-\(t\lbrack k\rbrack = 1 + r/\Delta\varepsilon\lbrack n - 1,k - 1\rbrack + \Delta\varepsilon\lbrack n - 2,k - 2\rbrack\)
-(9)
+\begin{equation}
+t\lbrack k\rbrack = 1 + r/\Delta\varepsilon\lbrack n - 1,k - 1\rbrack + \Delta\varepsilon\lbrack n - 2,k - 2\rbrack
+\end{equation}
 
-\(\gamma_{i}\lbrack k\rbrack = \left( \begin{aligned}
+\begin{equation}
+\gamma_{i}\lbrack k\rbrack = \left( \begin{aligned}
  & \overline{\gamma_{i}} = const\ if\ \eta\lbrack\gamma\rbrack = 1 \\
  & \frac{\gamma_{i}\lbrack 0\rbrack}{S\lbrack n\rbrack},if\eta\lbrack х\gamma\rbrack = 0
-\end{aligned} \right.\ \) (10)
+\end{aligned} \right.
+\end{equation}
 
 Where:
 
@@ -278,7 +285,7 @@ sequence \(\gamma_{i}\lbrack k\rbrack(k = 1,2,...)\);
 \(\Delta > 0\) - the threshold value of the misalignment of the value
 \(\varepsilon\lbrack n\rbrack и\widetilde{\varepsilon}\lbrack n,k\rbrack\).
 
-\textbf{Results and discussion.} The flowchart of the algorithm is
+{\bfseries Results and discussion.} The flowchart of the algorithm is
 described in this way:
 
 Block 1 performs the sequential formation of arrays necessary for
@@ -293,12 +300,9 @@ in Figure 1.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{assets/7}
-	\caption*{}
+	\includegraphics[width=0.4\textwidth]{assets/7}
+	\caption*{Figure 1 - The block diagram of the algorithm for processing analytical information}
 \end{figure}
-
-\textbf{Figure 1 - The block diagram of the algorithm for processing
-analytical information}
 
 Block 4 calculates the interpolated value of the content of the i-th
 component of the j-th material of the k-th furnace to the following
@@ -362,7 +366,7 @@ The block diagrams of these algorithms are shown in Figure 2.
 	\caption*{}
 \end{figure}
 
-\textbf{Figure 2 - The block diagrams of these algorithms}
+{\bfseries Figure 2 - The block diagrams of these algorithms}
 
 Block 1. Enters the values of these variables
 \(X_{ij},\ Y_{ij},\ a_{ij}\) into the machine.
@@ -533,7 +537,7 @@ made it possible to reduce the copper content in dump slags by 0.18\%
 increase the copper content in matte by 0.97\% while reducing
 electricity consumption by 1.8\%.
 
-\textbf{Conclusion.} Industrial tests and implementation of the electric
+{\bfseries Conclusion.} Industrial tests and implementation of the electric
 melting process control system were carried out in the electric furnace
 department, pilot tests of the algorithm for controlling the process of
 electric melting of copper concentrates in industrial conditions were
@@ -550,7 +554,7 @@ system for the process of electric melting of copper sulfide
 concentrates are the basis for the design solutions of the Institute of
 Information and Computational Technologies CS MSHE RK.
 
-\emph{\textbf{Financing.} Research were carried out within the framework
+\emph{{\bfseries Financing.} Research were carried out within the framework
 of the Grant Financing Project No. AP19679153 ``Research and development
 of method and technologies for creating composite structures with
 built-in photonic sensors PSBC (Photonic Smart Bragg Composites)''
@@ -558,7 +562,7 @@ Institute of Information and Computational Technologies of the Science
 Committee of the Ministry of Science and Higher Education of the
 Republic of Kazakhstan.}
 
-\textbf{References}
+{\bfseries References}
 
 1.Istadi I., Bindar Y. Improved cooler design of~electric~arc furnace
 refractory in mining industry using thermal analysis modeling and
@@ -612,7 +616,7 @@ copper from copper slag by co-roasting with SO2--O2./ Journal of
 Materials Research and Technology.-2022.- Vol.19.-P.2546-2555.
 https://doi.org/10.1016/j.jmrt.2022.05.177
 
-\emph{\textbf{Information about authors}}
+\emph{{\bfseries Information about authors}}
 
 U. Imanbekova -PhD, Associate Professor, Almaty University of Power
 Engineering and Telecommunications named after G.Daukeyev, Almaty,
@@ -635,7 +639,7 @@ Technologies CS MSHE RK, Almaty, Kazakhstan, Almaty University of Power
 Engineering and Telecommunications named after G.Daukeyev, Almaty,
 Kazakhstan, e-mail: an.utegenova@aues.kz
 
-\emph{\textbf{Сведения об авторах}}
+\emph{{\bfseries Сведения об авторах}}
 
 Иманбекова У. -PhD., ассоциированный профессор, Алматинский университет
 энергетики и связи им. Г. Даукеева, Алматы, Казахстан, e-mail:

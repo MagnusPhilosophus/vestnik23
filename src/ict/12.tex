@@ -1,9 +1,9 @@
 IRSTI 28.23.15
 
-\textbf{TRAFFIC SIGN RECOGNITION IN CHALLENGING WEATHER CONDITIONS USING
+{\bfseries TRAFFIC SIGN RECOGNITION IN CHALLENGING WEATHER CONDITIONS USING
 CONVOLUTIONAL NEURAL NETWORKS}
 
-\textbf{\textsuperscript{1}Zh.A. Batyr, \textsuperscript{1}B.S. Omarov,
+{\bfseries \textsuperscript{1}Zh.A. Batyr, \textsuperscript{1}B.S. Omarov,
 \textsuperscript{1}G.Z. Ziyatbekova, \textsuperscript{2}A.D.
 Mailybayeva}
 
@@ -45,10 +45,10 @@ advancements in precise and dependable road sign recognition technology.
 Keywords: CNN, traffic sign detection, artificial intelligence, image
 analysis, classification
 
-\textbf{РАСПОЗНАВАНИЕ ДОРОЖНЫХ ЗНАКОВ В СЛОЖНЫХ ПОГОДНЫХ УСЛОВИЯХ С
+{\bfseries РАСПОЗНАВАНИЕ ДОРОЖНЫХ ЗНАКОВ В СЛОЖНЫХ ПОГОДНЫХ УСЛОВИЯХ С
 ИСПОЛЬЗОВАНИЕМ СВЕРТОЧНЫХ НЕЙРОННЫХ СЕТЕЙ}
 
-\textbf{\textsuperscript{1}Ж.А. Батыр, \textsuperscript{1}Б.С. Омаров,
+{\bfseries \textsuperscript{1}Ж.А. Батыр, \textsuperscript{1}Б.С. Омаров,
 \textsuperscript{1}Г.З. Зиятбекова, \textsuperscript{2}А.Д. Майлыбаева}
 
 \textsuperscript{1}Казахский национальный университет имени аль-Фараби,
@@ -83,13 +83,13 @@ CNN, используется расширенный набор данных н�
 движения, что свидетельствует о будущем прогрессе в области надежных
 технологий распознавания дорожных знаков.
 
-\textbf{Ключевые слова:} CNN, распознавание дорожных знаков,
+{\bfseries Ключевые слова:} CNN, распознавание дорожных знаков,
 искусственный интеллект, анализ изображений, классификация.
 
-\textbf{КОНВОЛЮЦИЯЛЫҚ НЕЙРОНДЫҚ ЖЕЛІЛЕРДІ КӨМЕГІМЕН ҚИЫН АУА-РАЙЫ
+{\bfseries КОНВОЛЮЦИЯЛЫҚ НЕЙРОНДЫҚ ЖЕЛІЛЕРДІ КӨМЕГІМЕН ҚИЫН АУА-РАЙЫ
 ЖАҒДАЙЛАРЫНДА ЖОЛ БЕЛГІЛЕРІН ТАНУ}
 
-\textbf{\textsuperscript{1}Ж.А. Батыр, \textsuperscript{1}Б.С. Омаров,
+{\bfseries \textsuperscript{1}Ж.А. Батыр, \textsuperscript{1}Б.С. Омаров,
 \textsuperscript{2}Г.З. Зиятбекова, \textsuperscript{2}А.Д. Майлыбаева}
 
 \textsuperscript{1}әл-Фараби атындағы Қазақ ұлттық университеті, Алматы,
@@ -122,10 +122,10 @@ CNN, используется расширенный набор данных н�
 бұл жол белгілерін танудың сенімді технологиясының болашақтағы
 ілгерілеуін көрсетеді.
 
-\textbf{Түйін сөздер:} CNN, жол белгілерін анықтау, жасанды интеллект,
+{\bfseries Түйін сөздер:} CNN, жол белгілерін анықтау, жасанды интеллект,
 кескінді талдау, жіктеу.
 
-\textbf{Introduction.} Traffic sign recognition is a critical component
+{\bfseries Introduction.} Traffic sign recognition is a critical component
 in the development of intelligent transportation systems and autonomous
 vehicles. Accurate detection and interpretation of road signs enable
 automated systems to make informed decisions, thereby enhancing road
@@ -144,7 +144,7 @@ methods to simulate different weather scenarios, thus increasing the
 robustness and reliability of traffic sign detection systems in
 real-world environments.
 
-\textbf{Literary Review.} Convolutional Neural Networks (CNNs) have
+{\bfseries Literary Review.} Convolutional Neural Networks (CNNs) have
 become the standard in the field of image recognition and are
 increasingly being applied to traffic sign recognition due to their
 ability to extract high-level features from visual inputs {[}3{]}. The
@@ -172,7 +172,7 @@ underscores the importance of meticulous model training and dataset
 curation, as these are crucial for optimizing performance and ensuring
 the system\textquotesingle s real-world applicability {[}10{]}.
 
-\textbf{Methods and Materials.} The GTSRB dataset that was used for this
+{\bfseries Methods and Materials.} The GTSRB dataset that was used for this
 study, contains 51893 images categorized into 43 classes of traffic
 signs showing in Fig. 1. The size of the images in dataset varies
 between 15x15 and 222x193 pixels. All these images were taken in real
@@ -186,7 +186,7 @@ recognize.
 	\caption*{}
 \end{figure}
 
-\textbf{Figure 1- The 43 traffic sign classes in the dataset}
+{\bfseries Figure 1- The 43 traffic sign classes in the dataset}
 
 Existing datasets are limited in terms of their size and challenging
 condition coverage, which motivated us to augment images using image
@@ -230,7 +230,7 @@ environments.
 	\caption*{}
 \end{figure}
 
-\textbf{Figure 2 - Applying augmentations to traffic sign image}
+{\bfseries Figure 2 - Applying augmentations to traffic sign image}
 
 These augmentation methods not only diversified the training dataset but
 also significantly contributed to the model\textquotesingle s ability to
@@ -252,7 +252,7 @@ showcasing a network structure comprised of 12 layers.
 	\caption*{}
 \end{figure}
 
-\textbf{Figure 3- Applying augmentations to traffic sign image}
+{\bfseries Figure 3- Applying augmentations to traffic sign image}
 
 The initial input to this model consists of color images sized at 30x30
 pixels. CNN model contains 4 convolutional layers, max pooling, dropout
@@ -283,7 +283,7 @@ and its capacity to generalize across new data. These parameters play a
 crucial role in quantifying how effectively a model can handle and
 predict on data it has not previously encountered {[}14{]}.
 
-\textbf{Results.} We trained our network using the TensorFlow machine
+{\bfseries Results.} We trained our network using the TensorFlow machine
 learning framework, utilizing the Adam optimizer with a learning rate of
 0.001. The batch size was set to 32, and to mitigate overfitting,
 dropout regularization was applied to the first two fully connected
@@ -311,7 +311,7 @@ determined. Fig. 4 shows accuracy and loss of the model.
 	\caption*{}
 \end{figure}
 
-\textbf{Figure 4 - Model accuracy and loss after training}
+{\bfseries Figure 4 - Model accuracy and loss after training}
 
 Table 1 shows the some of the quality indicators that are used to
 evaluate test data in the model training stage. As an overall
@@ -319,7 +319,7 @@ performance measure, the global accuracy metric showed a great
 achievement with an average of 95\% in the context of the test data.
 
 \begin{quote}
-\textbf{Table 1 - Evaluation metrics after training stage}
+{\bfseries Table 1 - Evaluation metrics after training stage}
 \end{quote}
 
 \begin{longtable}[]{@{}
@@ -332,13 +332,13 @@ achievement with an average of 95\% in the context of the test data.
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-& \textbf{Precision} & \textbf{Recall} & \textbf{F1-score} &
-\textbf{Support} \\
-\textbf{Class 1} & 0,98 & 0,95 & 0,97 & 60 \\
-\textbf{Class 2} & 0,85 & 0,97 & 0,91 & 720 \\
-\textbf{Class 3} & 0,98 & 0,89 & 0,94 & 750 \\
-\textbf{Class 4} & 0,88 & 0,85 & 0,87 & 450 \\
-\textbf{Class 5} & 0,99 & 0,89 & 0,94 & 660 \\
+& {\bfseries Precision} & {\bfseries Recall} & {\bfseries F1-score} &
+{\bfseries Support} \\
+{\bfseries Class 1} & 0,98 & 0,95 & 0,97 & 60 \\
+{\bfseries Class 2} & 0,85 & 0,97 & 0,91 & 720 \\
+{\bfseries Class 3} & 0,98 & 0,89 & 0,94 & 750 \\
+{\bfseries Class 4} & 0,88 & 0,85 & 0,87 & 450 \\
+{\bfseries Class 5} & 0,99 & 0,89 & 0,94 & 660 \\
 \end{longtable}
 
 Additionally, a more thorough evaluation metric for the first class in
@@ -375,7 +375,7 @@ and performance of autonomous cars, which will ultimately lower the
 number of traffic accidents and increase the effectiveness of
 transportation networks.
 
-\textbf{Discussion.} The results of the experimental stage provide
+{\bfseries Discussion.} The results of the experimental stage provide
 compelling evidence of the effectiveness of the convolutional neural
 network (CNN) architecture in recognizing traffic signs under various
 challenging weather conditions. The application of adaptive feature
@@ -418,7 +418,7 @@ challenging conditions suggest promising prospects for use in
 self-driving systems, where dependability and security hold vital
 importance.
 
-\textbf{Conclusions.} This study has effectively shown that a modified
+{\bfseries Conclusions.} This study has effectively shown that a modified
 convolutional neural network (CNN) architecture can accurately and
 efficiently interpret traffic signs in inclement weather. Using
 substantial data augmentation techniques and adaptive feature extraction
@@ -443,7 +443,7 @@ development represents a step toward the eventualization of completely
 autonomous cars that can navigate safely under any circumstance,
 improving transportation efficiency and road safety.
 
-\textbf{References}
+{\bfseries References}
 
 1.Escalera A. de la, Armingol J.M., Mata M. Traffic sign recognition and
 analysis for intelligent vehicles // Image and vision computing.
@@ -545,7 +545,7 @@ object detection with learnable proposals // Proceedings of the IEEE/CVF
 conference on computer vision and pattern recognition. -2021.-
 https://doi.org/10.48550/arXiv.2011.12450
 
-\emph{\textbf{Information about the authors}}
+\emph{{\bfseries Information about the authors}}
 
 Zh.Batyr - graduate student at Al-Farabi Kazakh National University,
 e-mail: zhan.batyr01@gmail.com;
@@ -560,7 +560,7 @@ A/Mailybayeva -Candidate of Physical and Mathematical Sciences,
 Associate Professor of the Department of Informatics, Khalel
 Dosmukhamedov Atyrau University, e-mail: mjkka@mail.ru
 
-\emph{\textbf{Сведения об авторах}}
+\emph{{\bfseries Сведения об авторах}}
 
 Батыр Ж.А.докторант Казахского национального университета имени
 аль-Фараби, e-mail: zhan.batyr01@gmail.com;

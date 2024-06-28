@@ -1,9 +1,9 @@
-\textbf{IRSTI 28.23.37}
+{\bfseries IRSTI 28.23.37}
 
-\textbf{STUDY OF THE REPRESENTATIVENESS OF KAZAKH LANGUAGE CORPORA BY
+{\bfseries STUDY OF THE REPRESENTATIVENESS OF KAZAKH LANGUAGE CORPORA BY
 WORD STEMS FOR THE SUMMARIZATION TASK}
 
-\textbf{Т.Р Жабаев, У.А.Тукеев}
+{\bfseries Т.Р Жабаев, У.А.Тукеев}
 
 Kazakh National University named after al-Farabi, Almaty, Kazakhstan,
 
@@ -30,14 +30,14 @@ contribution of the work is the experimental proof of the
 representativeness of the training corpus by the number of stems before
 training the neural model.
 
-\textbf{Keywords}: neural language modeling, NLP, text summarization,
+{\bfseries Keywords}: neural language modeling, NLP, text summarization,
 Kazakh language, representativity, synthetic datasets.
 
-\textbf{ЖИНАҚТАУ ТАПСЫРМАСЫ БОЙЫНША ҚАЗАҚ ТІЛІ КОРПУСЫНЫҢ СӨЗ}
+{\bfseries ЖИНАҚТАУ ТАПСЫРМАСЫ БОЙЫНША ҚАЗАҚ ТІЛІ КОРПУСЫНЫҢ СӨЗ}
 
-\textbf{ТҮБІРЛЕРІ БОЙЫНША РЕПРЕЗЕНТАТИВТІЛІГІН ЗЕРТТЕУ}
+{\bfseries ТҮБІРЛЕРІ БОЙЫНША РЕПРЕЗЕНТАТИВТІЛІГІН ЗЕРТТЕУ}
 
-\textbf{Т.Р.Жабаев, У.А.Тукеев}
+{\bfseries Т.Р.Жабаев, У.А.Тукеев}
 
 әл-Фараби атындағы Қазақ ұлттық университеті, Алматы, Казахстан,
 
@@ -62,14 +62,14 @@ BLEU бағалаулары қорытынды жасау барысында с�
 үлесі -- нейромодельді оқытуға дейін оқу корпусының түбірлер саны
 бойынша репрезентативтілігі эксперименталды дәлелденді.
 
-\textbf{Түйін сөздер}: нейрондық тілді модельдеу, NLP, мәтінді жинақтау,
+{\bfseries Түйін сөздер}: нейрондық тілді модельдеу, NLP, мәтінді жинақтау,
 қазақ тілі, репрезентативтілік, синтетикалық деректер жиыны
 
-\textbf{ИССЛЕДОВАНИЕ РЕПРЕЗЕНТАТИВНОСТИ КОРПУСОВ КАЗАХСКОГО ЯЗЫКА}
+{\bfseries ИССЛЕДОВАНИЕ РЕПРЕЗЕНТАТИВНОСТИ КОРПУСОВ КАЗАХСКОГО ЯЗЫКА}
 
-\textbf{ПО СТЕМАМ СЛОВ ДЛЯ ЗАДАЧИ СУММАРИЗАЦИИ}
+{\bfseries ПО СТЕМАМ СЛОВ ДЛЯ ЗАДАЧИ СУММАРИЗАЦИИ}
 
-\textbf{Т.Р.Жабаев, У.А.Тукеев}
+{\bfseries Т.Р.Жабаев, У.А.Тукеев}
 
 Казахский Национальный университет имени аль-Фараби, г. Алматы,
 Казахстан,
@@ -96,11 +96,11 @@ BLEU бағалаулары қорытынды жасау барысында с�
 корпуса обучения по количеству стемов в нем до проведения обучения
 нейронной модели.
 
-\textbf{Ключевые слова}: нейронное языковое моделирование, NLP,
+{\bfseries Ключевые слова}: нейронное языковое моделирование, NLP,
 резюмирование текста, казахский язык, репрезентативность, синтетические
 наборы данных.
 
-\textbf{Introduction.} To create a high-quality neural model, as is
+{\bfseries Introduction.} To create a high-quality neural model, as is
 known, a large amount of parallel data is required, especially for
 low-resource languages. Parallel corpus is a dataset for training a
 neural network, consisting of a source part representing the source text
@@ -150,7 +150,7 @@ the BLEU estimate changes with increasing volume of the stem dictionary
 of the training dataset; 3) the minimum size of the initial dataset was
 determined, sufficient for correct training of the neural model.
 
-\textbf{Literature Review.} Without a large amount of initial training
+{\bfseries Literature Review.} Without a large amount of initial training
 data, the model can be gradually improved using for example, the
 back-translation method or other types of transfer learning. As you
 know, good quality can only be achieved using large volumes of initial
@@ -211,7 +211,7 @@ of different sizes. In the works {[}16{]} and {[}17{]} methods of
 dividing the dataset into parts are used for statistical analysis of the
 work.
 
-\textbf{Materials and methods.} \emph{Description of the word stemming
+{\bfseries Materials and methods.} \emph{Description of the word stemming
 method of the Kazakh language corpus.}
 
 CSE is a new computational morphology model based on complete sets of
@@ -272,7 +272,7 @@ obtain a score and the number of stems for each resulting model. Figure
 	\caption*{}
 \end{figure}
 
-\textbf{Figure 1- Algorithm of representativeness analyze}
+{\bfseries Figure 1- Algorithm of representativeness analyze}
 
 Let\textquotesingle s look at the algorithm step by step:
 
@@ -307,7 +307,7 @@ the text is readable and does not have repetition of words. \hl{}
 Table 1 shows data on training datasets. Under the number of stems means
 the number of unique stems. This data shows how our datasets in size.
 
-\textbf{Table 1 - Train datasets statistics}
+{\bfseries Table 1 - Train datasets statistics}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3200}}
@@ -317,7 +317,7 @@ the number of unique stems. This data shows how our datasets in size.
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{train dataset} & \textbf{stems} & \textbf{strings} \\
+{\bfseries train dataset} & {\bfseries stems} & {\bfseries strings} \\
 Full model & 80137 & 240000 \\
 Medium model & 26347 & 104772 \\
 Short model & 18580 & 50000 \\
@@ -335,7 +335,7 @@ in the Kazakh language. The number words and unique word stems of the
 source part of the files that were used for inference are given in the
 table. 2.
 
-\textbf{Table2 - Summary statistics for test files}
+{\bfseries Table2 - Summary statistics for test files}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5254}}
@@ -344,7 +344,7 @@ table. 2.
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{test file} & \textbf{stems} \\
+{\bfseries test file} & {\bfseries stems} \\
 test text 1 & 168 \\
 test text 2 & 386 \\
 test text 3 & 86 \\
@@ -382,7 +382,7 @@ second file which contains the largest amount of stems and it has the
 best BLEU scores in all three tests. There is a strong drop in ratings
 on file 3, which is the smallest in size.
 
-\textbf{Table 3 - BLEU scores and sample sizes by model}
+{\bfseries Table 3 - BLEU scores and sample sizes by model}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1434}}
@@ -396,12 +396,12 @@ on file 3, which is the smallest in size.
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\multirow{2}{*}{\textbf{test source file}} & \multicolumn{2}{l}{%
-\textbf{Medium model}} & \multicolumn{2}{l}{%
-\textbf{Full model stems}} & \multicolumn{2}{l@{}}{%
-\textbf{Short model}} \\
-& \textbf{Stems} & \textbf{BLUE} & \textbf{stems} & \textbf{BLUE} &
-\textbf{stems} & \textbf{BLUE} \\
+\multirow{2}{*}{{\bfseries test source file}} & \multicolumn{2}{l}{%
+{\bfseries Medium model}} & \multicolumn{2}{l}{%
+{\bfseries Full model stems}} & \multicolumn{2}{l@{}}{%
+{\bfseries Short model}} \\
+& {\bfseries Stems} & {\bfseries BLUE} & {\bfseries stems} & {\bfseries BLUE} &
+{\bfseries stems} & {\bfseries BLUE} \\
 test text 1 & 106 & 35.72 & 119 & 60.39 & 78 & 28.88 \\
 test text 2 & 284 & 55.74 & 306 & 62.60 & 257 & 37.45 \\
 test text 3 & 78 & 54 & 72 & 58 & 51 & 25.82 \\
@@ -413,7 +413,7 @@ test text 3 & 78 & 54 & 72 & 58 & 51 & 25.82 \\
 	\caption*{}
 \end{figure}
 
-\textbf{Figure 2 - Resulting scores with the number of stems in test
+{\bfseries Figure 2 - Resulting scores with the number of stems in test
 files}
 
 On all test files, the difference in the number of stems differs
@@ -441,7 +441,7 @@ sentence reductions by each model. As we see in the case of the Short
 model, we have the shortest summarization in the first and second
 sentence.
 
-\textbf{Table 4 - Example of the received text on test file}
+{\bfseries Table 4 - Example of the received text on test file}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
@@ -452,8 +452,8 @@ sentence.
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{Оriginal sentence} & \textbf{Medium model} & \textbf{Short
-model} & \textbf{Full model} \\
+{\bfseries Оriginal sentence} & {\bfseries Medium model} & {\bfseries Short
+model} & {\bfseries Full model} \\
 Шетелде демалу бізге керемет жаңа көңіл күй сыйлайды әрі күнделікті
 күйбең тіршіліктен біршама демалуға мүмкіндік береді. & Шетелде демалу
 бізге керемет жаңа көңіл күй әрі күнделікті күйбең тіршіліктен біршама
@@ -473,7 +473,7 @@ model} & \textbf{Full model} \\
 мен дүниежүзін саяхаттауды біріктіретін турлардың жалпы атауы. \\
 \end{longtable}
 
-\textbf{Conclusion}. In this work, the initial research hypothesis was:
+{\bfseries Conclusion}. In this work, the initial research hypothesis was:
 is it possible to determine the representativeness of the training
 dataset before conducting resource-intensive experiments on training a
 neural model of the summarization problem? To solve this problem, the
@@ -501,7 +501,7 @@ problem belongs to the class of Sequence-to-Sequence problems, the
 conclusion of this work can be extended to other problems of this class:
 machine translation and other natural language processing tasks.
 
-\textbf{References}
+{\bfseries References}
 
 1.Leech G., Aijmer K., Altenberg B. The state of the art in corpus
 linguistics. English corpus linguistics: studies in honour of Jan
@@ -618,7 +618,7 @@ Computational Linguistics:Human Language Technologies. -2015.- P.
 211-217. DOI:10.3115/v1/N15-1022
 
 \begin{quote}
-\emph{\textbf{Information about the authors}}
+\emph{{\bfseries Information about the authors}}
 \end{quote}
 
 Zhabaev T.R.- мaster, Al-Farabi KazNU, Almaty, Kazakhstan, e-mail:
@@ -628,7 +628,7 @@ Tukeyev U.A.- Doctor of Technical Sciences, Professor, Al-Farabi KazNU,
 Almaty, Kazakhstan e-mail: ualsher.tukeyev@gmail.com
 
 \begin{quote}
-\emph{\textbf{Сведения об авторах}}
+\emph{{\bfseries Сведения об авторах}}
 \end{quote}
 
 Жабаев Т.Р.- магистр, кафедра ``Информационные системы'', КазНУ имени

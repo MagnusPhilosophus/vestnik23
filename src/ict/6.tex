@@ -1,9 +1,9 @@
 IRSTI 20.53.01
 
-\textbf{COMPARISON AND ANALYSIS OF DIFFERENT MACHINE LEARNING METHODS ON
+{\bfseries COMPARISON AND ANALYSIS OF DIFFERENT MACHINE LEARNING METHODS ON
 WEATHER TEMPERATURE PREDICTIONS BASED ON THE OPEN DATA}
 
-\textbf{D. Kair}
+{\bfseries D. Kair}
 
 Kazakh-British Technical University, Almaty, Kazakhstan,
 
@@ -33,13 +33,13 @@ predictions. The key course of this study is to help find a way to the
 optimal approach to weather prediction problems and analysis by the way,
 which current tendencies can look at it.
 
-\textbf{Keywords}: machine learning, weather, prediction model,
+{\bfseries Keywords}: machine learning, weather, prediction model,
 CatBoost, Linear Regression, ElasticNet, LightGBM, forecasting.
 
-\textbf{АШЫҚ МӘЛІМЕТТЕР НЕГІЗІНДЕ АУА-АУРА ТЕМПЕРАТУРАСЫН БОЛЖАУ ҮШІН
+{\bfseries АШЫҚ МӘЛІМЕТТЕР НЕГІЗІНДЕ АУА-АУРА ТЕМПЕРАТУРАСЫН БОЛЖАУ ҮШІН
 ТҮРЛІ МАШИНАЛЫҚ ОҚУ ӘДІСТЕРІН САЛЫСТЫРУ ЖӘНЕ ТАЛДАУ}
 
-\textbf{Д. Каир}
+{\bfseries Д. Каир}
 
 Қазақстан-Британ техникалық университеті, Алматы, Қазақстан,
 
@@ -70,16 +70,16 @@ Regression, Bayesian Ridge және т.б. регрессорлар бар. Қо
 табуға көмектесу және қазіргі тенденциялар бұған қалай қарайтынын
 талдау.
 
-\textbf{Түйін сөздер:} машиналық оқыту, ауа-райы, болжау моделі,
+{\bfseries Түйін сөздер:} машиналық оқыту, ауа-райы, болжау моделі,
 CatBoost, Linear Regression, ElasticNet, LightGBM, болжау.
 
-\textbf{СРАВНЕНИЕ И АНАЛИЗ РАЗНЫХ МЕТОДОВ МАШИННОГО ОБУЧЕНИЯ}
+{\bfseries СРАВНЕНИЕ И АНАЛИЗ РАЗНЫХ МЕТОДОВ МАШИННОГО ОБУЧЕНИЯ}
 
-\textbf{ДЛЯ ПРОГНОЗИРОВАНИЯ ТЕМПЕРАТУРЫ ПОГОДЫ НА ОСНОВЕ}
+{\bfseries ДЛЯ ПРОГНОЗИРОВАНИЯ ТЕМПЕРАТУРЫ ПОГОДЫ НА ОСНОВЕ}
 
-\textbf{ОТКРЫТЫХ ДАННЫХ}
+{\bfseries ОТКРЫТЫХ ДАННЫХ}
 
-\textbf{Д. Каир}
+{\bfseries Д. Каир}
 
 Казахстанско-Британский Технический Университет, Алматы, Казахстан,
 
@@ -110,11 +110,11 @@ Regression, Bayesian Ridge и другие. Применяемые алгори�
 поиске оптимального подхода к решению задач прогнозирования погоды и
 анализ того, как на это могут смотреть современные тенденции.
 
-\textbf{Ключевые слова:} машинное обучение, погода, модель
+{\bfseries Ключевые слова:} машинное обучение, погода, модель
 прогнозирования, CatBoost, Linear Regression, ElasticNet, LightGBM,
 прогнозирование.
 
-\textbf{Introduction}. Weather forecasting is an essential aspect of our
+{\bfseries Introduction}. Weather forecasting is an essential aspect of our
 daily lives, as it helps us prepare for and manage the impact of weather
 conditions. While weather forecasting has improved in recent years,
 there are still challenges in creating accurate and timely forecasts.
@@ -192,7 +192,7 @@ In our research, we will try to deal with different types of data,
 implement it, and analyze it. The following table contains data
 explanation.
 
-\textbf{Table 1 -- The embeddings for each column}
+{\bfseries Table 1 -- The embeddings for each column}
 \end{quote}
 
 \begin{longtable}[]{@{}
@@ -259,7 +259,7 @@ in atmospheric pressure over the last three hours
 \end{longtable}
 
 \begin{quote}
-\textbf{Continuation of Table 1}
+{\bfseries Continuation of Table 1}
 \end{quote}
 
 \begin{longtable}[]{@{}
@@ -401,7 +401,7 @@ the earth\textquotesingle s surface (degrees Celsius)
 \end{longtable}
 
 \begin{quote}
-\textbf{Literature review.} Addressing these problems and improving the
+{\bfseries Literature review.} Addressing these problems and improving the
 accuracy of weather and thunderstorm forecasts in Almaty requires the
 development of an advanced numerical forecasting model that incorporates
 higher spatial resolution, improved data assimilation techniques, and
@@ -498,7 +498,7 @@ missed values.
 	\caption*{}
 \end{figure}
 
-\textbf{Figure 1 -- Correlation heatmap for all numerical and
+{\bfseries Figure 1 -- Correlation heatmap for all numerical and
 categorical features}
 
 After logical analysis, we began analyzing attributes by plotting the
@@ -519,7 +519,7 @@ following columns: \textquotesingle T\textquotesingle,
 between -0.1 and 0.1, and some of them considered to be used due to
 better overall model performance with them.
 
-\textbf{Table 2 -- Number of rows with missing values for given
+{\bfseries Table 2 -- Number of rows with missing values for given
 attributes}
 \end{quote}
 
@@ -532,11 +532,11 @@ attributes}
 \endlastfoot
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
-\emph{\textbf{Column}}
+\emph{{\bfseries Column}}
 \end{quote}
 \end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
-\emph{\textbf{Rows with NaN value}}
+\emph{{\bfseries Rows with NaN value}}
 \end{quote}
 \end{minipage} \\
 \begin{minipage}[t]{\linewidth}\raggedright
@@ -666,72 +666,72 @@ Regressor, Random Forest, Linear Regression, ElasticNet, SGD Regressor,
 Bayesian Ridge, Support Vector Regressor, CatBoost, Kernel Ridge,
 XGBoost and LightGBM. Here is a brief explanation of each model:
 
-\emph{\textbf{Gradient Boosting Regressor:}} Gradient Boosting is an
+\emph{{\bfseries Gradient Boosting Regressor:}} Gradient Boosting is an
 ensemble learning method that builds a strong predictive model by
 combining multiple weak models, usually decision trees. It works by
 iteratively adding new models that focus on the residuals of the
 previous models, gradually improving the overall predictions.
 
-\emph{\textbf{Random Forest:}} Random Forest is another ensemble
+\emph{{\bfseries Random Forest:}} Random Forest is another ensemble
 learning method that constructs multiple decision trees and combines
 their predictions. Each decision tree is trained on a random subset of
 the data and features. The final prediction is obtained by averaging the
 predictions of all the individual trees.
 
-\emph{\textbf{Linear Regression:}} Linear Regression is a simple and
+\emph{{\bfseries Linear Regression:}} Linear Regression is a simple and
 widely-used linear modeling technique. It assumes a linear relationship
 between the input features and the target variable. The model fits a
 line to the data that minimizes the sum of squared differences between
 the observed and predicted values.
 
-\emph{\textbf{ElasticNet:}} ElasticNet is a linear regression model that
+\emph{{\bfseries ElasticNet:}} ElasticNet is a linear regression model that
 combines both L1 (Lasso) and L2 (Ridge) regularization penalties. It is
 useful when dealing with high-dimensional datasets and aims to find a
 balance between feature selection (L1 regularization) and handling
 multicollinearity (L2 regularization).
 
-\emph{\textbf{SGD Regressor:}} Stochastic Gradient Descent (SGD) is an
+\emph{{\bfseries SGD Regressor:}} Stochastic Gradient Descent (SGD) is an
 iterative optimization algorithm used for linear regression. It updates
 the model\textquotesingle s parameters based on a randomly selected
 subset of the training data at each iteration, making it suitable for
 large-scale datasets.
 
-\emph{\textbf{Bayesian Ridge:}} Bayesian Ridge regression is a Bayesian
+\emph{{\bfseries Bayesian Ridge:}} Bayesian Ridge regression is a Bayesian
 statistical model that combines a prior distribution with the likelihood
 function to estimate the model parameters. It provides a probabilistic
 framework for linear regression and automatically determines the
 regularization strength.
 
-\emph{\textbf{Support Vector Regressor:}} Support Vector Regression
+\emph{{\bfseries Support Vector Regressor:}} Support Vector Regression
 (SVR) is a variant of Support Vector Machines adapted for regression
 problems. It finds a hyperplane that best fits the data while
 considering a margin that controls the trade-off between fitting the
 data and allowing some deviations.
 
-\emph{\textbf{CatBoost:}} CatBoost is a gradient boosting algorithm that
+\emph{{\bfseries CatBoost:}} CatBoost is a gradient boosting algorithm that
 is known for its ability to handle categorical variables efficiently. It
 incorporates a range of advanced techniques, such as ordered boosting
 and categorical feature embeddings, to improve predictive performance.
 
-\emph{\textbf{Kernel Ridge:}} Kernel Ridge regression combines ridge
+\emph{{\bfseries Kernel Ridge:}} Kernel Ridge regression combines ridge
 regression with the kernel trick to perform non-linear regression. It
 uses a kernel function to map the input features into a
 higher-dimensional space, where linear regression is applied. It is
 effective for capturing complex patterns in the data.
 
-\emph{\textbf{XGBoost:}} XGBoost is an optimized gradient boosting
+\emph{{\bfseries XGBoost:}} XGBoost is an optimized gradient boosting
 algorithm that is highly efficient and scalable. It uses a combination
 of tree-based models and gradient boosting techniques to achieve
 accurate predictions. XGBoost is known for its speed and performance on
 structured data.
 
-\emph{\textbf{LightGBM:}} LightGBM is another gradient boosting
+\emph{{\bfseries LightGBM:}} LightGBM is another gradient boosting
 framework that is designed to be fast and memory-efficient. It uses a
 special type of decision tree called the "leaf-wise" tree, which can
 lead to better accuracy with less memory consumption compared to
 traditional gradient boosting methods.
 
-\textbf{Table 3 -- Model performance results after test training}
+{\bfseries Table 3 -- Model performance results after test training}
 \end{quote}
 
 \begin{longtable}[]{@{}
@@ -905,10 +905,10 @@ are provided below.
 	\caption*{}
 \end{figure}
 
-\textbf{Figure 2 -- Sample of real and predicted temperatures
+{\bfseries Figure 2 -- Sample of real and predicted temperatures
 comparison}
 
-\textbf{Conclusion.} This paper presents a detailed description of
+{\bfseries Conclusion.} This paper presents a detailed description of
 constructing a machine learning model for weather numerical forecasting
 based on open data, which is available to everyone. The main idea of the
 research is to identify pairwise correlations between provided dataset
@@ -925,7 +925,7 @@ limitations, like a lack of CPU to achieve better results in less
 performing time.
 \end{quote}
 
-\textbf{References}
+{\bfseries References}
 
 \begin{quote}
 1.P. Bauer, A. Thorpe, and G. Brunet, The quiet revolution of numerical
@@ -1030,14 +1030,14 @@ Prediction in Sri Lanka.// 2021 10th International Conference on
 Information and Automation for Sustainability (ICIAfS). DOI
 10.1109/ICIAfS52090.2021.9606077
 
-\emph{\textbf{Information about authors}}
+\emph{{\bfseries Information about authors}}
 
 Kair D.- Kazakh-British Technical University, Almaty, Kazakhstan,
 e-mail: danikkair@gmail.com
 
-\emph{\textbf{Сведения об авторе}}
+\emph{{\bfseries Сведения об авторе}}
 
-\emph{\textbf{\hfill\break
+\emph{{\bfseries \hfill\break
 }}Каир Д.- Казахстанско-Британский Технический Университет,Алматы,
 Казахстан, e-mail: danikkair@gmail.com
 \end{quote}
