@@ -1,0 +1,713 @@
+IRSTI 50.47.31
+
+\textbf{RESEARCH AND CONSTRUCTION OF A MATHEMATICAL MODEL USING DISCRETE
+PROGRAMMING METHODS FOR THE MIXING AND MELTING OF COPPER CONCENTRATES}
+
+\textbf{U. Imanbekova\textsuperscript{1}, A.
+Kalizhanova\textsuperscript{2,1}, A.Kozbakova\textsuperscript{2,3}, A.
+Imanbekova\textsuperscript{4}, A. Utegenova\textsuperscript{1,2}}
+
+\textsuperscript{1}Almaty University of Power Engineering and
+Telecommunications named after G.Daukeyev, Almaty, Kazakhstan,
+
+\textsuperscript{2}Institute of Information and Computational
+Technologies CS MSHE RK, Almaty, Kazakhstan,
+
+\textsuperscript{3}Almaty Technological University, Almaty, Kazakhstan,
+
+\textsuperscript{4}Taraz Regional University named after M.Kh. Dulaty,
+Taraz, Kazakhstan,
+
+е-mail: uli.08@mail.ru
+
+This paper describes the construction of an optimal schedule for a
+metallurgical workshop using discrete programming, and in particular,
+the method of branches and boundaries. In this regard, a heuristic
+approach to solving this problem is proposed, which includes: building
+an initial graph that satisfies the constraints of the optimization
+problem, as well as sequential search optimization of the initial graph
+according to a given criterion. To test the effectiveness of using the
+task of forming a melting schedule as part of the operational control
+subsystem in the converter department, experimental studies were
+conducted. Considering that the creation of the automated process
+control system of the copper plant provides for the introduction of
+systems using modern software and hardware controls, cargo flow control,
+and an automated conversion process control system, the efficiency of
+using optimal melting schedules will significantly increase.
+
+\textbf{Keywords.} Copper raw materials, blending, smelting.
+
+\begin{quote}
+\textbf{МЫС КОНЦЕНТРАТТАРЫН ШИХТАУ ЖӘНЕ БАЛҚЫТУ ҮШІН ДИСКРЕТТІ
+БАҒДАРЛАМАЛАУ ӘДІСТЕРІМЕН МАТЕМАТИКАЛЫҚ МОДЕЛЬДІ ЗЕРТТЕУ ЖӘНЕ ҚҰРУ}
+
+\textbf{У.Иманбекова\textsuperscript{1},
+А.Калижанова\textsuperscript{2,1}, А.Козбакова\textsuperscript{2,3},
+А.Иманбекова\textsuperscript{4}, А.Утегенова\textsuperscript{1,2}}
+\end{quote}
+
+\textsuperscript{1}Ғ.Дәукеев атындағы Алматы энергетика және байланыс
+университеті, Алматы, Қазақстан,
+
+\textsuperscript{2}Ақпараттық және есептеуіш технологиялар институты ҚР
+ҒЖБМ ҒК, Алматы, Қазақстан,
+
+\textsuperscript{3}Алматы технологиялық университеті, Алматы, Қазақстан,
+
+\textsuperscript{4}М.Х. Дулати атындағы Тараз өңірлік университеті,
+Тараз, Қазақстан,
+
+е-mail: uli.08@mail.ru
+
+Бұл жұмыста дискретті бағдарламалау арқылы, атап айтқанда, бұтақтар мен
+шекаралар әдісімен металлургия цехының оңтайлы графигін құру
+сипатталған. Осыған байланысты осы мәселені шешуге эвристикалық тәсіл
+ұсынылады, оған мыналар кіреді: оңтайландыру мәселесінің шектеулерін
+қанағаттандыратын бастапқы графикті құру, сондай-ақ, берілген критерий
+бойынша бастапқы графикті дәйекті іздеу жүйесін оңтайландыру.
+Конверторлық бөлімшеде жедел басқару кіші жүйесінің құрамымен балқыту
+кестесін қалыптастыру міндетін пайдаланудың тиімділігін тексеру үшін
+эксперименттік зерттеулер жүргізілді. Мыс зауытының баж ТП құру заманауи
+бағдарламалық-техникалық басқару құралдарын, жүк ағынын бақылауды,
+айырбастау процесін басқарудың автоматтандырылған жүйесін қолдана отырып
+жүйелерді енгізуді көздейтінін ескере отырып, балқымалардың оңтайлы
+кестелерін пайдалану тиімділігі айтарлықтай артады.
+
+\textbf{Түйін сөздер:} мыс шикізаты, араластыру, балқыту.
+
+\begin{quote}
+\textbf{ИССЛЕДОВАНИЕ И ПОСТРОЕНИЕ МАТЕМАТИЧЕСКОЙ МОДЕЛИ МЕТОДАМИ
+ДИСКРЕТНОГО ПРОГРАММИРОВАНИЯ ДЛЯ ШИХТОВКИ И ПЛАВЛЕНИЯ МЕДНЫХ
+КОНЦЕНТРАТОВ}
+
+\textbf{У.Иманбекова\textsuperscript{1},
+А.Калижанова\textsuperscript{2,1}, А.Козбакова\textsuperscript{2,3},
+А.Иманбекова\textsuperscript{4}, А.Утегенова\textsuperscript{1,2}}
+
+\textsuperscript{1}Алматинский университет энергетики и связи им. Г.
+Даукеева, Алматы, Казахстан,
+
+\textsuperscript{2}Институт информационных и вычислительных технологий
+КН МНВО РК, Алматы, Казахстан,
+
+\textsuperscript{3}Алматинский технологический университет, Алматы,
+Казахстан,
+
+\textsuperscript{4}Таразский региональный университет им.М. Х. Дулати,
+Тараз, Казахстан,
+\end{quote}
+
+е-mail: uli.08@mail.ru
+
+В данной работе описывается построение оптимального графика
+металлургического цеха с помощью дискретного программирования, и в
+частности, методом ветвей и границ. В сзязи с этим предлагается
+эвристический подход к решению данной задачи включающий в себя:
+построение исходного графика, удовлетворяющего ограничениям
+оптимизационной задачи, а также последовательную поисковую оптимизацию
+исходного графика по заданному критерию. Для проверки эффективности
+использования задачи формирования графика плавки с составе подсистемы
+оперативного управления в конверторном отделении были проведены
+экспериментальные исследования. Учитывая, что созданием АСУ ТП медь
+завода предусматривается внедрение систем с применением современных
+программно-технических средств управления, контроля грузопотоков,
+автоматизированной системы управления процессом конвертирования,
+эффективность использования оптимальных графиков плавок существенно
+повысится.
+
+\textbf{Ключевые слова.} Медное сырье, купажирование, плавка.
+
+\textbf{Introduction.} The solution of the formulated problem of
+constructing an optimal graph using discrete programming methods, and in
+particular, the method of branches and boundaries, involves a large
+amount of calculations, difficult when implementing the system. At the
+first stage of the procedure, an initial graph is constructed that
+satisfies all the constraints of the task. i.e., it is valid {[}1{]}.
+
+Restoration of the process state in each unit of the site (at the time
+of the start of the algorithm) based on the initial information and
+using a mathematical model of the process: formation of the initial
+section of the graph by entering the first heats of each unit into the
+Gantt table, calculation based on a mathematical model of the
+characteristics of an exemplary melting with a given average blast
+consumption and an average number of buckets of loaded matte, assignment
+of the characteristics of all swimming trunks (except the first ones) to
+the values of the characteristics of an exemplary melting, filling in
+the Gantt table with swimming trunks, taking into account the
+restrictions and if the condition is met, the first stage of the
+procedure is completed {[}2{]}.
+
+Checking the possibility of changing the average flow rate of the blast
+in the required direction and calculation of the required value by which
+the average blast consumption must be changed and adjustment of the
+average blast consumption by this value. Checking the possibility of
+changing the matte loading of the smelts {[}3{]}. If possible, the
+transition to is carried out, otherwise at the end of the first stage of
+the procedure. The choice of melting, which can change the matte loading
+in the required direction and adjust the number of loaded matte buckets
+{[}4{]}.
+
+\textbf{Materials and methods.} At the second stage of the procedure, a
+direct search for the optimal schedule is carried out by step-by-step
+improvement of the original schedule. The search step is to select a
+pair of swimming trunks for which it is possible to redistribute the
+material (matte) or temporary (duration of the first period and downtime
+after melting) resource, redistribute the selected resource, evaluate
+the newly obtained schedule option and, if unsatisfactory, return to the
+old option. The choice of two melting points in the redevelopment of the
+schedule, for which it is possible to redistribute the resource {[}5{]}:
+
+1. Adjustment of the characteristics of the selected melts in accordance
+with the redistribution performed.
+
+2. Checking for violation of the condition. If this condition of
+redistribution is violated, the transition to paragraph 7 is rejected
+and made, otherwise to paragraph
+
+3. The schedule (Gantt table) is adjusted in accordance with the
+production redistribution of the resource.
+
+4. Evaluation of the change in the criterion ∆F. If ∆F \textless{} 0,
+then the step is considered successful and the transition is made to
+point 1, otherwise to point 6.
+
+5. Return to the previous version of the schedule (reverse adjustment of
+the Gantt table).
+
+6. Return resource redistribution for previously selected swimming
+trunks.
+
+7. Checking for a decrease in the value of the criterion after
+conducting cycles of redistribution of all types of resources. If the
+decrease in the criterion value is not marked, the optimization
+procedure is completed, and the cycle is repeated from point 1.
+
+We present an algorithm for forming the work schedule of the converter
+department together with a semiotic model, which form a system for
+forming the optimal work schedule of the converter section {[}6{]}.
+
+The purpose of the research was: to determine the feasibility of optimal
+schedules of converter melts generated by the system; identification of
+the reasons causing the deviation of the actual values from the
+specified melting schedules (start and end times of operations, the
+amount
+
+of processed and received materials, etc.), development of
+recommendations to increase the degree of use of optimal melting
+schedules {[}7{]}.
+
+The development of an algorithm for operational control of the converter
+department involves testing the control algorithm together with the
+control object. However, conducting experiments with an algorithm that
+has not yet been debugged at the facility is not possible due to the
+strenuous operation of the separation units in industrial conditions.
+The output of the latter\textquotesingle s operating modes beyond the
+scope of the regulated one entailed significant production losses. In
+addition, there are difficulties caused by the need to simultaneously
+measure a large number of parameters involved in evaluating the
+operability and effectiveness of the control algorithm. In real
+production conditions, this can only be done with a long delay, low
+accuracy and insufficient data collection frequency {[}8{]}.
+
+\textbf{Results and discussion.} In these conditions, it is advisable to
+debug the control algorithm based on experiments with a simulation model
+of the converter compartment {[}9{]}. The process of forming and using a
+simulation model includes the following steps: clarification of
+information flows into the modeling system and schemes of their
+transformation; assessment of the probabilistic characteristics of the
+material flows of the converter unit in order to form a model of
+compensating effects; development of the structure of a software system
+that simulates the functioning of a control object based on a
+mathematical model of the process, development of a software system
+simulating the functioning of an object (with active disturbances) in
+conjunction with a control system; conducting simulation experiments
+with the software system; evaluation by a specialist of the results of
+the simulation experiment; adjustment of the parameters (structure) of
+the control algorithm {[}10{]}:
+
+Block 1 organizes a cycle for all units in operation.
+
+Block 2 generates the initial information for simulating the process at
+the time interval \emph{τ} in the \emph{i-th} unit of the site. For this
+purpose, values characterizing the state of the process at the end of
+the \emph{t1} time interval (composition, quantity and temperature of
+the mass and slag in the bath), as well as the values of control actions
+on the time interval \emph{τ} (flow rate of blast, ore, amount of poured
+matte and drained slag, the moment of commencement) are rewritten into
+the working array from the general memory area of the system or the end
+of blowing). These values are considered as mathematical expectations of
+the corresponding values.
+
+To obtain noisy values, each of the listed parameters is exposed to
+interference according to the following Equation 1.
+
+\begin{quote}
+ʘ\(\ _{j}\)=\(M_{ʘj}\)+ξ\(\ _{ʘj}\) (1)
+\end{quote}
+
+where ξ\(\ _{ʘj}\) - is a random variable distributed according to a
+normal law with zero mathematical expectation and a variance equal to
+the variance of the real "played" parameter obtained by statistical
+processing of experimental data.
+
+The value of ξ\(\ _{ʘj}\) - is generated by block 8, which implements a
+pseudorandom number sensor with a given distribution law.The
+compositions of materials loaded into the converter are also subjected
+to noise.
+
+Block 3 contains a mathematical model of the conversion process
+described in section 2, and the initial state of the process is
+transformed into the final one, taking into account the specified
+control actions.
+
+Block 4 generates the output technological parameters of the process
+(temperature, amount and composition of the exhaust gas). It is assumed
+that the air sucked into the exhaust gas is directly proportional to the
+amount of converter gas to the following Equation 2.
+
+\begin{quote}
+\(M\left\{ G_{p}\lbrack\tau\rbrack \right\} = K_{p}G_{g}\lbrack\tau\rbrack\)
+(2)
+\end{quote}
+
+The value of the \(K_{П}\)coefficient was found during the
+identification of the mathematical model. In this case, the amount and
+composition of the gas mixture is determined by to the following
+Equations 3-4:
+
+\begin{quote}
+\(G_{m}\lbrack\tau\rbrack\)=\(G_{g}\lbrack\tau\rbrack + G_{p}\lbrack\tau\rbrack\)+ξ\(G_{p}\lbrack\tau\rbrack\)
+(3)
+
+\(\alpha_{{so}_{2}}^{m}\lbrack\tau\rbrack = \alpha_{{so}_{2}}^{2}\lbrack\tau\rbrack G_{g}\lbrack\tau\rbrack 100\%/G_{m}\lbrack\tau\rbrack\)
+(4)
+\end{quote}
+
+In addition, the block updates the values characterizing the state of
+the process located in the general memory area of the system, thereby
+preparing for the simulation of the next time interval. In conclusion,
+we return to block 1 to simulate the operation of the next unit.
+
+Block 5 calculates the parameters of the converter gas flow from the
+converter compartment by to the following Equations 5-6:
+
+\begin{quote}
+\(G_{m}^{\sum}\lbrack\tau\rbrack =\)
+\(\sum_{i = 1}^{n}G_{m}^{i}\lbrack\tau\rbrack\) (5)
+
+\(\alpha_{{so}_{2}}^{\sum}\lbrack\tau\rbrack =\)
+\(\sum_{i = 1}^{n}\alpha_{{so}_{2}}^{i}\lbrack\tau\rbrack G_{m}^{i}\lbrack\tau\rbrack\)/\(G_{m}^{\sum}\lbrack\tau\rbrack\)
+(6)
+\end{quote}
+
+After that, the calculation of the current statistical characteristics
+of the total gas flow, the average downtime of the units, the average
+deviation of time parameters, melting parameters from those set by the
+graph is performed by to the following Equations 7-8:
+
+\begin{quote}
+\(\overline{X}\lbrack n\rbrack = \overline{X}\lbrack n - 1\rbrack +\)
+\(\frac{1}{n}\) \(\overline{(X}\){[}n{]}-\(\ \overline{X}\){[}n-1{]})
+(7)
+
+\(\sigma_{X}^{2}\){[}n{]}=\(\ \sigma_{X}^{2}\){[}n-1{]}+\(\frac{1}{n - 1}\)
+\(\left\{ \ X\lbrack n\rbrack - \overline{X}\ \lbrack n - 1\rbrack)^{2} - \sigma_{X}^{2}\lbrack n - 1\rbrack \right\}\ \)
+(8)
+\end{quote}
+
+The results generated by block 5 are recorded in the general memory area
+of the system.
+
+Block 6 is used to simulate random disturbances on the process,
+reflecting fluctuations in the flow rate of blast and ore into the
+converter, the amount and composition of the loaded matte and other
+materials, the duration and moments of the beginning and end of the
+smelting purges. For these purposes, a standard procedure for generating
+pseudorandom sequences distributed according to a normal law is used.
+The variances of the corresponding parameters to be noisy are
+transmitted to block 2 and 4 when accessing block 6.
+
+The next stage consists in the development of a software system,
+providing simulation of the operation of the control object together
+with the control system, the developed system functions as follows.
+
+Block 1 prepares the initial values of the system time counter τ and the
+control time interval l. Block 2 organizes a cycle for all units of the
+department that are in operation. Block 3 generates the initial state of
+the process in the i-th unit necessary to start the system in operation,
+the following parameters are generated: the start time of the current
+melting, the average consumption since the beginning of the current
+melting, the number of matte buckets loaded into the current melting by
+the time the system starts, the compositions of materials loaded into
+the current melting. This sets not only the initial conditions for the
+i-th unit, but also the integral control actions applied before the
+start of the system.
+
+Block 4 generates a micro description of the current technological
+situation at the site in the language of a systematic model, thereby
+preparing information for the operation of the situational management
+unit. Information for the formation of a micro description is selected
+from the general memory area of the system sequentially for each unit of
+the site.
+
+Block 5 generates a solution for managing the converter department based
+on the semiotic model of the latter. Depending on the chosen solution, a
+transition can be made to block 6, 8 or 9 (AB). The selected solution(s)
+are recorded in the general memory area of the system.
+
+Block 6 generates the optimal work schedule of the department for a
+given time interval, taking into account the management decisions
+developed in block 5. The generated schedule is fixed in the general
+memory area of the system. Block 7 organizes the cycle according to the
+melts scheduled in block 6 for a specified time interval. Block 8
+generates the optimal schedule for the next melting, in addition, if
+block 5 makes a decision to adjust the schedule of some melting, it
+generates a new schedule for it, taking into account the changed
+situation in the department.
+
+Block 9 (AB) contains a simulation model of the converter compartment.
+
+Block 10 increases the values of the accounts \emph{τ} and l by one,
+preparing the output for the next simulation cycle. Block 11 analyzes
+the value of the system time. If the simulation of the next shift has
+ended, a transition is made to block 12, otherwise to block 14. Block 12
+prints the results of the simulation of functioning during the last
+shift. Block 13 resets the counter values to zero, thereby switching to
+simulating the next shift. Block 14 analyzes the value of the counter l.
+If the l value is equal to the control cycle time set when the system is
+started, the transition is made to block 15, otherwise to block 9. Block
+15 resets the l counter values to zero.
+
+The developed simulation system allows checking the operability and
+effectiveness of the proposed system of operational management of the
+converter department in various modes of its operation. The data
+obtained as a result of the next cycle of the experiment is evaluated by
+a specialist who makes a conclusion about the quality of the control
+system and decides whether to adjust the control algorithm aimed at
+eliminating the identified shortcomings, or to end the experiment if
+satisfactory results are obtained, both the structure of the control
+algorithm and the values of its objects, the field can be adjusted then
+a series of experiments is repeated.
+
+Simulation modeling of the control system showed the operability of the
+system and the possibility of a significant increase in the efficiency
+of technological processes of the metallurgical workshop during its
+implementation presented in Table 1.
+
+\textbf{Table 1 - System performance results}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1087}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3184}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2866}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2863}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+№
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+The name of the indicator
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Significance in current practice
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Importance in situational management
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & Dispersion of SO content in converter gases & 2,89 & 0,36 \\
+2 & Downtime variance & 212 & 36 \\
+\end{longtable}
+
+The functioning of the operational management system of the converter
+department is aimed at the formation of work schedules of the
+department, which regulate the conditions of the process and are issued
+as written instructions to the technological staff. It is shown above
+that the algorithm for forming the work schedule of the converter
+department ensures that the schedule is optimal from the point of view
+of coordinating the operation of individual units and is most
+appropriate to the current situation in the metallurgical workshop. The
+size of the planned period in the formation of the
+department\textquotesingle s work schedule is determined by the
+established management practice, is limited by the dimension of the
+optimization task solved at the Central computer and is assumed to be
+equal to one day or less (depending on the moment of the beginning of
+planning). The results obtained in this case could be issued for
+execution once a day. However, the non-stationarity of the control
+object, as a rule, leads to the need to revise the schedule during the
+day. The main reasons for non-stationarity are:
+
+- failures of the converter compartment units, resulting in the need to
+force the operating modes to perform the production program with a
+smaller number of operating units;
+
+- deviations of the qualitative and quantitative characteristics of the
+raw materials of copper matte) from the regulated norms due to
+violations in the operation of the electric furnace and charge
+departments, leading to the need to force or artificially reduce the
+pace of operation of the converter department;
+
+- disturbances in the operation of the electric furnace compartment,
+leading to excessive downtime of the converter compartment units,
+leading to excessive downtime of the converter compartment units in
+anticipation of the next portions of matte.
+
+- the effect of the "human factor" - staff errors in fulfilling planned
+schedules, the inability to reach the planned blast consumption due to a
+decrease in the intensity of the work of the shapers, etc.;
+
+- the drift of the characteristics of aggregates due to their aging, the
+listed factors, on the one hand, lead to significant deviations from the
+specified schedule, which do not allow using it in the future, on the
+other hand, to the inadequacy of the mathematical models underlying the
+algorithm for selecting modes and, consequently, to the non-optimality
+or even inadmissibility of the management decisions being formed. Under
+these conditions, the effectiveness of the control system can be ensured
+by introducing a rational frequency of submission of control actions, as
+well as on the basis of the application of the principle of adaptation,
+involving the introduction of feedback on the structure and parameters
+of the control system.
+
+Under these conditions, the appropriate task is to select algorithms for
+adapting the mathematical model of the control object and to develop a
+general algorithm for functioning that regulates the sequence and
+frequency of operation of individual algorithmic blocks of the control
+system.
+
+The mathematical model of the control object is presented, as well as
+the structure of the predicate system. The adaptation of the control
+system should be reduced to adjusting the parameters of the analytical
+model and the structure of the predicate system based on current
+information about the functioning of the facility and the control
+system. The first task is solved on the basis of the use of
+probabilistic interactive adaptation algorithms, the type and
+characteristics of which should take into account the statistical
+features of the current information and is selected during a special
+study. The algorithm of the current correction of the structure of the
+predicate system is based, ultimately, on the correction of the values
+of the weighting coefficients appearing as arguments in the
+corresponding predicates, which, in turn, connect the concept of
+different levels of description.
+
+The structure of the general algorithm for the operation of the control
+system. The main blocks of this algorithm are:
+
+Block 1 converts the information generated by the subsystem of
+centralized control of the automated control system into a form
+convenient for further use (in other words, the block restores a
+micromodel of the current situation in terms of language)
+\(\left\{ a_{i}^{j} \right\}\), \(\left\{ \tau v \right\}\).
+
+Block 2 performs, based on the predicate system
+\(\left\{ P_{S}^{K} \right\}\)\emph{,} the selection of a management
+solution \emph{U} that is optimal for this situation. If the developed
+solution is immediately ready for implementation, then it is issued to
+the site for execution, otherwise other blocks of the system are
+launched in order to specify the sequential one.
+
+Block 3 is started if the management decision relates to the formation
+(adjustment) of the work schedule of the converter department. At the
+same time, the initial state of the converter department is fixed and,
+taking into account the previously developed management decision of the
+department. At the same time, the initial state of the converter
+department is fixed and, taking into account the previously developed
+management decision, \(U_{\Psi}\)the formation of a work schedule for
+the converter department for a day (until the end of the day from the
+moment the unit is put into operation);
+
+Block 4 implements a system of equations, which is an analytical
+mathematical model of the conversion process.
+
+The set of blocks 1-4 is a system of operational control of the
+converter department by deviation. The frequency of operation of the
+system units is 3-4 hours, which corresponds to the dynamics of the most
+"rapid" disturbances (failures of aggregates, the action of the "human
+factor", etc.), the control object in this case is considered as
+quasi-stationary. Accounting for the non-stationarity of the control
+object, which allows to increase the efficiency of the control system,
+is provided by the introduction of blocks 5-7. Block 5, comparing the
+characteristics of converter melts obtained on the basis of an
+analytical model with the fixed block 1, adjusts the parameters of the
+model by implementing a probabilistic interactive algorithm by to the
+following Equation 9:
+
+\begin{quote}
+\(A\lbrack n\rbrack = A\lbrack n - 1\rbrack + \gamma\lbrack n\rbrack\nabla_{A}\lbrack Z^{0}\lbrack n\rbrack - Z(Q\lbrack n\rbrack,A\lbrack n - 1\rbrack)^{2}\)
+(9)
+\end{quote}
+
+where A is the vector of model parameters; Z\textsuperscript{0}-output
+of the control object; Z- output of the model; \emph{Q} is the output of
+disturbances; \emph{U} is the vector of control actions;
+
+Block 6, based on the process model (block 4), digitally simulates a
+certain production situation in the converter department, sequentially
+simulates the adoption of each of the available management decisions by
+to the following Equation 10:
+
+\begin{quote}
+\(U_{\Psi}\)(Ψ=1,2\ldots) (10)
+\end{quote}
+
+based on the criterion \emph{Q(x,u)} the effectiveness of each
+management decision is evaluated, after which the optimal management, in
+the sense of the specified criterion, is selected; Block 7 captures the
+situation \emph{Х{[}n{]},} generated by block 6, selects the optimal
+management solution based on the predicate system
+\(\left\{ P_{S}^{K} \right\} \rightarrow {\overline{U}}_{on}\lbrack n\rbrack\),
+compares both U\textsubscript{on}{[}n{]} and
+\({\overline{U}}_{on}\lbrack n\rbrack\) in case of their discrepancy,
+corrects the predicate system in order to eliminate the resulting
+mismatch.
+
+The implementation of blocks 5-7 is associated with significant
+computational difficulties. The need to launch blocks 5-7 is due to
+changes in technology (for example, the transition to new types of raw
+materials) or changes in the organization of work and should be carried
+out with a periodicity of about a month.
+
+\textbf{Conclusion.} In the process of long-term operation of the system
+for the operational formation of an optimal work schedule for the
+converter department, the need to improve individual units of the system
+has been identified. In particular, the technological staff of the
+metallurgical workshop expressed the wish that it was necessary to take
+into account the raw materials and energy limitations of the electric
+furnace electronic department (FED).
+
+To implement these wishes, the following changes were made to the
+algorithm for forming the work schedule of the converter department: a
+fragment of an algorithm has been developed that corrects a given plan
+for the production of rough copper, taking into account the energy and
+raw material constraints of the FED, as well as the schedule of the
+latter\textquotesingle s PPD; the procedure for creating a schedule at
+time intervals corresponding to the FED\textquotesingle s PPR has been
+changed. At these intervals, it is planned to reduce the intensity of
+the converters, the melts are spaced over time so that they can be
+provided with matte from one furnace; an algorithm has been developed
+for the formation of an application plan for the issuance of a matte FED
+with the development of the latter for shift tasks, which specify the
+time the output of each stein bucket, as well as the total number of
+buckets per shift and per day. The required number of pellets to be
+processed and the cost of electricity are also indicated.
+
+The listed changes and additions are made in the form of separate
+fragment programs and independent programs and will be included in the
+system software being developed.
+
+\emph{\textbf{Acknowledgment.}} \emph{Research were carried out within
+the framework of the Grant Financing Project No. AP19679153 ``Research
+and development of method and technologies for creating composite
+structures with built-in photonic sensors PSBC (Photonic Smart Bragg
+Composites)'' Institute of Information and Computational Technologies of
+the Science Committee of the Ministry of Science and Higher Education of
+the Republic of Kazakhstan.}
+
+\emph{\textbf{Sources of funding for research presented in a scientific
+article or scientific article itself.}}
+
+This work is supported by grant from the Ministry of Science and Higher
+Education of the Republic of Kazakhstan within the framework of the
+Grant Financing Project No. AP19679153 ``Research and development of a
+method and technology for creating composite structures with built-in
+photonic sensors PSBC (Photonic Smart Bragg Composites)'', Institute of
+Information and Computational Technologies CS MSHE RK.
+
+\textbf{References}
+
+1.Malfliet A., Lotfian S., Scheunis L., Petkov V., Pandelaers L., Jones
+P.T., Blanpain B. Degradation mechanisms and use of refractory linings
+in copper production processes // Journal of the European Ceramic
+Society. A critical review.- 2014.- Vol.34, Iss.3. - P. 849-876.
+https://doi.org/10.1016/j.jeurceramsoc.2013.10.005
+
+2.Cheng P., Herreros P., Lalpuria M., Grossmann I. Optimal scheduling of
+copper concentrate operations under uncertainty.//Computers \& Chemical
+Engineering.-2020.- Vol.140, 106919.
+doi.org/10.1016/j.compchemeng.2020.106919
+
+3.Guimarães F.Y., Santos I.D., Dutra J.B. Direct recovery of~copper~from
+printed circuit boards (PCBs) powder~concentrate~by a simultaneous
+electroleaching--electrodeposition~process.//
+Hydrometallurgy.-2014.-Vol. 149.- P. 63-70.
+https://doi.org/10.1016/j.hydromet.2014.06.005
+
+4.Zhai Q.,Runqing Lui. Simultaneous recovery of arsenic and copper from
+copper smelting slag by flotation: Redistribution behavior and toxicity
+investigation. Journal of Cleaner Production. -2023.-Vol. 425, 138811
+https://doi.org/10.1016/j.jclepro.2023.138811
+
+5.Imanbekova U., Hotra O., Koshimbayev S. K., Popiel P., Tanas J.
+Optimal control of blending and melting of copper concentrates.//
+Proceedings of SPIE-The International Society for Optical Engineering
+.-2015, 966246. DOI:10.1117/12.2205446
+
+6.Rubanenko O. O., Komar V. O., Petrushenko O. Y., Smolarz A., Smailova
+S., Imanbekova U., Determinition of similatiry criteria in optimization
+tasks by means of neuro-fuzzy modelling. //Journal Przegląd
+Elektrotechniczny.-2017.-Vol. 1(3).- P.95-98.
+DOI:10.15199/48.2017.03.226.
+
+7. Hotra O.Z., Koshimbayev S.K., Imanbekova U.N. Modelling in Matlab
+using fuzzy logic for improving the economic factors of melting of
+copper concentrate charge.// Actual problems of
+economics.-2014.-Vol.11.-P. 380-387.
+
+8. Da-wei~Wang,~Yan-jie~Liang. Comprehensive recovery of zinc, iron and
+copper from copper slag by co-roasting with SO2--O2./ Journal of
+Materials Research and Technology.-2022.- Vol.19.-P.2546-2555.
+https://doi.org/10.1016/j.jmrt.2022.05.177
+
+9. Istadi I., Bindar Y. Improved cooler design of~electric~arc furnace
+refractory in mining industry using thermal analysis modeling and
+simulation.//Applied Thermal Engineering.- 2014.- Vol.73, Iss.1.-
+P.1129-1140. https://doi.org/10.1016/j.applthermaleng.2014.08.070
+
+10.Imanbekova U., Hotra O., Koshimbayev S., Optimal control of copper
+concentrate blending and melting based on intelligent systems.// Journal
+Przegląd Elektrotechniczny.2016.-Vol.8.- P.125-128.
+doi:10.15199/48.2016.08.34
+
+\emph{\textbf{Information about authors}}
+
+Ulzhan Imanbekova - PhD, Associate Professor, Almaty University of Power
+Engineering and Telecommunications named after G.Daukeyev, Almaty,
+Kazakhstan, e-mail: uli.08@mail.ru;
+
+Aliya Kalizhanova- Professor, Institute of Information and Computational
+Technologies CS MSHE RK, Almaty University of Power Engineering and
+Telecommunications named after G.Daukeyev, Almaty, Kazakhstan,e-mail:
+kalizhanova.aliya@gmail.com;
+
+Ainur Kozbakova- PhD, Institute of Information and Computational
+Technologies CS MSHE RK, Almaty Technological University, Almaty,
+Kazakhstan, e-mail: ainur79@mail.ru;
+
+Aliya Imanbekova- Senior Lecturer, M. H. Dulati Taraz Regional
+University, Taraz, Kazakhstan, e-mail: aleka.12@mail.ru;
+
+Anar Utegenova -PhD, Institute of Information and Computational
+Technologies CS MSHE RK, Almaty University of Power Engineering and
+Telecommunications named after G.Daukeyev, Almaty, Kazakhstan, e-mail:
+an.utegenova@aues.kz
+
+\emph{\textbf{Сведения об авторах}}
+
+Иманбекова У. -PhD, ассоциированный профессор, Алматинский университет
+энергетики и связи им. Г. Даукеева, Алматы, Казахстан, e-mail:
+uli.08@mail.ru;
+
+Калижанова А.- к.ф.-м.н., профессор, Институт информационных и
+вычислительных технологий КН МНВО РК. Алматинский университет энергетики
+и связи им. Г. Даукеева, Алматы, Казахстан, e-mail:
+kalizhanova.aliya@gmail.com;
+
+Козбакова А. - PhD, Институт информационных и вычислительных технологий
+КН МНВО РК, Алматинский технологический университет, Алматы, Казахстан,
+e-mail: ainur79@mail.ru;
+
+Иманбекова А.-старший преподаватель, Таразский региональный университет
+им.М. Х. Дулати, Тараз, Казахстан, e-mail: aleka.12@mail.ru;
+
+Утегенова А. -- PhD, Институт информационных и вычислительных технологий
+КН МНВО РК. Алматинский университет энергетики и связи им. Г. Даукеева,
+Алматы, Казахстан, e-mail: an.utegenova@aues.kz
