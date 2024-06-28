@@ -308,25 +308,16 @@ Block 4 calculates the interpolated value of the content of the i-th
 component of the j-th material of the k-th furnace to the following
 Equation 11:
 
-\begin{quote}
-\(Χ_{ijk}\lbrack n\rbrack = Χ_{ijk_{}}\lbrack\mu\rbrack - \frac{\left( Χ_{ijk}\lbrack\mu\rbrack - Χ_{ijk}\lbrack\mu\rbrack \right)\left( n - \tau_{\mu} \right)}{\tau_{\mu + 1} - \tau_{\mu}}\)
-(11)
-\end{quote}
+\begin{equation}
+Χ_{ijk}\lbrack n\rbrack = Χ_{ijk_{}}\lbrack\mu\rbrack - \frac{\left( Χ_{ijk}\lbrack\mu\rbrack - Χ_{ijk}\lbrack\mu\rbrack \right)\left( n - \tau_{\mu} \right)}{\tau_{\mu + 1} - \tau_{\mu}}
+\end{equation}
 
 Where: \(X_{ijk}\lbrack\mu\rbrack\) - the content of the i-th component
 in the j-th material for the k-th selection furnace;
 
 \(\tau_{\mu},\tau_{\mu + 1}\)- accordingly, the time of the
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/8}
-	\caption*{}
-\end{figure} and
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/8}
-	\caption*{}
-\end{figure}+1 sampling of the analyzed material
+$\mu$ and
+$\mu$+1 sampling of the analyzed material
 
 \emph{n} - discrete time, the hour for which the content of the
 \emph{i-th} component in the \emph{j-th} material is determined.
@@ -334,10 +325,9 @@ in the j-th material for the k-th selection furnace;
 Block 5 performs preliminary processing of the received information --
 smoothing to the following Equation 12:
 
-\begin{quote}
-\(\overline{C}\lbrack n\rbrack = \overline{C}\lbrack n - 1\rbrack + \frac{1}{T}\left( C\lbrack n\rbrack - C\lbrack n - 1\rbrack \right)\)
-(12)
-\end{quote}
+\begin{equation}
+\overline{C}\lbrack n\rbrack = \overline{C}\lbrack n - 1\rbrack + \frac{1}{T}\left( C\lbrack n\rbrack - C\lbrack n - 1\rbrack \right)
+\end{equation}
 
 where \(\overline{C}\lbrack n\rbrack\) - the smoothed value of the
 variable at the \emph{n-th} instant of time;
@@ -350,9 +340,9 @@ variable at the \emph{n-th} instant of time;
 Block 6 stores a sequence of values of analytical variables to the
 following Equation 13:
 
-\begin{quote}
-\(C\lbrack n - 1\rbrack,\) \emph{i = 0,1,2,\ldots,N} (13)
-\end{quote}
+\begin{equation}
+C\lbrack n - 1\rbrack, i = 0,1,2,\ldots,N
+\end{equation}
 
 where \emph{N} is the memory depth. The average values of variables are
 stored per hour, from the beginning of the shift, per shift, from the
@@ -362,12 +352,11 @@ The block diagrams of these algorithms are shown in Figure 2.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{assets/9}
-	\caption*{}
+	\includegraphics[width=0.6\textwidth]{assets/9}
+	\caption*{Figure 2 - The block diagrams of these algorithms}
 \end{figure}
 
-{\bfseries Figure 2 - The block diagrams of these algorithms}
-
+\begin{noparindent}
 Block 1. Enters the values of these variables
 \(X_{ij},\ Y_{ij},\ a_{ij}\) into the machine.
 
@@ -392,55 +381,64 @@ coefficient values are obtained.
 
 Block 10. Calculation of the optimal composition of the charge. At the
 same time, we use the "Optimization" subroutine of block 11.
+\end{noparindent}
 
 The algorithm for adapting the mathematical model of the process of
 mixing and melting copper concentrates is given below to the following
 Equations 14-25:
 
-\begin{quote}
-\(f_{FeS}^{III} = \alpha_{FeS}^{II - III}G_{FeS}^{II} - K_{C}G_{FeS} - K_{mech}G_{FeS}^{III} - \alpha_{FeS}^{III - IV}\frac{\vartheta_{K}}{H_{sl}} = 0\)
-(14)
-\end{quote}
+\begin{equation}
+f_{FeS}^{III} = \alpha_{FeS}^{II - III}G_{FeS}^{II} - K_{C}G_{FeS} - K_{mech}G_{FeS}^{III} - \alpha_{FeS}^{III - IV}\frac{\vartheta_{K}}{H_{sl}} = 0
+\end{equation}
 
-\(f_{Cu_{2}S}^{II} = \alpha_{Cu_{2}s}^{II - III}G_{Cu_{2}S}^{II} - K_{C}G_{Cu_{2}S} - G_{Cu_{2}S}G_{FeO} - K_{mech}G_{Cu_{2}S}^{III} - \alpha_{Cu_{2}S}^{III - IV}G_{Cu_{2}s}^{III}\frac{\vartheta_{K}}{H_{sl}} = 0\)
-(15)
+\begin{equation}
+f_{Cu_{2}S}^{II} = \alpha_{Cu_{2}s}^{II - III}G_{Cu_{2}S}^{II} - K_{C}G_{Cu_{2}S} - G_{Cu_{2}S}G_{FeO} - K_{mech}G_{Cu_{2}S}^{III} - \alpha_{Cu_{2}S}^{III - IV}G_{Cu_{2}s}^{III}\frac{\vartheta_{K}}{H_{sl}} = 0
+\end{equation}
 
-\begin{quote}
-\(f_{CaO}^{III} = \alpha_{CaO}^{II - III}G_{CaO} + \gamma_{CaO}^{K}G^{K} - \gamma_{CaO}G_{sl}^{m} = 0\)
-(16)
+\begin{equation}
+f_{CaO}^{III} = \alpha_{CaO}^{II - III}G_{CaO} + \gamma_{CaO}^{K}G^{K} - \gamma_{CaO}G_{sl}^{m} = 0
+\end{equation}
 
-\(f_{SO_{2}}^{III} = \alpha_{SiO_{2}}^{II - III}G_{SiO_{2}}^{II} + \gamma_{SiO_{2}}^{K}G^{K} - \gamma_{SiO_{2}}G_{sl}^{m} = 0\)
-(17)
+\begin{equation}
+f_{SO_{2}}^{III} = \alpha_{SiO_{2}}^{II - III}G_{SiO_{2}}^{II} + \gamma_{SiO_{2}}^{K}G^{K} - \gamma_{SiO_{2}}G_{sl}^{m} = 0
+\end{equation}
 
-\(f_{Cao}^{II} = \alpha_{FeO}^{II - III}G_{FeO}^{II} + \gamma_{FeO}^{K}G^{K} - \gamma_{FeO}G_{sl}^{m} = 0\)
-(18)
+\begin{equation}
+f_{Cao}^{II} = \alpha_{FeO}^{II - III}G_{FeO}^{II} + \gamma_{FeO}^{K}G^{K} - \gamma_{FeO}G_{sl}^{m} = 0
+\end{equation}
 
-\(G_{sl}^{II} = \beta_{1}G_{Cu_{2}S}^{III} + \beta_{2}G_{Cu_{2}O}^{III} + \beta_{3}G_{cp}^{III}\)
-(19)
+\begin{equation}
+G_{sl}^{II} = \beta_{1}G_{Cu_{2}S}^{III} + \beta_{2}G_{Cu_{2}O}^{III} + \beta_{3}G_{cp}^{III}
+\end{equation}
 
-\(С_{sl}^{II} = \gamma_{n}G_{Cu}^{III}\) (20)
+\begin{equation}
+С_{sl}^{II} = \gamma_{n}G_{Cu}^{III}
+\end{equation}
 
-\(F_{sl}^{II} = \rho_{sl}^{R} + k_{1}G_{SiO_{2}} + k_{2}G_{CaO} + k_{3}G_{FeO} + k_{4}t_{sl}\)
-(21)
-\end{quote}
+\begin{equation}
+F_{sl}^{II} = \rho_{sl}^{R} + k_{1}G_{SiO_{2}} + k_{2}G_{CaO} + k_{3}G_{FeO} + k_{4}t_{sl}
+\end{equation}
 
-\(f_{sl}^{II} = K_{э}\rho_{sl}^{R}I^{2} + G_{sl}^{K}С_{sl}^{к}t_{sl}^{K} - \alpha(t_{sl} - t_{m})ц_{0}С_{sl}F_{m} - \alpha(t_{sl} - t_{st})F_{st} - G_{sl}^{m}С_{sl}t_{sl} - \sum_{е}^{}\alpha_{е}^{III - IV}G_{e}C_{e}t_{sl}\frac{\vartheta_{к}}{Н_{sl}} = 0\)
-(22)
+\begin{equation}
+f_{sl}^{II} = K_{э}\rho_{sl}^{R}I^{2} + G_{sl}^{K}С_{sl}^{к}t_{sl}^{K} - \alpha(t_{sl} - t_{m})ц_{0}С_{sl}F_{m} - \alpha(t_{sl} - t_{st})F_{st} - G_{sl}^{m}С_{sl}t_{sl} - \sum_{е}^{}\alpha_{е}^{III - IV}G_{e}C_{e}t_{sl}\frac{\vartheta_{к}}{Н_{sl}} = 0
+\end{equation}
 
-\begin{quote}
-\(f_{Cu_{2}S}^{III} = \frac{\alpha_{Cu_{2}S}^{III - IV}G_{Cu_{2}S}^{III}}{H_{sl}}\vartheta_{k - \beta_{Cu_{2}S}G_{st}^{m}} = 0\)
-(23)
+\begin{equation}
+f_{Cu_{2}S}^{III} = \frac{\alpha_{Cu_{2}S}^{III - IV}G_{Cu_{2}S}^{III}}{H_{sl}}\vartheta_{k - \beta_{Cu_{2}S}G_{st}^{m}} = 0
+\end{equation}
 
-\(f_{FeS}^{II} = \frac{\alpha_{Cu_{2}S}^{III - IV}G_{Cu_{2}S}^{III}}{H_{sl}}\vartheta_{К} - \beta_{FeS}G_{st}^{вm} = 0\)
-(24)
-\end{quote}
+\begin{equation}
+f_{FeS}^{II} = \frac{\alpha_{Cu_{2}S}^{III - IV}G_{Cu_{2}S}^{III}}{H_{sl}}\vartheta_{К} - \beta_{FeS}G_{st}^{вm} = 0
+\end{equation}
 
-\(f_{Fe}^{II} = (\sum_{l}^{}{\gamma_{l}G_{st}C_{е}})t_{sl} + \alpha(t_{sl} - t_{st})F_{st} - \lambda(\frac{t_{st} - t_{sl}}{\delta})h_{st}S_{n} - \frac{\lambda'}{\delta}(t_{st} - t_{n})F_{n} = 0\)
-(25)
+\begin{equation}
+f_{Fe}^{II} = (\sum_{l}^{}{\gamma_{l}G_{st}C_{е}})t_{sl} + \alpha(t_{sl} - t_{st})F_{st} - \lambda(\frac{t_{st} - t_{sl}}{\delta})h_{st}S_{n} - \frac{\lambda'}{\delta}(t_{st} - t_{n})F_{n} = 0
+\end{equation}
 
 The block diagram of the algorithm for optimal control of the energy
 regime can be described as follows:
 
+\begin{noparindent}
 Blocks 1-6 . Collects, processes and generates mass data.
 
 Blocks 7-20. The equations of the mathematical model of the electric
@@ -522,6 +520,7 @@ should be operated.
 
 Blocks 33 - 34. An algorithm for direct control of electrode deepening
 is implemented.
+\end{noparindent}
 
 The results of processing the data obtained during the two stages of the
 tests are summarized in a table. The tests showed: the adequacy of
@@ -562,12 +561,17 @@ Institute of Information and Computational Technologies of the Science
 Committee of the Ministry of Science and Higher Education of the
 Republic of Kazakhstan.}
 
+\begin{center}
 {\bfseries References}
+\end{center}
 
+\begin{noparindent}
 1.Istadi I., Bindar Y. Improved cooler design of~electric~arc furnace
 refractory in mining industry using thermal analysis modeling and
 simulation.//Applied Thermal Engineering.- 2014.- Vol.73, Iss.1.-
-P.1129-1140. https://doi.org/10.1016/j.applthermaleng.2014.08.070
+P.1129-1140.
+
+https://doi.org/10.1016/j.applthermaleng.2014.08.070
 
 2.Imanbekova U., Hotra O., Koshimbayev S., Optimal control of copper
 concentrate blending and melting based on intelligent systems.// Journal
@@ -583,17 +587,20 @@ https://doi.org/10.1016/j.jeurceramsoc.2013.10.005
 4.Cheng P., Herreros P., Lalpuria M., Grossmann I. Optimal scheduling of
 copper concentrate operations under uncertainty.//Computers \& Chemical
 Engineering.-2020.- Vol.140, 106919.
+
 doi.org/10.1016/j.compchemeng.2020.106919
 
 5.Guimarães F.Y., Santos I.D., Dutra J.B. Direct recovery of~copper~from
-printed circuit boards (PCBs) powder~concentrate~by a simultaneous
+printed circuit boards (PCBs) powder concentrate by a simultaneous
 electroleaching--electrodeposition~process.//
 Hydrometallurgy.-2014.-Vol. 149.- P. 63-70.
+
 https://doi.org/10.1016/j.hydromet.2014.06.005
 
 6.Zhai Q.,Runqing Lui. Simultaneous recovery of arsenic and copper from
 copper smelting slag by flotation: Redistribution behavior and toxicity
 investigation. Journal of Cleaner Production. -2023.-Vol. 425, 138811
+
 https://doi.org/10.1016/j.jclepro.2023.138811
 
 7.Imanbekova U., Hotra O., Koshimbayev S. K., Popiel P., Tanas J.
@@ -614,10 +621,13 @@ economics.-2014.-Vol.11.-P. 380-387.
 10.Da-wei~Wang,~Yan-jie~Liang. Comprehensive recovery of zinc, iron and
 copper from copper slag by co-roasting with SO2--O2./ Journal of
 Materials Research and Technology.-2022.- Vol.19.-P.2546-2555.
+
 https://doi.org/10.1016/j.jmrt.2022.05.177
+\end{noparindent}
 
 \emph{{\bfseries Information about authors}}
 
+\begin{noparindent}
 U. Imanbekova -PhD, Associate Professor, Almaty University of Power
 Engineering and Telecommunications named after G.Daukeyev, Almaty,
 Kazakhstan, e-mail: uli.08@mail.ru;
@@ -638,9 +648,11 @@ A.Utegenova -PhD, Institute of Information and Computational
 Technologies CS MSHE RK, Almaty, Kazakhstan, Almaty University of Power
 Engineering and Telecommunications named after G.Daukeyev, Almaty,
 Kazakhstan, e-mail: an.utegenova@aues.kz
+\end{noparindent}
 
 \emph{{\bfseries Сведения об авторах}}
 
+\begin{noparindent}
 Иманбекова У. -PhD., ассоциированный профессор, Алматинский университет
 энергетики и связи им. Г. Даукеева, Алматы, Казахстан, e-mail:
 uli.08@mail.ru;
@@ -660,3 +672,4 @@ e-mail: ainur79@mail.ru;
 Утегенова А.-PhD Институт информационных и вычислительных технологий КН
 МНВО РК, Алматинский университет энергетики и связи им. Г. Даукеева,
 Алматы, Казахстан, e-mail: an.utegenova@aues.kz
+\end{noparindent}
