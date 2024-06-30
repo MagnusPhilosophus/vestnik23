@@ -178,12 +178,12 @@ contribute to a more informed and responsive command structure.
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{assets/10}
+        \includegraphics[height=0.7\linewidth]{assets/10}
         \caption*{a)}
     \end{subfigure}\hfill
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{assets/11}
+        \includegraphics[height=0.7\linewidth]{assets/11}
         \caption*{b)}
     \end{subfigure}
 	\caption*{Figure 1- Drone in battlefield. a) Drone take off for reconnaissance b) Information received during reconnaissance}
@@ -237,10 +237,11 @@ challenging conditions.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{assets/12}
+	\includegraphics[width=0.8\textwidth]{assets/12}
 	\caption*{Figure 2- Schematic diagram of drone operation}
 \end{figure}
 
+\begin{multicols}{2}
 The drone is shown flying at an altitude of 500 meters above the ground. The
 drone is equipped with a sensor or camera (indicated by the blue square
 on the drone), which is used to observe objects on the ground. The green
@@ -256,7 +257,28 @@ objects observed by the drone. This could be a visual representation of
 the data on a screen for an operator, or it could represent the process
 of the onboard computer classifying the objects in real-time. The
 objects are labeled as "object1", "object2", and "object3" {[}7{]}.
+\end{multicols}
 
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[height=0.9\linewidth]{assets/13}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[height=0.9\linewidth]{assets/14}
+    \end{subfigure}
+	\caption*{Figure 3 - Data annotation process}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{assets/15}
+	\caption*{Figure 4 - Flowchart of Machine Learning Process for Object Detection and Tracking}
+\end{figure}
+
+\begin{multicols}{2}
 {\bfseries Methods and Materials.} This section delves into the technical
 details of how data annotated, how these algorithms are employed and
 fused to achieve superior target recognition accuracy and reliability in
@@ -284,27 +306,6 @@ or video frame, ensuring that the model learns from accurate
 information. This step is particularly challenging in complex
 environments, where objects might be partially obscured or camouflaged.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/13}
-	\caption*{}
-\end{figure}\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/14}
-	\caption*{}
-\end{figure}
-
-{\bfseries Figure 3 - Data annotation process}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/15}
-	\caption*{}
-\end{figure}
-
-{\bfseries Figure 4 - Flowchart of Machine Learning Process for Object
-Detection and Tracking}
-
 YOLO is a state-of-the-art, real-time object detection system that
 differs significantly from traditional methods. Traditional object
 detection systems repurpose classifiers to perform detection. They apply
@@ -327,13 +328,15 @@ scaling, and flipping images to simulate various viewing conditions.
 Deep Sort is trained on a vast dataset of labeled images, which include
 various objects in different environmental conditions, ensuring
 comprehensive learning {[}14{]}.
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{assets/16}
+	\includegraphics[width=0.9\textwidth]{assets/16}
 	\caption*{}
 \end{figure}
 
+\begin{multicols}{2}
 The integration of YOLO and Deep Sort is the linchpin of our
 methodology. The process is not just about running one algorithm after
 the other but about creating a seamless, efficient pipeline where the
@@ -362,33 +365,32 @@ false positives and negatives compared to when each algorithm was used
 independently. In terms of processing speed, the integrated system
 maintained a high level of performance, making it viable for real-time
 applications in dynamic battlefield environments.
+\end{multicols}
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/17}
-	\caption*{}
-\end{figure}\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/18}
-	\caption*{}
-\end{figure}
-
-{\bfseries Figure 5 - Object identification}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/19}
-	\caption*{}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[height=0.6\linewidth]{assets/17}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[height=0.6\linewidth]{assets/18}
+    \end{subfigure}
+	\caption*{Figure 5 - Object identification}
 \end{figure}
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/20}
-	\caption*{}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[height=0.7\linewidth]{assets/20}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[height=0.7\linewidth]{assets/19}
+    \end{subfigure}
+	\caption*{Figure 6 - Multiple object identification}
 \end{figure}
 
-{\bfseries Figure 6 - Multiple object identification}
-
+\begin{multicols}{2}
 The model was subjected to rigorous testing in diverse weather
 conditions including rain, fog, and extreme brightness. The results were
 promising, demonstrating the model\textquotesingle s robustness and
@@ -397,35 +399,39 @@ and rugged terrains, the system maintained a high level of accuracy,
 reinforcing its potential for various military applications. The
 significance of this work lies in its potential to revolutionize target
 identification in complex environments.
+\end{multicols}
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/21}
-	\caption*{}
-\end{figure}\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/22}
-	\caption*{}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[height=0.75\linewidth]{assets/21}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[height=0.75\linewidth]{assets/22}
+    \end{subfigure}
+	\caption*{Figure 7 - Complex environment object detection}
 \end{figure}
-
-{\bfseries Figure 7 - Complex environment object detection}
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/23}
-	\caption*{}
-\end{figure}\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/24}
-	\caption*{}
-\end{figure}\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/25}
-	\caption*{}
+    \centering
+    \begin{subfigure}[b]{0.33\textwidth}
+        \centering
+        \includegraphics[height=0.55\linewidth]{assets/23}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.33\textwidth}
+        \centering
+        \includegraphics[height=0.55\linewidth]{assets/24}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.33\textwidth}
+        \centering
+        \includegraphics[height=0.55\linewidth]{assets/25}
+    \end{subfigure}
+	\caption*{Figure 8 - Object Tracking}
 \end{figure}
 
-{\bfseries Figure 8 - Object Tracking}
-
+\begin{multicols}{2}
 The integrated YOLO-Deep Sort model represents a significant advancement
 in the field of military reconnaissance and intelligence gathering. Its
 ability to rapidly and accurately identify and track targets in complex
@@ -448,34 +454,22 @@ technology, especially in military applications, ethical considerations
 must be addressed. The potential for misuse and the implications of
 autonomous target identification systems raise important questions that
 need to be carefully considered and regulated.
+\end{multicols}
 
-{\bfseries Table 1 -- Object Detection Accuracy Table by Environment Field}
+\begin{table}[H]
+\caption{Table 1 -- Object Detection Accuracy Table by Environment Field}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+Environment Field & Objects Detected & Correct Identifications & Detection Accuracy (\%) \\ \hline
+Steppe & 1571 & 1509 & 96.1 \\ \hline
+Forested Terrains & 250 & 239 & 95.6 \\ \hline
+Desert & 145 & 134 & 92.4 \\ \hline
+Mountainous Regions & 104 & 91 & 87.5 \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2537}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2537}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2537}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2390}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-{\bfseries Environment Field}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-{\bfseries Objects Detected}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-{\bfseries Correct Identifications}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-{\bfseries Detection Accuracy (\%)}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Steppe & 1571 & 1509 & 96.1 \\
-Forested Terrains & 250 & 239 & 95.6 \\
-Desert & 145 & 134 & 92.4 \\
-Mountainous Regions & 104 & 91 & 87.5 \\
-\end{longtable}
-
+\begin{multicols}{2}
 Table presents data on the performance of target identification in
 various complex environments. This table effectively conveys how the
 complexity of different environments impacts the effectiveness of target
@@ -501,9 +495,13 @@ accurate object identification is important. The study also identifies
 areas for future improvement, such as improving model performance when
 using lower-quality raw data and reducing computational requirements for
 broader applications.
+\end{multicols}
 
+\begin{center}
 {\bfseries References}
+\end{center}
 
+\begin{noparindent}
 1.Jemal R. Brinson, Juanje Gómez, Daniel Michaels, Stephen Kalin. Drones
 Are Changing How Wars Are Fought// The wall street Journal.-
 2024.https://www.wsj.com/world/drones-are-changing-the-way-wars-are-fought-b6cb4c46
@@ -539,6 +537,7 @@ https://doi.org/10.54097/fcis.v5i2.13146.~
 8.Qu J., \& Zhang S. Research on Video Tracking Algorithm Based on Yolo
 Target Detection.// 2023 6th International Conference on Computer
 Network, Electronic and Automation (ICCNEA).-P. 437-439.
+
 https://doi.org/10.1109/ICCNEA60107.2023.00098.
 
 9.Jiao L., Zhang F., Liu F., Yang, S., Li L., Feng Z., \& Qu, R. A
@@ -550,6 +549,7 @@ https://doi.org/10.1109/ACCESS.2019.2939201.
 10.Grebo, A., Konsa, T., Gašparović, G., \& Klarin, B. (2020).
 Application of YOLO algorithm on student UAV.// 2020 5th International
 Conference on Smart and Sustainable Technologies (SpliTech).-P. 1-6.
+
 https://doi.org/10.23919/SpliTech49282.2020.9243691.
 
 11.Gao B. Research on Two-Way Detection of YOLO V5s+Deep Sort Road
@@ -560,6 +560,7 @@ https://doi.org/10.1088/1742-6596/2303/1/012057.
 12.Yan, F., \& Xu, Y. (2021). Improved Target Detection Algorithm Based
 on YOLO.// 2021 4th International Conference on Robotics, Control and
 Automation Engineering (RCAE).- P.21-25.
+
 https://doi.org/10.1109/RCAE53607.2021.9638930.
 
 13.Hou X., Wang Y. \& Chau L. Vehicle Tracking Using Deep SORT with Low
@@ -570,24 +571,30 @@ https://doi.org/10.1109/AVSS.2019.8909903.
 14.Meimetis, D., Daramouskas, I., Perikos, I., \& Hatzilygeroudis, I.
 (2021). Real-time multiple object tracking using deep learning methods.
 //Neural Computing and Applications.-2021.-Vol. 35(1).-P. 89-118.
+
 https://doi.org/10.1007/s00521-021-06391-y.
 
 15.Belmouhcine A., Simon J., Courtrai L. \& Lefèvre S. Robust Deep
 Simple Online Real-Time Tracking.// 2021 12th International Symposium on
 Image and Signal Processing and Analysis (ISPA).-P 138-144.
+
 https://doi.org/10.1109/ISPA52656.2021.9552062
+\end{noparindent}
 
 \emph{{\bfseries Information about the authors}}
 
+\begin{noparindent}
 Karim A.- Kazakh-British Technical University, Bachelor, Almaty,
 Kazakhstan, ORCID ID: 0009-0008-7355-2099, e-mail: ad\_karim@kbtu.kz;
 
 Muhammad I.- Kazakh-British Technical University, PhD, Professor,
 Almaty, Kazakhstan,ORCID ID: 0000-0001-7555-3839, e-mail:
 m.ilyas@kbtu.kz
+\end{noparindent}
 
 \emph{{\bfseries Сведение об авторах}}
 
+\begin{noparindent}
 Карим А. -Казахский-Британский Технический Университет, бакалавр,
 Алматы, Казахстан, ORCID ID: 0009-0008-7355-2099, e-mail:
 ad\_karim@kbtu.kz;
@@ -595,3 +602,4 @@ ad\_karim@kbtu.kz;
 Мухаммад И.- Казахский-Британский Технический Университет,PhD,
 профессор, Алматы, Казахстан, ORCID ID: 0000-0001-7555-3839, e-mail:
 m.ilyas@kbtu.kz
+\end{noparindent}

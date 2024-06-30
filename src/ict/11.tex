@@ -1,13 +1,15 @@
 {\bfseries IRSTI 28.23.37}
 
-{\bfseries STUDY OF THE REPRESENTATIVENESS OF KAZAKH LANGUAGE CORPORA BY
+\sectionwithauthors{Т.Р Жабаев, У.А.Тукеев}{STUDY OF THE REPRESENTATIVENESS OF KAZAKH LANGUAGE CORPORA BY
 WORD STEMS FOR THE SUMMARIZATION TASK}
 
+\begin{center}
 {\bfseries Т.Р Жабаев, У.А.Тукеев}
 
 Kazakh National University named after al-Farabi, Almaty, Kazakhstan,
 
 е-mail:talgat14430@gmail.com
+\end{center}
 
 The aim of the work is to prove the possibility of determining the
 representativeness of a corpus for training a neural model before
@@ -33,7 +35,8 @@ training the neural model.
 {\bfseries Keywords}: neural language modeling, NLP, text summarization,
 Kazakh language, representativity, synthetic datasets.
 
-{\bfseries ЖИНАҚТАУ ТАПСЫРМАСЫ БОЙЫНША ҚАЗАҚ ТІЛІ КОРПУСЫНЫҢ СӨЗ}
+\begin{center}
+{\large\bfseries ЖИНАҚТАУ ТАПСЫРМАСЫ БОЙЫНША ҚАЗАҚ ТІЛІ КОРПУСЫНЫҢ СӨЗ}
 
 {\bfseries ТҮБІРЛЕРІ БОЙЫНША РЕПРЕЗЕНТАТИВТІЛІГІН ЗЕРТТЕУ}
 
@@ -42,6 +45,7 @@ Kazakh language, representativity, synthetic datasets.
 әл-Фараби атындағы Қазақ ұлттық университеті, Алматы, Казахстан,
 
 е-mail:talgat14430@gmail.com
+\end{center}
 
 Жұмыстың мақсаты -- ресурсты көп қажет ететін эксперименттер жүргізу
 алдында нейрондық модельді оқыту үшін корпустың репрезентативтілігін
@@ -65,9 +69,8 @@ BLEU бағалаулары қорытынды жасау барысында с�
 {\bfseries Түйін сөздер}: нейрондық тілді модельдеу, NLP, мәтінді жинақтау,
 қазақ тілі, репрезентативтілік, синтетикалық деректер жиыны
 
-{\bfseries ИССЛЕДОВАНИЕ РЕПРЕЗЕНТАТИВНОСТИ КОРПУСОВ КАЗАХСКОГО ЯЗЫКА}
-
-{\bfseries ПО СТЕМАМ СЛОВ ДЛЯ ЗАДАЧИ СУММАРИЗАЦИИ}
+\begin{center}
+{\large\bfseries ИССЛЕДОВАНИЕ РЕПРЕЗЕНТАТИВНОСТИ КОРПУСОВ КАЗАХСКОГО ЯЗЫКА ПО СТЕМАМ СЛОВ ДЛЯ ЗАДАЧИ СУММАРИЗАЦИИ}
 
 {\bfseries Т.Р.Жабаев, У.А.Тукеев}
 
@@ -75,6 +78,7 @@ BLEU бағалаулары қорытынды жасау барысында с�
 Казахстан,
 
 е-mail:talgat14430@gmail.com
+\end{center}
 
 Целью работы является доказать возможность определить до проведения
 ресурсоемких экспериментов репрезентативность корпуса для обучения
@@ -100,6 +104,7 @@ BLEU бағалаулары қорытынды жасау барысында с�
 резюмирование текста, казахский язык, репрезентативность, синтетические
 наборы данных.
 
+\begin{multicols}{2}
 {\bfseries Introduction.} To create a high-quality neural model, as is
 known, a large amount of parallel data is required, especially for
 low-resource languages. Parallel corpus is a dataset for training a
@@ -238,9 +243,11 @@ affixes - K, possessive affixes - T, case affixes - C, personal affixes
 \end{enumerate}
 
 The number of placements is determined by the formula:
+\end{multicols}
 
 \[A_{41} = \frac{4!}{(4 - 1)!} = 4;A_{42} = \frac{4!}{(4 - 2)!} = 12;A_{43} = \frac{4!}{(4 - 3)!} = 24;A_{44} = \frac{4!}{(4 - 4)!} = 24\]
 
+\begin{multicols}{2}
 We get 64 possible placements of basic types of affixes.
 
 2) Determination of semantically acceptable placement of affixes.
@@ -265,15 +272,15 @@ We will determine how the BLEU score, number of word stems and
 representativeness of the training dataset are related. The method is to
 obtain a score and the number of stems for each resulting model. Figure
 1 schematically shows the operating algorithm.
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{assets/55}
-	\caption*{}
+	\caption*{Figure 1- Algorithm of representativeness analyze}
 \end{figure}
 
-{\bfseries Figure 1- Algorithm of representativeness analyze}
-
+\begin{multicols}{2}
 Let\textquotesingle s look at the algorithm step by step:
 
 1) The dataset was divided into parts, resulting in three datasets of
@@ -307,21 +314,17 @@ the text is readable and does not have repetition of words. \hl{}
 Table 1 shows data on training datasets. Under the number of stems means
 the number of unique stems. This data shows how our datasets in size.
 
-{\bfseries Table 1 - Train datasets statistics}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3200}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2801}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4000}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-{\bfseries train dataset} & {\bfseries stems} & {\bfseries strings} \\
-Full model & 80137 & 240000 \\
-Medium model & 26347 & 104772 \\
-Short model & 18580 & 50000 \\
-\end{longtable}
+\begin{table}[H]
+\caption*{Table 1 - Train datasets statistics}
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+train dataset & stems & strings \\ \hline
+Full model & 80137 & 240000 \\ \hline
+Medium model & 26347 & 104772 \\ \hline
+Short model & 18580 & 50000 \\ \hline
+\end{tabular}
+\end{table}
 
 \emph{Training a neural network.} For training we use a transformer
 model, trained with standard parameters for 12 epochs. Training dataset
@@ -335,21 +338,17 @@ in the Kazakh language. The number words and unique word stems of the
 source part of the files that were used for inference are given in the
 table. 2.
 
-{\bfseries Table2 - Summary statistics for test files}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5254}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4746}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-{\bfseries test file} & {\bfseries stems} \\
-test text 1 & 168 \\
-test text 2 & 386 \\
-test text 3 & 86 \\
-\end{longtable}
-
+\begin{table}[H]
+\caption*{Table2 - Summary statistics for test files}
+\centering
+\begin{tabular}{|l|l|}
+\hline
+test file & stems \\ \hline
+test text 1 & 168 \\ \hline
+test text 2 & 386 \\ \hline
+test text 3 & 86 \\ \hline
+\end{tabular}
+\end{table}
 This data is necessary in order to assess how much the text has been
 reduced and how representative the text is after summarization. Let us
 consider the ratios of scores and the number of word stems obtained by
@@ -363,10 +362,8 @@ score of 35, Short model has a BLEU score of 28.88. Lowest number of
 stems in a Short model - 78 stems, that is, a reduction of 54 percent
 and at the same time the BLEU score decreased by 2 times.
 
-\begin{quote}
 Next the second file: Full model - 62.60, Medium model - 55, Short model
 - 37.45. Lowest value of stems - Short model reduction by 33 percent.
-\end{quote}
 
 The third file: Full model - 55. Medium model - 55 and Short model -
 25.82. Word stems - Short model by 40 percent.
@@ -381,40 +378,21 @@ almost the same results as the Medium model. The best results are on the
 second file which contains the largest amount of stems and it has the
 best BLEU scores in all three tests. There is a strong drop in ratings
 on file 3, which is the smallest in size.
+\end{multicols}
 
-{\bfseries Table 3 - BLEU scores and sample sizes by model}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1434}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1019}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1054}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1451}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1675}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1244}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2124}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\multirow{2}{*}{{\bfseries test source file}} & \multicolumn{2}{l}{%
-{\bfseries Medium model}} & \multicolumn{2}{l}{%
-{\bfseries Full model stems}} & \multicolumn{2}{l@{}}{%
-{\bfseries Short model}} \\
-& {\bfseries Stems} & {\bfseries BLUE} & {\bfseries stems} & {\bfseries BLUE} &
-{\bfseries stems} & {\bfseries BLUE} \\
-test text 1 & 106 & 35.72 & 119 & 60.39 & 78 & 28.88 \\
-test text 2 & 284 & 55.74 & 306 & 62.60 & 257 & 37.45 \\
-test text 3 & 78 & 54 & 72 & 58 & 51 & 25.82 \\
-\end{longtable}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/56}
-	\caption*{}
-\end{figure}
-
-{\bfseries Figure 2 - Resulting scores with the number of stems in test
-files}
+\begin{table}[H]
+\caption*{Table 3 - BLEU scores and sample sizes by model}
+\centering
+\begin{tabular}{|l|ll|ll|ll|}
+\hline
+\multirow{2}{*}{test source file} & \multicolumn{2}{l|}{Medium model} & \multicolumn{2}{l|}{Full model stems} & \multicolumn{2}{l|}{Short model} \\ \cline{2-7}
+ & \multicolumn{1}{l|}{Stems} & BLUE & \multicolumn{1}{l|}{stems} & BLUE & \multicolumn{1}{l|}{stems} & BLUE \\ \hline
+test text 1 & \multicolumn{1}{l|}{106} & 35.72 & \multicolumn{1}{l|}{119} & 60.39 & \multicolumn{1}{l|}{78} & 28.88 \\ \hline
+test text 2 & \multicolumn{1}{l|}{284} & 55.74 & \multicolumn{1}{l|}{306} & 62.60 & \multicolumn{1}{l|}{257} & 37.45 \\ \hline
+test text 3 & \multicolumn{1}{l|}{78} & 54 & \multicolumn{1}{l|}{72} & 58 & \multicolumn{1}{l|}{51} & 25.82 \\ \hline
+\end{tabular}
+\end{table}
 
 On all test files, the difference in the number of stems differs
 slightly and all three files are reduced by approximately the same
@@ -441,38 +419,25 @@ sentence reductions by each model. As we see in the case of the Short
 model, we have the shortest summarization in the first and second
 sentence.
 
-{\bfseries Table 4 - Example of the received text on test file}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{assets/56}
+	\caption*{Figure 2 - Resulting scores with the number of stems in test files}
+\end{figure}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-{\bfseries Оriginal sentence} & {\bfseries Medium model} & {\bfseries Short
-model} & {\bfseries Full model} \\
-Шетелде демалу бізге керемет жаңа көңіл күй сыйлайды әрі күнделікті
-күйбең тіршіліктен біршама демалуға мүмкіндік береді. & Шетелде демалу
-бізге керемет жаңа көңіл күй әрі күнделікті күйбең тіршіліктен біршама
-демалуға мүмкіндік береді. & Ол демалу біршама біршама мүмкіндік
-мүмкіндік береді. & Фитнес-турлар - дене жаттығулары мен дүниежүзін
-саяхаттауды біріктіретін турлардың жалпы атауы. \\
-Егер сіз спортты сүйсеңіз, саяхаттау кезінде әрі пайдалы іспен
-айналысып, әрі саяхаттап ерекше демалатын боласыз. & Егер сіз спортты
-сүйсеңіз, саяхаттау кезінде әрі пайдалы іспен айналысып, әрі саяхаттап
-ерекше демалатын & Егер сіз спортты сүйсеңіз, ашылуы кезінде басталады.
-& Егер сіз спортты сүйсеңіз, саяхаттау кезінде әрі пайдалы іспен
-айналысып, әрі келді, ерекше демалатын боласыз. \\
-Фитнес-турлар -- дене жаттығулары мен дүниежүзін саяхаттауды
-біріктіретін турлардың жалпы атауы. & Фитнес-турлар - дене жаттығулары
-мен дүниежүзін & Фитнес-турлар - дене шынықтыру мен дүниежүзін
-біріктіретін турлардың жалпы атауы. & Фитнес-турлар - дене жаттығулары
-мен дүниежүзін саяхаттауды біріктіретін турлардың жалпы атауы. \\
-\end{longtable}
+\begin{table}[H]
+\caption*{Table 4 - Example of the received text on test file}
+\centering
+\begin{tabular}{|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
+\hline
+Оriginal sentence & Medium model & Short model & Full model \\ \hline
+Шетелде демалу бізге керемет жаңа көңіл күй сыйлайды әрі күнделікті күйбең тіршіліктен біршама демалуға мүмкіндік береді. & Шетелде демалу бізге керемет жаңа көңіл күй әрі күнделікті күйбең тіршіліктен біршама демалуға мүмкіндік береді. & Ол демалу біршама біршама мүмкіндік мүмкіндік береді. & Фитнес-турлар - дене жаттығулары мен дүниежүзін саяхаттауды біріктіретін турлардың жалпы атауы. \\ \hline
+Егер сіз спортты сүйсеңіз, саяхаттау кезінде әрі пайдалы іспен айналысып, әрі саяхаттап ерекше демалатын боласыз. & Егер сіз спортты сүйсеңіз, саяхаттау кезінде әрі пайдалы іспен айналысып, әрі саяхаттап ерекше демалатын & Егер сіз спортты сүйсеңіз, ашылуы кезінде басталады. & Егер сіз спортты сүйсеңіз, саяхаттау кезінде әрі пайдалы іспен айналысып, әрі келді, ерекше демалатын боласыз. \\ \hline
+Фитнес-турлар – дене жаттығулары мен дүниежүзін саяхаттауды біріктіретін турлардың жалпы атауы. & Фитнес-турлар - дене жаттығулары мен дүниежүзін & Фитнес-турлар - дене шынықтыру мен дүниежүзін біріктіретін турлардың жалпы атауы. & Фитнес-турлар - дене жаттығулары мен дүниежүзін саяхаттауды біріктіретін турлардың жалпы атауы. \\ \hline
+\end{tabular}
+\end{table}
 
+\begin{multicols}{2}
 {\bfseries Conclusion}. In this work, the initial research hypothesis was:
 is it possible to determine the representativeness of the training
 dataset before conducting resource-intensive experiments on training a
@@ -500,9 +465,13 @@ resources, i.e. for low-resource languages. Since the summarization
 problem belongs to the class of Sequence-to-Sequence problems, the
 conclusion of this work can be extended to other problems of this class:
 machine translation and other natural language processing tasks.
+\end{multicols}
 
+\begin{center}
 {\bfseries References}
+\end{center}
 
+\begin{noparindent}
 1.Leech G., Aijmer K., Altenberg B. The state of the art in corpus
 linguistics. English corpus linguistics: studies in honour of Jan
 Svartvik. London:Longman.-1991. -P.8-29
@@ -559,6 +528,7 @@ DOI:10.26599/TST.2021.9010060
 11.Maruyama T., Yamamoto K. Extremely Low Resource Text Simplification
 with Pre-Trained Transformer Language Model // International Journal of
 Asian Language Processing.-2020.-Vol.30(01):205001 DOI
+
 10.1142/S2717554520500010
 
 12.Parida S., Motlicek P. Abstract Text Summarization: A Low Resource
@@ -577,6 +547,7 @@ DOI:10.1109/ComPE53109.2021.9751919
 14.Paddington C., Cleghorn C.W. Improving transformer model translation
 for low resource South African languages using BERT. 2021 IEEE Symposium
 Series on Computational Intelligence (SSCI). DOI
+
 10.1109/SSCI50451.2021.9659923
 
 15.Alami N., Meknassi M., Ouatik S.A., Ennahnahi N.Impact of stemming on
@@ -616,23 +587,30 @@ Aligning sentences from standard wikipedia to simple wikipedia.
 //Conference of the North American Chapter of the Association for
 Computational Linguistics:Human Language Technologies. -2015.- P.
 211-217. DOI:10.3115/v1/N15-1022
+\end{noparindent}
 
-\begin{quote}
 \emph{{\bfseries Information about the authors}}
-\end{quote}
 
+\begin{noparindent}
 Zhabaev T.R.- мaster, Al-Farabi KazNU, Almaty, Kazakhstan, e-mail:
 ltalgat14430@gmail.com;
 
 Tukeyev U.A.- Doctor of Technical Sciences, Professor, Al-Farabi KazNU,
-Almaty, Kazakhstan e-mail: ualsher.tukeyev@gmail.com
+Almaty, Kazakhstan e-mail:
 
-\begin{quote}
+ualsher.tukeyev@gmail.com
+\end{noparindent}
+
 \emph{{\bfseries Сведения об авторах}}
-\end{quote}
 
+\begin{noparindent}
 Жабаев Т.Р.- магистр, кафедра ``Информационные системы'', КазНУ имени
-аль-Фараби,e-mail: talgat14430@gmail.com;
+аль-Фараби,e-mail:
+
+talgat14430@gmail.com;
 
 Тукеев У.А.- доктор технических наук, профессор, КазНУ имени аль-Фараби,
-e-mail: ualsher.tukeyev@gmail.com
+e-mail:
+
+ualsher.tukeyev@gmail.com
+\end{noparindent}

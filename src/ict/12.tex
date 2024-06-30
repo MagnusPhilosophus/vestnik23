@@ -1,8 +1,8 @@
 IRSTI 28.23.15
 
-{\bfseries TRAFFIC SIGN RECOGNITION IN CHALLENGING WEATHER CONDITIONS USING
-CONVOLUTIONAL NEURAL NETWORKS}
+\sectionwithauthors{Zh.A. Batyr, B.S. Omarov, G.Z. Ziyatbekova, A.D. Mailybayeva}{TRAFFIC SIGN RECOGNITION IN CHALLENGING WEATHER CONDITIONS USING CONVOLUTIONAL NEURAL NETWORKS}
 
+\begin{center}
 {\bfseries \textsuperscript{1}Zh.A. Batyr, \textsuperscript{1}B.S. Omarov,
 \textsuperscript{1}G.Z. Ziyatbekova, \textsuperscript{2}A.D.
 Mailybayeva}
@@ -14,6 +14,7 @@ Kazakhstan,
 Kazakhstan,
 
 е-mail: ziyatbekova1@gmail.com
+\end{center}
 
 The ability of autonomous driving systems to recognize traffic signs in
 a variety of environmental conditions is crucial to their reliability.
@@ -45,7 +46,8 @@ advancements in precise and dependable road sign recognition technology.
 Keywords: CNN, traffic sign detection, artificial intelligence, image
 analysis, classification
 
-{\bfseries РАСПОЗНАВАНИЕ ДОРОЖНЫХ ЗНАКОВ В СЛОЖНЫХ ПОГОДНЫХ УСЛОВИЯХ С
+\begin{center}
+{\large\bfseries РАСПОЗНАВАНИЕ ДОРОЖНЫХ ЗНАКОВ В СЛОЖНЫХ ПОГОДНЫХ УСЛОВИЯХ С
 ИСПОЛЬЗОВАНИЕМ СВЕРТОЧНЫХ НЕЙРОННЫХ СЕТЕЙ}
 
 {\bfseries \textsuperscript{1}Ж.А. Батыр, \textsuperscript{1}Б.С. Омаров,
@@ -58,6 +60,7 @@ analysis, classification
 Атырау, Казахстан,
 
 е-mail: ziyatbekova1@gmail.com
+\end{center}
 
 В исследовании рассматривается использование сверточных нейронных сетей
 (CNN) для улучшения систем распознавания дорожных знаков, особенно в
@@ -86,7 +89,8 @@ CNN, используется расширенный набор данных н�
 {\bfseries Ключевые слова:} CNN, распознавание дорожных знаков,
 искусственный интеллект, анализ изображений, классификация.
 
-{\bfseries КОНВОЛЮЦИЯЛЫҚ НЕЙРОНДЫҚ ЖЕЛІЛЕРДІ КӨМЕГІМЕН ҚИЫН АУА-РАЙЫ
+\begin{center}
+{\large\bfseries КОНВОЛЮЦИЯЛЫҚ НЕЙРОНДЫҚ ЖЕЛІЛЕРДІ КӨМЕГІМЕН ҚИЫН АУА-РАЙЫ
 ЖАҒДАЙЛАРЫНДА ЖОЛ БЕЛГІЛЕРІН ТАНУ}
 
 {\bfseries \textsuperscript{1}Ж.А. Батыр, \textsuperscript{1}Б.С. Омаров,
@@ -99,6 +103,7 @@ CNN, используется расширенный набор данных н�
 Атырау, Қазақстан,
 
 е-mail: ziyatbekova1@gmail.com
+\end{center}
 
 Зерттеу жол белгілерін тану жүйелерін жақсарту үшін, әсіресе қиын
 ауа-райында, конволюциялық нейрондық желілерді (CNN) пайдалануды
@@ -125,6 +130,7 @@ CNN, используется расширенный набор данных н�
 {\bfseries Түйін сөздер:} CNN, жол белгілерін анықтау, жасанды интеллект,
 кескінді талдау, жіктеу.
 
+\begin{multicols}{2}
 {\bfseries Introduction.} Traffic sign recognition is a critical component
 in the development of intelligent transportation systems and autonomous
 vehicles. Accurate detection and interpretation of road signs enable
@@ -179,15 +185,15 @@ between 15x15 and 222x193 pixels. All these images were taken in real
 environment, including bad weather conditions and different light
 illumination. Some images are low resolution and can be difficult to
 recognize.
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{assets/57}
-	\caption*{}
+	\caption*{Figure 1- The 43 traffic sign classes in the dataset}
 \end{figure}
 
-{\bfseries Figure 1- The 43 traffic sign classes in the dataset}
-
+\begin{multicols}{2}
 Existing datasets are limited in terms of their size and challenging
 condition coverage, which motivated us to augment images using image
 augmentation methods. To simulate adverse weather conditions, additional
@@ -223,15 +229,15 @@ methods. By using these augmentation techniques, our training dataset
 was enriched with a variety of challenging conditions, preparing the CNN
 model to perform reliably in diverse and unpredictable real-world
 environments.
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{assets/58}
-	\caption*{}
+	\caption*{Figure 2 - Applying augmentations to traffic sign image}
 \end{figure}
 
-{\bfseries Figure 2 - Applying augmentations to traffic sign image}
-
+\begin{multicols}{2}
 These augmentation methods not only diversified the training dataset but
 also significantly contributed to the model\textquotesingle s ability to
 generalize from the training data to real-world scenarios, ensuring
@@ -245,15 +251,15 @@ library. 80\% of the data was used for training and 20\% for testing.
 Fig. 3 illustrates the architectural design of the proposed
 Convolutional Neural Network (CNN) for traffic sign recognition,
 showcasing a network structure comprised of 12 layers.
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{assets/59}
-	\caption*{}
+	\includegraphics[width=0.6\textwidth]{assets/59}
+	\caption*{Figure 3- Applying augmentations to traffic sign image}
 \end{figure}
 
-{\bfseries Figure 3- Applying augmentations to traffic sign image}
-
+\begin{multicols}{2}
 The initial input to this model consists of color images sized at 30x30
 pixels. CNN model contains 4 convolutional layers, max pooling, dropout
 and flatten layers. The output of last fully connected layer is fed to a
@@ -304,42 +310,33 @@ Finally, to enhance the accuracy and approach the ideal output, the
 softmax function is used in the output dense layer, yielding the
 probability of each class, where the recognized traffic sign is
 determined. Fig. 4 shows accuracy and loss of the model.
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{assets/60}
-	\caption*{}
+	\caption*{Figure 4 - Model accuracy and loss after training}
 \end{figure}
 
-{\bfseries Figure 4 - Model accuracy and loss after training}
-
+\begin{multicols}{2}
 Table 1 shows the some of the quality indicators that are used to
 evaluate test data in the model training stage. As an overall
 performance measure, the global accuracy metric showed a great
 achievement with an average of 95\% in the context of the test data.
 
-\begin{quote}
-{\bfseries Table 1 - Evaluation metrics after training stage}
-\end{quote}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2495}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2046}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1820}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1820}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1820}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-& {\bfseries Precision} & {\bfseries Recall} & {\bfseries F1-score} &
-{\bfseries Support} \\
-{\bfseries Class 1} & 0,98 & 0,95 & 0,97 & 60 \\
-{\bfseries Class 2} & 0,85 & 0,97 & 0,91 & 720 \\
-{\bfseries Class 3} & 0,98 & 0,89 & 0,94 & 750 \\
-{\bfseries Class 4} & 0,88 & 0,85 & 0,87 & 450 \\
-{\bfseries Class 5} & 0,99 & 0,89 & 0,94 & 660 \\
-\end{longtable}
+\begin{table}[H]
+\caption*{Table 1 - Evaluation metrics after training stage}
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+ & Precision & Recall & F1-score & Support \\ \hline
+Class 1 & 0,98 & 0,95 & 0,97 & 60 \\ \hline
+Class 2 & 0,85 & 0,97 & 0,91 & 720 \\ \hline
+Class 3 & 0,98 & 0,89 & 0,94 & 750 \\ \hline
+Class 4 & 0,88 & 0,85 & 0,87 & 450 \\ \hline
+Class 5 & 0,99 & 0,89 & 0,94 & 660 \\ \hline
+\end{tabular}
+\end{table}
 
 Additionally, a more thorough evaluation metric for the first class in
 the task of classifying traffic signs produced the following significant
@@ -442,9 +439,13 @@ that can work well in despite of environmental challenges. This
 development represents a step toward the eventualization of completely
 autonomous cars that can navigate safely under any circumstance,
 improving transportation efficiency and road safety.
+\end{multicols}
 
+\begin{center}
 {\bfseries References}
+\end{center}
 
+\begin{noparindent}
 1.Escalera A. de la, Armingol J.M., Mata M. Traffic sign recognition and
 analysis for intelligent vehicles // Image and vision computing.
 -2003.-Vol. 21(3). - Р. 247-258. DOI 10.1016/S0262-8856(02)00156-7
@@ -459,7 +460,9 @@ recognition // Procedia engineering. -2017. -Vol. 201. -Р. 718-725. DOI
 10.1016/j.proeng.2017.09.594
 
 4.Haloi, M. Traffic sign classification using deep inception based
-convolutional networks. -2016. DOI 10.48550/arXiv.1511.02992
+convolutional networks. -2016. DOI
+
+10.48550/arXiv.1511.02992
 
 5.Nguwi, Y.Y., Kouzani, A.Z. Detection and classification of road signs
 in natural environments // Neural Comput, 2008. - Vol. 17. - Р.
@@ -527,7 +530,9 @@ HOG feature extraction // Journal of Measurements in Engineering. -
 17.Feng, L., \& Jia, Y. Traffic sign recognition based on YOLOX in
 extreme weather // In 2022 Global Conference on Robotics, Artificial
 Intelligence and Information Technology (GCRAIT). -2022. - Р. 299-303.
-DOI: 10.1109/GCRAIT55928.2022.00070
+DOI:
+
+10.1109/GCRAIT55928.2022.00070
 
 18.Luo, H., Yang, Y., Tong, B., Wu, F., \& Fan, B. Traffic sign
 recognition using a multi-task convolutional neural network // IEEE
@@ -544,9 +549,11 @@ Tomizuka, L., Li, Z., Yuan, C., Wang \& Luo, P. Sparse R-CNN: End-to-end
 object detection with learnable proposals // Proceedings of the IEEE/CVF
 conference on computer vision and pattern recognition. -2021.-
 https://doi.org/10.48550/arXiv.2011.12450
+\end{noparindent}
 
 \emph{{\bfseries Information about the authors}}
 
+\begin{noparindent}
 Zh.Batyr - graduate student at Al-Farabi Kazakh National University,
 e-mail: zhan.batyr01@gmail.com;
 
@@ -559,18 +566,27 @@ University, Corresponding author; e-mail: ziyatbekova1@gmail.com;
 A/Mailybayeva -Candidate of Physical and Mathematical Sciences,
 Associate Professor of the Department of Informatics, Khalel
 Dosmukhamedov Atyrau University, e-mail: mjkka@mail.ru
+\end{noparindent}
 
 \emph{{\bfseries Сведения об авторах}}
 
+\begin{noparindent}
 Батыр Ж.А.докторант Казахского национального университета имени
-аль-Фараби, e-mail: zhan.batyr01@gmail.com;
+аль-Фараби,
+
+e-mail: zhan.batyr01@gmail.com;
 
 Омаров Б.С.- PhD, доцент, Казахский национальный университет имени
-аль-Фараби, e-mail: batyahan@gmail.com;
+аль-Фараби,
+
+e-mail: batyahan@gmail.com;
 
 Зиятбекова Г.З.PhD - и.о. доцента Казахского национального университета
-имени аль-Фараби, e-mail: ziyatbekova1@gmail.com;
+имени аль-Фараби,
+
+e-mail: ziyatbekova1@gmail.com;
 
 Майлыбаева А.Д.-кандидат физико-математических наук, ассоциированный
 профессор кафедры Информатики, Атырауский университет имени Халела
 Досмухамедова, e-mail: mjkka@mail.ru
+\end{noparindent}

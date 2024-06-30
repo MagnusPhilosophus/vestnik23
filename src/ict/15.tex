@@ -1,13 +1,11 @@
 IRSTI 20.15.05
 
-{\bfseries DEVELOPMENT AND APPLICATION OF AN INTEGRATED INFORMATION MODEL
+\sectionwithauthors{А.Tynykulova, A.Mukhanova, A.Mukhomedyarova, A.Khamzina, Zh.Bagisov}{DEVELOPMENT AND APPLICATION OF AN INTEGRATED INFORMATION MODEL
 FOR OPTIMIZING LAND USE AND FORECASTING YIELDS IN AGRICULTURAL
 PRODUCTION}
 
-{\bfseries \textsuperscript{1,2}А.Tynykulova,
-\textsuperscript{1}A.Mukhanova},
-{\bfseries \textsuperscript{3}A.Mukhomedyarova,}
-{\bfseries \textsuperscript{4}A.Khamzina, \textsuperscript{4}Zh.Bagisov}
+\begin{center}
+{\bfseries \textsuperscript{1,2}А.Tynykulova, \textsuperscript{1}A.Mukhanova, \textsuperscript{3}A.Mukhomedyarova, \textsuperscript{4}A.Khamzina, \textsuperscript{4}Zh.Bagisov}
 
 \textsuperscript{1}L.N. Gumilyov Eurasian National University, Astana,
 Kazakhstan,
@@ -21,6 +19,7 @@ University, Uralsk, Kazakhstan,
 Kazakhstan,
 
 e-mail: asem\_110981@mail.ru,
+\end{center}
 
 The paper presents the development of a conceptual information model for
 optimizing land use and crop forecasting in agriculture, implemented
@@ -75,7 +74,8 @@ indicators to optimize land use.
 {\bfseries Keywords:} information model, optimization, PHP, Javascript,
 MYSQL, optimization tasks, logistics, production, economic profit.
 
-{\bfseries ЖЕРДІ ПАЙДАЛАНУДЫ ОҢТАЙЛАНДЫРУ ЖӘНЕ АУЫЛ ШАРУАШЫЛЫҒЫ
+\begin{center}
+{\large\bfseries ЖЕРДІ ПАЙДАЛАНУДЫ ОҢТАЙЛАНДЫРУ ЖӘНЕ АУЫЛ ШАРУАШЫЛЫҒЫ
 ӨНДІРІСІНДЕГІ ӨНІМДІЛІКТІ БОЛЖАУ ҮШІН ИНТЕГРАЦИЯЛАНҒАН АҚПАРАТТЫҚ
 МОДЕЛЬДІ ӘЗІРЛЕУ ЖӘНЕ ҚОЛДАНУ}
 
@@ -95,6 +95,7 @@ MYSQL, optimization tasks, logistics, production, economic profit.
 Орал, Қазақстан,
 
 e-mail: asem\_110981@mail.ru
+\end{center}
 
 Жұмыста PHP бағдарламалау тілі, Javascript және MySQL дерекқорды басқару
 жүйесі арқылы жүзеге асырылатын жерді пайдалануды оңтайландыру және ауыл
@@ -131,7 +132,8 @@ e-mail: asem\_110981@mail.ru
 {\bfseries Түйін сөздер:} ақпараттық модель, оңтайландыру, PHP, Javascript,
 MYSQL, оңтайландыру міндеттері, логистика, өндіріс, экономикалық пайда.
 
-{\bfseries Разработка и применение интегрированной информационной модели
+\begin{center}
+{\large\bfseries Разработка и применение интегрированной информационной модели
 для оптимизации землепользования и прогнозирования урожайности в
 сельскохозяйственном производстве}
 
@@ -151,6 +153,7 @@ MYSQL, оңтайландыру міндеттері, логистика, өнд
 Уральск, Казахстан,
 
 e-mail: asem\_110981@mail.ru
+\end{center}
 
 В работе представлена разработка концептуальной информационной модели
 для оптимизации землепользования и прогнозирования урожая в сельском
@@ -190,6 +193,7 @@ Javascript и системы управления базами данных MYSQ
 Javascript, MYSQL, задачи оптимизации, логистика, производство,
 экономическая прибыль.
 
+\begin{multicols}{2}
 {\bfseries Introduction.} Over the past twenty years, land conflicts among
 various land users have become more frequent. These conflicts have
 devastating consequences for society, including the loss of lives and
@@ -379,9 +383,15 @@ improving the efficiency and sustainability of agricultural production.
 The issues facing peasant farming include low productivity, inefficient
 resource use, high risks, and food security, which is clearly
 demonstrated in Figure 1.
+\end{multicols}
 
-{\bfseries Figure 1 - The main problems of an agronomist (peasant economy)}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{assets/1002}
+	\caption*{Figure 1 - The main problems of an agronomist (peasant economy)}
+\end{figure}
 
+\begin{multicols}{2}
 All of the above factors influence the optimal use of land to build an
 information model.
 
@@ -392,155 +402,44 @@ region.
 Table 1 shows data on weather conditions during the sowing period, which
 shows the frequency of 15 days, which are divided into two columns, that
 is, the dates 01.05 - 15.05 and 16.05 - 30.05.
+\end{multicols}
 
-{\bfseries Table 1 - Statistical agrometeorological data for the last 5
-years (data from the weather station of the village of Saumalkol in the
-Ayyrtau district of the North Kazakhstan region)}
+\begin{table}[H]
+\caption*{Table 1 - Statistical agrometeorological data for the last 5 years (data from the weather station of the village of Saumalkol in the Ayyrtau district of the North Kazakhstan region)}
+\centering
+\begin{tabular}{|r|l|rr|rr|rr|rr|rr|}
+\hline
+\multicolumn{1}{|l|}{\multirow{2}{*}{№}} & \multirow{2}{*}{Indicators} & \multicolumn{2}{r|}{2019}                                           & \multicolumn{2}{r|}{2020}                                           & \multicolumn{2}{r|}{2021}                                           & \multicolumn{2}{r|}{2022}                                           & \multicolumn{2}{r|}{2023}                                           \\ \cline{3-12}
+\multicolumn{1}{|p{0.045\textwidth}|}{}                   &                             & \multicolumn{1}{p{0.045\textwidth}|}{01.05-15.05} & \multicolumn{1}{p{0.045\textwidth}|}{16.05-30.045} & \multicolumn{1}{p{0.045\textwidth}|}{01.05-15.05} & \multicolumn{1}{p{0.045\textwidth}|}{16.05-30.045} & \multicolumn{1}{p{0.045\textwidth}|}{01.05-15.05} & \multicolumn{1}{p{0.045\textwidth}|}{16.05-30.045} & \multicolumn{1}{p{0.045\textwidth}|}{01.05-15.05} & \multicolumn{1}{p{0.045\textwidth}|}{16.05-30.045} & \multicolumn{1}{p{0.045\textwidth}|}{01.05-15.05} & \multicolumn{1}{p{0.045\textwidth}|}{16.05-30.045} \\ \hline
+1                                        & Temperature, 0C             & \multicolumn{1}{r|}{12}          & 13                               & \multicolumn{1}{r|}{18}          & 20                               & \multicolumn{1}{r|}{21}          & 22                               & \multicolumn{1}{r|}{20}          & 17                               & \multicolumn{1}{r|}{17}          & 20                               \\ \hline
+2                                        & Precipitation, мм           & \multicolumn{1}{r|}{0,4}         & 0,3                              & \multicolumn{1}{r|}{0,8}         & 0                                & \multicolumn{1}{r|}{0}           & 0,2                              & \multicolumn{1}{r|}{1}           & 0                                & \multicolumn{1}{r|}{0,1}         & 0                                \\ \hline
+3                                        & Air humidity, \%            & \multicolumn{1}{r|}{36}          & 40                               & \multicolumn{1}{r|}{43,5}        & 27,6                             & \multicolumn{1}{r|}{37,8}        & 39                               & \multicolumn{1}{r|}{36}          & 23                               & \multicolumn{1}{r|}{27}          & 30                               \\ \hline
+4                                        & Wind speed, m/s             & \multicolumn{1}{r|}{2,6}         & 3                                & \multicolumn{1}{r|}{7,3}         & 4,6                              & \multicolumn{1}{r|}{6,1}         & 5,5                              & \multicolumn{1}{r|}{5,2}         & 4                                & \multicolumn{1}{r|}{7}           & 5,5                              \\ \hline
+\end{tabular}%
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.0443}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.1435}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.0811}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.0811}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.0811}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.0811}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.0030}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.0791}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.0811}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.0811}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.0811}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.0811}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.0796}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 26\tabcolsep) * \real{0.0014}}@{}}
-\toprule\noalign{}
-\multirow{2}{*}{\begin{minipage}[b]{\linewidth}\raggedright
-№
-\end{minipage}} &
-\multirow{2}{*}{\begin{minipage}[b]{\linewidth}\raggedright
-Indicators
-\end{minipage}} & \multicolumn{2}{l}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-2019
-\end{minipage}} & \multicolumn{3}{l}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-2020
-\end{minipage}} & \multicolumn{2}{l}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-2021
-\end{minipage}} & \multicolumn{2}{l}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-2022
-\end{minipage}} & \multicolumn{2}{l}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-2023
-\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} \\
-& & \begin{minipage}[b]{\linewidth}\raggedright
-01.05-15.05
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-16.05-30.05
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-01.05-15.05
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-16.05-30.05
-\end{minipage} & \multicolumn{2}{l}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-01.05-15.05
-\end{minipage}} & \begin{minipage}[b]{\linewidth}\raggedright
-16.05-30.05
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-01.05-15.05
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-16.05-30.05
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-01.05-15.05
-\end{minipage} & \multicolumn{2}{l@{}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-16.05-30.05
-\end{minipage}} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-1 & Temperature, \textsuperscript{0}C & +12 & +13 & +18 & +20 &
-\multicolumn{2}{l}{%
-+21} & +22 & +20 & +17 & +17 & \multicolumn{2}{l@{}}{%
-+20} \\
-2 & Precipitation, мм & 0,4 & 0,3 & 0,8 & 0 & \multicolumn{2}{l}{%
-0} & 0,2 & 1 & 0 & 0,1 & \multicolumn{2}{l@{}}{%
-0} \\
-3 & Air humidity, \% & 36 & 40 & 43,5 & 27,6 & \multicolumn{2}{l}{%
-37,8} & 39 & 36 & 23 & 27 & \multicolumn{2}{l@{}}{%
-30} \\
-4 & Wind speed, m/s & 2,6 & 3 & 7,3 & 4,6 & \multicolumn{2}{l}{%
-6,1} & 5,5 & 5,2 & 4 & 7 & \multicolumn{2}{l@{}}{%
-5,5} \\
-\end{longtable}
-
+\begin{multicols}{2}
 It is during these dates that crops such as wheat, barley, corn and
 alfalfa are actively sown in the area. We will not focus on any culture,
 but data is important to us for further decision-making of the
 information model. From Table 1, we see the average daily temperature,
 humidity, etc. for favorable sowing.
+\end{multicols}
 
-{\bfseries Table 2 - Statistical data on spring wheat crops in the Ayyrtau
-district of North Kazakhstan region over the past 5 years}
+\begin{table}[H]
+\caption*{Table 2 - Statistical data on spring wheat crops in the Ayyrtau district of North Kazakhstan region over the past 5 years}
+\centering
+\begin{tabular}{|l|p{0.2\textwidth}|llllp{0.1\textwidth}|}
+\hline
+\multirow{2}{*}{№} & \multirow{2}{*}{Indicators}           & \multicolumn{5}{l|}{Sown area of spring wheat}                                                                                                                                                                                                                                                                                                                                                                                                              \\ \cline{3-7}
+                   &                                       & \multicolumn{1}{l|}{2019}                                                                    & \multicolumn{1}{l|}{2020}                                                                            & \multicolumn{1}{l|}{2021}                                                                    & \multicolumn{1}{l|}{2022}                                                         & 2023                                                               \\ \hline
+1                  & Date of sowing                        & \multicolumn{1}{l|}{05.05-15.05}                                                             & \multicolumn{1}{l|}{05.05-25.05}                                                                     & \multicolumn{1}{l|}{10.05-15.05}                                                             & \multicolumn{1}{l|}{05.05-20.05}                                                  & 05.05-20.05                                                        \\ \hline
+2                  & Variety                               & \multicolumn{1}{p{0.1\textwidth}|}{Omsk 36 Akmola 2 Astana} & \multicolumn{1}{p{0.15\textwidth}|}{Omsk 36 Shortandinskaya 95 improved} & \multicolumn{1}{p{0.1\textwidth}|}{Omsk 36 Timas Asyl Sapa} & \multicolumn{1}{p{0.1\textwidth}|}{Omsk 36 Akmola 2} & Omsk 36 Virgin land 60 \\ \hline
+4                  & The area of sowing, thousand hectares & \multicolumn{1}{l|}{276,4}                                                                   & \multicolumn{1}{l|}{282,1}                                                                           & \multicolumn{1}{l|}{290,3}                                                                   & \multicolumn{1}{l|}{295,7}                                                        & 301,2                                                              \\ \hline
+\end{tabular}%
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.0420}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1398}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1515}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1515}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1818}}@{}}
-\toprule\noalign{}
-\multirow{2}{*}{\begin{minipage}[b]{\linewidth}\raggedright
-№
-\end{minipage}} &
-\multirow{2}{*}{\begin{minipage}[b]{\linewidth}\raggedright
-Indicators
-\end{minipage}} &
-\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.8182} + 8\tabcolsep}@{}}{%
-\begin{minipage}[b]{\linewidth}\raggedright
-Sown area of spring wheat
-\end{minipage}} \\
-& & \begin{minipage}[b]{\linewidth}\raggedright
-2019
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-2020
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-2021
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-2022
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-2023
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-1 & Date of sowing & 05.05-15.05 & 05.05-25.05 & 10.05-15.05 &
-05.05-20.05 & 05.05-20.05 \\
-2 & Variety & Omsk 36
-
-Akmola 2
-
-Astana & Omsk 36
-
-Shortandinskaya 95 improved & Omsk 36
-
-Timas
-
-Asyl Sapa & Omsk 36
-
-Akmola 2 & Omsk 36
-
-Virgin land 60 \\
-4 & The area of sowing, thousand hectares & 276,4 & 282,1 & 290,3 &
-295,7 & 301,2 \\
-\end{longtable}
-
+\begin{multicols}{2}
 As we can see from Table 2, it takes a lot of time to process digital
 data. The analysis of the table leads to the fact that there are several
 varieties of spring wheat, and sowing proceeds in a chaotic, in our
@@ -566,9 +465,15 @@ visually see the result in the form of yield values in tons {[}11,
 12{]}. The general type of information flows is considered on the
 example of a farm, in other cases, information flows occur according to
 the same principle. A preview is shown in Figure 2.
+\end{multicols}
 
-{\bfseries Figure 2 - General view of information flows}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{assets/1003}
+	\caption*{Figure 2 - General view of information flows}
+\end{figure}
 
+\begin{multicols}{2}
 When developing an information model for optimizing agricultural land,
 it is possible to identify the main factors affecting the efficiency and
 economic profit of each site. 10 tables have been developed that provide
@@ -597,15 +502,15 @@ platform, performance issues and other technical aspects {[}14{]}. The
 conceptual data model is documented using ER diagrams and a data
 dictionary. Figure 3 shows an ER diagram of the LIS database data, which
 shows entities, attributes, and relationships.
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{assets/70}
-	\caption*{}
+	\caption*{Figure 3 - LIS database schema}
 \end{figure}
 
-{\bfseries Figure 3 - LIS database schema}
-
+\begin{multicols}{2}
 Figure 3 illustrates the relationships between the tables of the system.
 The research presented in the paper was aimed at studying user
 requirements and developing the architecture of the proposed Land
@@ -660,15 +565,15 @@ Figure 4 shows the structure of the database that is used in the system.
 It contains information about weather conditions affecting agriculture,
 the types of crops that can be grown in specific conditions, and the
 financial situation of agricultural enterprises.
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{assets/71}
-	\caption*{}
+	\includegraphics[width=0.9\textwidth]{assets/71}
+	\caption*{Figure 4 - Sql database}
 \end{figure}
 
-{\bfseries Figure 4 - Sql database}
-
+\begin{multicols}{2}
 The use of an optimization system makes it possible to increase the
 efficiency of agricultural production, reduce the risks associated with
 weather conditions and other factors, as well as increase the profits of
@@ -692,15 +597,15 @@ The server calculates which cultures are similar to the sites of our
 user and outputs them to the client side. According to the results of
 testing the information model of the system, the following results were
 recorded.
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{assets/72}
-	\caption*{}
+	\includegraphics[width=0.9\textwidth]{assets/72}
+	\caption*{Figure 5 - Scenario on the level of restrictions on sowing}
 \end{figure}
 
-{\bfseries Figure 5 - Scenario on the level of restrictions on sowing}
-
+\begin{multicols}{2}
 The proposed system is a revolutionary tool that radically simplifies
 the tasks of land use and assessment. It provides reliable and secure
 storage for working with huge amounts of land data in real time.
@@ -769,9 +674,13 @@ of automation of agricultural structures by software of the appropriate
 level when making a decision. The model can be used by farmers to
 increase the profitability of their farms and optimize the use of
 resources.
+\end{multicols}
 
+\begin{center}
 {\bfseries References}
+\end{center}
 
+\begin{noparindent}
 1.Charity Mugabi Challenges Facing Land Ownership in Rural Tanzania:
 What needs to be done?
 
@@ -790,6 +699,7 @@ Sustainability. - Abuja, Nigeria, 2013.-P.6-10.{[}Google Scholar{]}
 
 4.Flanagan D. JavaScript: The Definitive Guide, 7th Edition.-2020. ISBN:
 9781491952023.
+
 https://www.oreilly.com/library/view/javascript-the-definitive/9781491952016/.
 
 5.Forta B. MySQL: The Complete Reference. Crash Course 1st Edition.
@@ -846,9 +756,11 @@ ISBN 978-0-13-149735-1.
 16.Nicholas C. Zakas High Performance JavaScript: Build Faster Web
 Application Interfaces: 1st Edition// Yahoo Press, 2012.-232P. ISBN:
 978-5-93286-213-1.
+\end{noparindent}
 
 \emph{{\bfseries Information about the authors}}
 
+\begin{noparindent}
 Tynykulova A.S. - doctoral student of the L.N. Gumilyov Eurasian
 National University, Master of Computer Science, Senior Lecturer of the
 Astana International University, Astana, Kazakhstan, e-mail:
@@ -868,12 +780,16 @@ akmaral\_abilk@mail.ru;
 
 Bagisov Zh.Zh. - Master, doctor of DBA, M. Utemisov West Kazakhstan
 University, Uralsk, Kazakhstan, e-mail: Bag\_8585@mail.ru.
+\end{noparindent}
 
 \emph{{\bfseries Сведения об авторах}}
 
+\begin{noparindent}
 Тыныкулова А.С. - докторант Евразийского национального университета им.
 Л.Н. Гумилева, магистр информатики, старший преподаватель Международного
-университета Астана, Астана, Казахстан, e-mail asem\_110981@mail.ru;
+университета Астана, Астана, Казахстан,
+
+e-mail: asem\_110981@mail.ru;
 
 Муханова А.А. - PhD, ассоциированный профессор, Евразийский национальный
 университет им. Л.Н. Гумилева, Астана, Казахстан, е-mail
@@ -890,3 +806,4 @@ e-mail: akmaral\_abilk@mail.ru;
 
 Багисов Ж.Ж. - магистр, доктор DBA, Западно-Казахстанский университет
 им. М. Утемисова, Уральск, Казахстан, e-mail: Bag\_8585@mail.ru.
+\end{noparindent}

@@ -1,10 +1,8 @@
 МРНТИ 20.15.05;81.93.29
 
-{\bfseries A COMPREHENSIVE APPROACH TO ENHANCING THE RESILIENCE OF}
+\sectionwithauthors{Ye. Kaiupov, A.Mukanova, A.Nazyrova, B.Tashtai, T.Toleubekov}{A COMPREHENSIVE APPROACH TO ENHANCING THE RESILIENCE OF INFORMATION SYSTEMS: FROM MATHEMATICAL MODELING TO RISK MANAGEMENT STRATEGIES}
 
-{\bfseries INFORMATION SYSTEMS: FROM MATHEMATICAL MODELING TO RISK
-MANAGEMENT STRATEGIES}
-
+\begin{center}
 {\bfseries \textsuperscript{1, 2}Ye. Kaiupov,
 \textsuperscript{2}A.Mukanova, \textsuperscript{2}A.Nazyrova,
 \textsuperscript{1}B.Tashtai, \textsuperscript{1}T.Toleubekov}
@@ -15,6 +13,7 @@ Kazakhstan,
 \textsuperscript{2}Аstana International University, Astana, Kazakhstan,
 
 e-mail: yerik.kai@gmail.com
+\end{center}
 
 This article discusses the issue of improving the reliability of
 information systems. The main focus is on mathematical analysis methods
@@ -43,10 +42,9 @@ level of reliability is absolutely necessary.
 parameters, network resources reliability, failure, network operation
 level.
 
-{\bfseries АҚПАРАТТЫҚ ЖҮЙЕЛЕРДІҢ ТҰРАҚТЫЛЫҒЫН АРТТЫРУДЫҢ КЕШЕНДІ ТӘСІЛІ:
-МАТЕМАТИКАЛЫҚ МОДЕЛЬДЕУДЕН ТӘУЕКЕЛДЕРДІ БАСҚАРУ}
-
-{\bfseries СТРАТЕГИЯСЫНА ДЕЙІН}
+\begin{center}
+{\large\bfseries АҚПАРАТТЫҚ ЖҮЙЕЛЕРДІҢ ТҰРАҚТЫЛЫҒЫН АРТТЫРУДЫҢ КЕШЕНДІ ТӘСІЛІ:
+МАТЕМАТИКАЛЫҚ МОДЕЛЬДЕУДЕН ТӘУЕКЕЛДЕРДІ БАСҚАРУ СТРАТЕГИЯСЫНА ДЕЙІН}
 
 {\bfseries \textsuperscript{1, 2}Е.Қайупов, \textsuperscript{2}Ә.Мұқанова,
 \textsuperscript{2}А.Назырова,\textsuperscript{1}Б.Таштай,
@@ -58,6 +56,7 @@ level.
 \textsuperscript{2}Астана халықаралық университеті, Астана, Қазақстан,
 
 e-mail: yerik.kai@gmail.com
+\end{center}
 
 Бұл мақалада ақпараттық жүйелердің сенімділігін арттыру мәселесі
 қарастырылады. Деректер алмасу жүйелеріндегі ақауларға төзімділікті
@@ -86,7 +85,8 @@ e-mail: yerik.kai@gmail.com
 диагностикасы, желілік ресурстардың сенімділігі, істен шығуы, желінің
 жұмыс деңгейі.
 
-{\bfseries КОМПЛЕКСНЫЙ ПОДХОД К ПОВЫШЕНИЮ УСТОЙЧИВОСТИ ИНФОРМАЦИОННЫХ
+\begin{center}
+{\large\bfseries КОМПЛЕКСНЫЙ ПОДХОД К ПОВЫШЕНИЮ УСТОЙЧИВОСТИ ИНФОРМАЦИОННЫХ
 СИСТЕМ: ОТ МАТЕМАТИЧЕСКОГО МОДЕЛИРОВАНИЯ ДО СТРАТЕГИЙ УПРАВЛЕНИЯ
 РИСКАМИ}
 
@@ -100,6 +100,7 @@ e-mail: yerik.kai@gmail.com
 \textsuperscript{2} Международный университет Астана, астана, Казахстан,
 
 e-mail: yerik.kai@gmail.com
+\end{center}
 
 В данной статье рассматривается вопрос повышения надежности
 информационных систем. Основное внимание уделяется методам
@@ -129,6 +130,7 @@ e-mail: yerik.kai@gmail.com
 сети, надежность сетевых ресурсов, отказы, уровень функционирования
 сети.
 
+\begin{multicols}{2}
 {\bfseries Introduction.} In the modern world, where information technology
 plays a leading role in various spheres of human activity, the
 reliability of information systems becomes a critically important
@@ -308,7 +310,28 @@ component failures and their impact on overall operability. A system of
 differential equations is used to describe the dynamics of system state
 changes, the solution of which allows estimating the probabilities of
 the system being in each of the possible states over time.
+\end{multicols}
 
+\begin{table}[H]
+\caption*{Table 1 - Important components of Information systems (IS)}
+\centering
+\begin{tabular}{|l|l|p{0.4\textwidth}|l|}
+\hline
+№ & Component & Function & Criticality Level \\ \hline
+1 & Database Server & Data storage, management, and processing & High \\ \hline
+2 & Communication Equipment & Ensuring data transmission between network devices & Medium \\ \hline
+3 & Application Server & Running business applications and services & High \\ \hline
+4 & Data Storage Systems & Centralized storage of large volumes of data & High \\ \hline
+5 & Backup Systems & Data recovery after failures & High \\ \hline
+6 & Network Routers and Switches & Traffic routing and network flow management & Medium \\ \hline
+7 & Security Systems (Firewall, IDS/IPS) & Network protection against unauthorized access and attacks & High \\ \hline
+8 & Data Processing Centers (DPC) & Physical and software support of IT infrastructure & High \\ \hline
+9 & End-User Devices (PCs, Laptops) & User access to applications and data & Medium \\ \hline
+10 & Cloud Computing Services & Flexible scaling and resource provisioning & Medium \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{multicols}{2}
 Modeling the fault tolerance of information systems using the proposed
 mathematical model enables the identification of the most vulnerable
 elements of the system, assess the risks of potential failures, and
@@ -320,47 +343,6 @@ quality of service for end-users.
 
 Table 1 presents the critically important components of information
 systems (IS), their main functions, and the level of criticality.
-
-{\bfseries Table 1 - Important components of Information systems (IS)}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0640}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3227}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.4171}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1962}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-{\bfseries №}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-{\bfseries Component}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-{\bfseries Function}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-{\bfseries Criticality Level}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-1 & Database Server & Data storage, management, and processing & High \\
-2 & Communication Equipment & Ensuring data transmission between network
-devices & Medium \\
-3 & Application Server & Running business applications and services &
-High \\
-4 & Data Storage Systems & Centralized storage of large volumes of data
-& High \\
-5 & Backup Systems & Data recovery after failures & High \\
-6 & Network Routers and Switches & Traffic routing and network flow
-management & Medium \\
-7 & Security Systems (Firewall, IDS/IPS) & Network protection against
-unauthorized access and attacks & High \\
-8 & Data Processing Centers (DPC) & Physical and software support of IT
-infrastructure & High \\
-9 & End-User Devices (PCs, Laptops) & User access to applications and
-data & Medium \\
-10 & Cloud Computing Services & Flexible scaling and resource
-provisioning & Medium \\
-\end{longtable}
 
 This classification emphasizes the importance of various IS components
 in ensuring their stable and reliable operation. Components with a high
@@ -375,38 +357,36 @@ operation, an inefficient state of the IS is characterized by problems
 including delays, malfunctions, and complete failures. Additionally,
 within the scope of the study, various categories of errors that can
 lead to system failures can be identified, as detailed in Figure 2.
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{assets/43}
-	\caption*{}
+	\includegraphics[width=0.6\textwidth]{assets/43}
+	\caption*{Figure 1 - Characteristics of the functioning of the IS}
 \end{figure}
-
-{\bfseries Figure 1 - Characteristics of the functioning of the IS}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{assets/44}
-	\caption*{}
+	\includegraphics[width=0.6\textwidth]{assets/44}
+	\caption*{Figure 2 - Errors that can lead to failures And}
 \end{figure}
 
-{\bfseries Figure 2 - Errors that can lead to failures And}
-
+\begin{multicols}{2}
 In the framework of system-technical analysis, information systems are
 considered as integrated structures consisting of interconnected and
 interacting levels. The key elements of such systems are system and
 application software, database management systems, as well as a set of
 functions and services responsible for data transmission, storage and
 processing (Figure 3).
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{assets/45}
-	\caption*{}
+	\caption*{Figure 3- Information systems}
 \end{figure}
 
-{\bfseries Figure 3- Information systems}
-
+\begin{multicols}{2}
 When developing reliable and fault-tolerant information systems and
 networks, significant attention is dedicated to minimizing the time and
 resources required for the recovery and replacement of failed
@@ -453,18 +433,15 @@ it is assumed that a failure can occur at any level of its operation at
 any given time, including the local level, the network environment
 level, or the level of system\textquotesingle s critically significant
 nodes (Figure 4).
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{assets/46}
-	\caption*{}
+	\caption*{Figure 4 - Schematic representation of the hierarchy of failure states of an information system with modeling based on Markov chains}
 \end{figure}
 
-{\bfseries Figure 4 - Schematic representation of the hierarchy of failure
-states of an information system with}
-
-{\bfseries modeling based on Markov chains}
-
+\begin{multicols}{2}
 In the process of developing a model and evaluating the characteristics
 of network fault tolerance, it is assumed that the information system at
 certain points in time may experience a failure at one of the levels of
@@ -624,9 +601,13 @@ information systems. The use of mathematical modeling based on Markov
 chains allows for a more in-depth analysis of the processes taking place
 in the IP and the development of effective risk management strategies
 related to potential failures.
+\end{multicols}
 
+\begin{center}
 {\bfseries References}
+\end{center}
 
+\begin{noparindent}
 1.Nikscresht M. et al. Impact of selective implementation on soft error
 detection through low-level re-execution //2021 IEEE Intl Conf on
 Dependable, Autonomic and Secure Computing, Intl Conf on Pervasive
@@ -661,7 +642,9 @@ DOI:10.1109/ACCESS.2021.3077190
 6.Siddique A., Basu K., Hoque K. A. Exploring fault-energy trade-offs in
 approximate DNN hardware accelerators // 2021 22nd International
 Symposium on Quality Electronic Design (ISQED).-IEEE.- 2021.- P.
-343-348. DOI:10.1109/ISQED51717.2021.9424345
+343-348.
+
+DOI:10.1109/ISQED51717.2021.9424345
 
 7.Baloch N. K., Baig M. I., Daneshtalab M. Defender: A low overhead and
 efficient fault-tolerant mechanism for reliable on-chip router // IEEE
@@ -672,6 +655,7 @@ DOI:~10.1109/ACCESS.2019.2944490
 8.Isik M. et al. A design methodology for fault-tolerant computing using
 astrocyte neural networks // Proceedings of the 19th ACM International
 Conference on Computing Frontiers. -2022.- P.169-172.
+
 DOI:10.1145/3528416.3530232
 
 9.Cohen A. et al. Secure multi-source multicast // IEEE Transactions on
@@ -741,16 +725,20 @@ DOI:10.1109/ITW44776.2019.8989083
 23.Stănescu D. et al. Cover processing-based steganographic model with
 improved security // Acta Polytechnica Hungarica.- 2019.-Vol.16.(1)-
 P.227-246.
+\end{noparindent}
 
 \emph{{\bfseries Information about the authors}}
 
+\begin{noparindent}
 Kaiupov Ye. K. {\bfseries -} doctoral student, L. N. Gumilev Eurasian
 National University,Astana, Kazakhstan,
 
 е-mail: yerik.kai@gmail.com;
 
 Mukanova А. - PhD, аssoc. professor of the Astana International
-University, Astana, Kazakhstan, е-mail: asiserikovna@gmail.com;
+University, Astana, Kazakhstan,
+
+е-mail: asiserikovna@gmail.com;
 
 Nazyrova A. - senior lecturer of the Astana International University,
 Astana, Kazakhstan,
@@ -763,9 +751,11 @@ University, Astana, Kazakhstan, е-mail: 93bahti93@gmail.com;
 Toleubekov Т. - is a senior lecturer at the Eurasian National
 University. L.N. Gumilyov,Astana, Kazakhstan, е-mail:
 toleubekovtm@gmail.com
+\end{noparindent}
 
 \emph{{\bfseries Сведения об авторах}}
 
+\begin{noparindent}
 Кайупов Е.К. {\bfseries -}докторант Евразийского национального университета
 им. Л. Н. Гумилева, Астана, Казахстан, е-mail: yerik.kai@gmail.com;
 
@@ -782,3 +772,4 @@ toleubekovtm@gmail.com
 Толеубеков Т.-старший преподаватель Евразийского национального
 университета им. Л.Н. Гумилева, Астана, Казахстан,
 е-mail:toleubekovtm@gmail.com
+\end{noparindent}

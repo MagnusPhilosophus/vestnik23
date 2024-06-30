@@ -1,7 +1,8 @@
 IRSTI 50.47.00
 
-{\bfseries THE USE OF DIGITAL TECHNOLOGIES FOR INTELLIGENT TRAFFIC MANAGEMENT}
+\sectionwithauthors{A.D.Tulegulov , K.M. Akishev, D.S.Zhamangarin, B.O.Sataev}{THE USE OF DIGITAL TECHNOLOGIES FOR INTELLIGENT TRAFFIC MANAGEMENT}
 
+\begin{center}
 {\bfseries A.D.Tulegulov , K.M. Akishev, D.S.Zhamangarin, B.O.Sataev}
 
 K. Kulazhanov Kazakh University of Technology and Business,
@@ -9,6 +10,7 @@ K. Kulazhanov Kazakh University of Technology and Business,
 Astana, Kazakhstan,
 
 е-mail: tad62@ya.ru
+\end{center}
 
 The purpose of the study is to develop, with the help of artificial
 intelligence, an innovative digital microcontroller network traffic
@@ -32,7 +34,8 @@ negative congestion in the center of Almaty and its expressways.
 artificial intelligence, machine vision, microcontroller, system
 analysis, simulation modeling.
 
-{\bfseries КӨЛІК АҒЫНДАРЫН ИНТЕЛЛЕКТУАЛДЫ БАСҚАРУ ҮШІН ЦИФРЛЫҚ
+\begin{center}
+{\large\bfseries КӨЛІК АҒЫНДАРЫН ИНТЕЛЛЕКТУАЛДЫ БАСҚАРУ ҮШІН ЦИФРЛЫҚ
 ТЕХНОЛОГИЯЛАРДЫ ПАЙДАЛАНУ}
 
 {\bfseries А.Д. Тулегулов,К.М. Акишев, Д.С. Жамангарин, Б.О. Сатаев}
@@ -42,6 +45,7 @@ analysis, simulation modeling.
 Астана, Қазақстан,
 
 е-mail: tad62@ya.ru
+\end{center}
 
 Зерттеудің мақсаты-жасанды интеллект көмегімен қиылыстың жүктемесіне
 бейімделе жауап беруге және көршілес бағдаршам нысандарымен өзара
@@ -66,7 +70,8 @@ analysis, simulation modeling.
 интеллект, машиналық көру, микроконтроллер, жүйелік талдау, Имитациялық
 модельдеу.
 
-{\bfseries ПРИМЕНЕНИЕ ЦИФРОВЫХ ТЕХНОЛОГИЙ ДЛЯ ИНТЕЛЛЕКТУАЛЬНОГО УПРАВЛЕНИЯ
+\begin{center}
+{\large\bfseries ПРИМЕНЕНИЕ ЦИФРОВЫХ ТЕХНОЛОГИЙ ДЛЯ ИНТЕЛЛЕКТУАЛЬНОГО УПРАВЛЕНИЯ
 ТРАНСПОРТНЫМИ ПОТОКАМИ}
 
 {\bfseries А.Д.Тулегулов,К.М. Акишев, Д.С. Жамангарин, Б.О.Сатаев}
@@ -76,6 +81,7 @@ analysis, simulation modeling.
 Астана, Казахстан,
 
 е-mail: tad62@ya.ru
+\end{center}
 
 Цель исследования состоит в разработке с помощью искусственного
 интеллекта инновационного цифрового микроконтроллерного сетевого
@@ -100,7 +106,8 @@ analysis, simulation modeling.
 искусственный интеллект, машинное зрение, микроконтроллер, системный
 анализ, имитационное моделирование.
 
-{\bfseries Introduction}\emph{.} The global experience in the development
+\begin{multicols}{2}
+{\bfseries Introduction}. The global experience in the development
 of modern digital technologies for information exchange and the use of
 intelligent control systems in the automotive industry has led to a
 significant change in scientific, technological and practical approaches
@@ -243,21 +250,15 @@ digital traffic light controllers based on Siemens microcontrollers in
 network design. There are few examples in the technical literature and
 practice of creating traffic light controllers as IoT devices. In
 Russian science and practice, these works are in their infancy.
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{assets/73}
-	\caption*{}
+	\includegraphics[width=0.6\textwidth]{assets/73}
+	\caption*{Figure 1 - Forecast for 2024 of the processes of development of congestion on the central roads in the city of Almaty (overview of the current situation of congestion in Almaty according to the data yandex.kz )}
 \end{figure}
 
-{\bfseries Figure 1 - Forecast for 2024 of the processes of development of
-congestion on the central roads in}
-
-{\bfseries the city of Almaty (overview of the current situation of
-congestion in Almaty according}
-
-{\bfseries to the data yandex.kz )}
-
+\begin{multicols}{2}
 The creation of collective intelligent traffic light controllers
 integrated with the Scada system in an automated traffic management
 system using advanced simulation of processes in the AnyLogic
@@ -272,18 +273,15 @@ of smart traffic light facilities that will be able to monitor the
 traffic situation dynamically and allow automating optimal decisions by
 dispatchers of the central traffic control panel of the megapolis
 (Fig.2).
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{assets/74}
-	\caption*{}
+	\includegraphics[width=0.5\textwidth]{assets/74}
+	\caption*{Figure 2 - Graph of traffic flow during rush hour from east to west in Almaty along Abai, Satpayev and Shevchenko streets}
 \end{figure}
 
-{\bfseries Figure 2 - Graph of traffic flow during rush hour from east to
-west in Almaty along Abai,}
-
-{\bfseries Satpayev and Shevchenko streets}
-
+\begin{multicols}{2}
 Pilot research works on the introduction of smart traffic lights are
 being carried out in the cities of Almaty and Astana. Creating a local
 smart traffic light that works autonomously without taking into account
@@ -352,43 +350,61 @@ In addition, the road condition is taken into account by calculating the
 braking time for a given coefficient of friction (obtained from images
 on the roads). This braking time is subtracted from the braking distance
 of the vehicle and used as an additional safety indicator.:
+\end{multicols}
 
 ``min''
-\(f(q) = max\left\{ \min\left\{ \frac{5 - q}{5},1 \right\},0 \right\};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1)\)
+\begin{equation}
+f(q) = max\left\{ \min\left\{ \frac{5 - q}{5},1 \right\},0 \right\};
+\end{equation}
 
 «zero»
-\(f(q) = max\left\{ \min\left\{ \frac{q}{5},\frac{10 - q}{5} \right\},0 \right\};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (2)\)
+\begin{equation}
+f(q) = max\left\{ \min\left\{ \frac{q}{5},\frac{10 - q}{5} \right\},0 \right\};
+\end{equation}
 
 «average»
-\(f(q) = max\left\{ \min\left\{ \frac{q - 5}{5},\frac{15 - q}{5} \right\},0 \right\};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (3)\)
+\begin{equation}
+f(q) = max\left\{ \min\left\{ \frac{q - 5}{5},\frac{15 - q}{5} \right\},0 \right\};
+\end{equation}
 
 ``max''
-\(f(q) = max\left\{ \min\left\{ \frac{q - 10}{5},1 \right\},0 \right\};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (4)\)
+\begin{equation}
+f(q) = max\left\{ \min\left\{ \frac{q - 10}{5},1 \right\},0 \right\};
+\end{equation}
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/75}
-	\caption*{}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{assets/75}
+		\caption*{a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{assets/75.1}
+		\caption*{b}
+    \end{subfigure}
 \end{figure}
-
-\begin{quote}
-а b
-\end{quote}
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{assets/76}
-	\caption*{}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{assets/76}
+		\caption*{c}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{assets/76.1}
+		\caption*{d}
+    \end{subfigure}
+	\caption*{a -- with a minimum indicator; b -- with a zero indicator; c -- with an average indicator; d -- with a maximum indicator}
+	\caption*{Figure 3 - Calculation results based on a simulation model for controlling useful signals in real time}
 \end{figure}
 
-c d
-
-\emph{a -- with a minimum indicator; b -- with a zero indicator; c --
-with an average indicator; d -- with a maximum indicator}
-
-{\bfseries Figure 3 - Calculation results based on a simulation model for
-controlling useful signals in real time}
-
+\begin{multicols}{2}
 Two consecutive images of the video sequence for the intersection in
 Almaty were processed in the work. This allows you to use video
 recordings of the dynamics of pedestrian movement and the position of
@@ -419,24 +435,22 @@ used.
 
 An electrical circuit for connecting this interface to the LOGO! 230RCE
 microcontroller was also developed (Fig. 4).
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{assets/77}
-	\caption*{}
-\end{figure}
-
-\emph{1 -- ZONeSUN 18650 battery with a capacity of 3000 mAh and a
+	\caption*{1 -- ZONeSUN 18650 battery with a capacity of 3000 mAh and a
 voltage of 3.7 volts; 2 -- a poster with a QR code on the windshield of
 a special car; 3 -- OV 2640 webcam; 4 -- ESP32 Cam microcontroller as a
 ``local server''; 5 -- mobile smartphone as a ``client''; 6 --
 reprogrammable traffic light microcontroller LOGO 230RCE; 7 -- traffic
 light; 8 -- electromechanical relay SRL-05VDC-SL-C; 9 -- DC voltage
 converter (step-up, adjustable) XL6009 from 3.7 VDC to 5 VDC}
+	\caption*{Figure 4 - Electrical diagram of the smart interface for controlling a ``smart'' traffic light using a QR code}
+\end{figure}
 
-{\bfseries Figure 4 - Electrical diagram of the smart interface for
-controlling a ``smart'' traffic light using a QR code}
-
+\begin{multicols}{2}
 To obtain permission using the QR code displayed on a mini-poster near
 the right corner of the windshield of special vehicles, it is necessary
 not only to decode the code, but also to perform a number of actions
@@ -486,71 +500,44 @@ will be longer and this information is embedded in the QR code.
 
 Below is a program in the Arduino IDE environment codes that implements
 the adaptive green wave activation algorithm:
+\end{multicols}
 
+\begin{verbatim}
 Void setup()
-
-\{
-
-Serial.begin(115200);
-
-Serial.println();
-
-pinMode(12,OUTPUT);
-
-reader.setup();
-
-Serial.println(``Setup QRCode Reader'');
-
-reader.beginOnCore(1);
-
-Serial.println(``Begin on Core 1'');
-
-\}
-
+{
+  Serial.begin(115200);
+  Serial.println();
+  pinMode(12,OUTPUT);
+  reader.setup();
+   Serial.println(“Setup QRCode Reader”);
+  reader.beginOnCore(1);
+Serial.println(“Begin on Core 1”);
+}
 void loop()
+{
+  if(millis() / 1000 – pastSeconds > 5){
+  String code = onQrCodeText();
+  int litres = ParseInt(code.substring(0, code.indexOf(‘$’)));
+  String name = code.substring(code.indexOf(‘$’) + 1);
+  Serial.print(“Seconds:”);
+  Serial.println(seconds);
+  Serial.print(“Name:”);
+  Serial.println(name);
+  digitalWrite(12, HIGH);
+  pastSeconds = millis() / 1000;
+  for(nti = 0; i < second * 2; i++){
+    Serial.print(“.”);
+    delay(500);
+  }
+  Serial.println();
+  digitalWrite(12, LOW);
+  code = “”;
+  }
+  delay(100);
+}
+\end{verbatim}
 
-\{
-
-if(millis() / 1000 -- pastSeconds \textgreater{} 5)\{
-
-String code = onQrCodeText();
-
-int litres = ParseInt(code.substring(0, code.indexOf(`\$')));
-
-String name = code.substring(code.indexOf(`\$') + 1);
-
-Serial.print(``Seconds:'');
-
-Serial.println(seconds);
-
-Serial.print(``Name:'');
-
-Serial.println(name);
-
-digitalWrite(12, HIGH);
-
-pastSeconds = millis() / 1000;
-
-for(nti = 0; i \textless{} second * 2; i++)\{
-
-Serial.print(``.'');
-
-delay(500);
-
-\}
-
-Serial.println();
-
-digitalWrite(12, LOW);
-
-code = ``\,'';
-
-\}
-
-delay(100);
-
-\}
-
+\begin{multicols}{2}
 As can be seen from the text of the program, the webcam reads the QR
 code, analyzes the text and selects a number from it, presented in text
 format, and converts it into a numeric format. The smart traffic light
@@ -581,9 +568,13 @@ and intellectualization of the performance of a number of regulatory
 functions of traffic management corresponds to modern trends in the
 development of a digital society in the context of the Modernization 4.0
 concept.
+\end{multicols}
 
+\begin{center}
 {\bfseries References}
+\end{center}
 
+\begin{noparindent}
 1.Badaguev B.T. Jekspluatacija transportnyh sredstv (organizacija i
 bezopasnost\textquotesingle{} dvizhenija).- M.:
 Al\textquotesingle fa-Press, 2019. - 239 s. ISBN: 978-5-64280-556-2
@@ -604,7 +595,9 @@ Vysshej shkoly jekonomiki, 2013. -- 240 c. ISBN: 978-5-7598-1086-5.
 {[}in Russian{]}
 
 5.Volkov V.S. Jelektrooborudovanie transportnyh i
-transportno-tehnologicheskih mashin: ucheb. pos. -- M.: Akademija, 2010.
+transportno-tehnologicheskih mashin: ucheb. pos. -- M.:
+
+Akademija, 2010.
 -- 208 s. ISBN: 9785769557491.{[}in Russian{]}
 
 6.Gorev, A. Je. Osnovy teorii transportnyh sistem: ucheb. posobie / A.
@@ -614,9 +607,11 @@ Je. Gorev; SPbGASU. -- SPb., 2010.- 214 s. ISBN: 978-5-9227-0266-9.
 7.Bednarskij V.V.,Majboroda M.E., Gruzovye avtomobil\textquotesingle nye
 perevozki. -- M.: Feniks, 2008. - 442 s. ISBN:978-5-222-11805-4. {[}in
 Russian{]}
+\end{noparindent}
 
 \emph{{\bfseries Information about authors}}
 
+\begin{noparindent}
 Tulegulov А. D.- Candidate of Physical and Mathematical Sciences, аss.
 professor, K.Kulazhanov Kazakh University of Technology and Business,
 Astana, Kazakhstan, е-mail: tad62@ya.ru;
@@ -632,13 +627,11 @@ Dus\_man89@mail.ru;
 Sataev B. O.- Candidate of Technical Sciences, ass. professor.
 Kulazhanov Kazakh University of Technology and Business, Astana,
 Kazakhstan, е-mail: sbo@mail.ru.
+\end{noparindent}
 
 \emph{{\bfseries Сведение об авторах}}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
+\begin{noparindent}
 Тулегулов А.Д.-к.ф.-м.н., асс. профессор, Казахский университет
 технологии и бизнеса им. К. Кулажанова, Астана. Казахстан, е-mail:
 tad62@ya.ru;
@@ -648,29 +641,7 @@ tad62@ya.ru;
 
 Жамангарин Д.С.- PhD, асс. профессор, Казахский университет технологии и
 бизнеса им. К. Кулажанова, Астана, Казахстан,е-mail: Dus\_man89@mail.ru;
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
 
 Сатаев Б.О.-к.т.н., асс. профессор, Казахский университет технологии и
 бизнеса им. К.Кулажанова, Астана, Казахстан,е-mail: sbo@mail.ru.
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.0592}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.9408}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-& \\
-& \\
-& \\
-& \\
-\end{longtable}
+\end{noparindent}

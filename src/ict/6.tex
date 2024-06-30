@@ -1,13 +1,15 @@
 IRSTI 20.53.01
 
-{\bfseries COMPARISON AND ANALYSIS OF DIFFERENT MACHINE LEARNING METHODS ON
+\sectionwithauthors{D. Kair}{COMPARISON AND ANALYSIS OF DIFFERENT MACHINE LEARNING METHODS ON
 WEATHER TEMPERATURE PREDICTIONS BASED ON THE OPEN DATA}
 
+\begin{center}
 {\bfseries D. Kair}
 
 Kazakh-British Technical University, Almaty, Kazakhstan,
 
 e-mail: danikkair@gmail.com
+\end{center}
 
 The database obtained from the rp5 data archive is provided by the LLC
 "Weather Schedule" and represents the collected information about
@@ -36,7 +38,8 @@ which current tendencies can look at it.
 {\bfseries Keywords}: machine learning, weather, prediction model,
 CatBoost, Linear Regression, ElasticNet, LightGBM, forecasting.
 
-{\bfseries АШЫҚ МӘЛІМЕТТЕР НЕГІЗІНДЕ АУА-АУРА ТЕМПЕРАТУРАСЫН БОЛЖАУ ҮШІН
+\begin{center}
+{\large\bfseries АШЫҚ МӘЛІМЕТТЕР НЕГІЗІНДЕ АУА-АУРА ТЕМПЕРАТУРАСЫН БОЛЖАУ ҮШІН
 ТҮРЛІ МАШИНАЛЫҚ ОҚУ ӘДІСТЕРІН САЛЫСТЫРУ ЖӘНЕ ТАЛДАУ}
 
 {\bfseries Д. Каир}
@@ -44,6 +47,7 @@ CatBoost, Linear Regression, ElasticNet, LightGBM, forecasting.
 Қазақстан-Британ техникалық университеті, Алматы, Қазақстан,
 
 e-mail: danikkair@gmail.com
+\end{center}
 
 Rp5 деректер мұрағатынан алынған мәліметтер базасы «Ауа-Райы кестесі»
 ЖШС-мен қамтамасыз етілген және температураны, бұлттылықты және
@@ -73,11 +77,7 @@ Regression, Bayesian Ridge және т.б. регрессорлар бар. Қо
 {\bfseries Түйін сөздер:} машиналық оқыту, ауа-райы, болжау моделі,
 CatBoost, Linear Regression, ElasticNet, LightGBM, болжау.
 
-{\bfseries СРАВНЕНИЕ И АНАЛИЗ РАЗНЫХ МЕТОДОВ МАШИННОГО ОБУЧЕНИЯ}
-
-{\bfseries ДЛЯ ПРОГНОЗИРОВАНИЯ ТЕМПЕРАТУРЫ ПОГОДЫ НА ОСНОВЕ}
-
-{\bfseries ОТКРЫТЫХ ДАННЫХ}
+{\large\bfseries СРАВНЕНИЕ И АНАЛИЗ РАЗНЫХ МЕТОДОВ МАШИННОГО ОБУЧЕНИЯ ДЛЯ ПРОГНОЗИРОВАНИЯ ТЕМПЕРАТУРЫ ПОГОДЫ НА ОСНОВЕ ОТКРЫТЫХ ДАННЫХ}
 
 {\bfseries Д. Каир}
 
@@ -114,6 +114,7 @@ Regression, Bayesian Ridge и другие. Применяемые алгори�
 прогнозирования, CatBoost, Linear Regression, ElasticNet, LightGBM,
 прогнозирование.
 
+\begin{multicols}{2}
 {\bfseries Introduction}. Weather forecasting is an essential aspect of our
 daily lives, as it helps us prepare for and manage the impact of weather
 conditions. While weather forecasting has improved in recent years,
@@ -138,50 +139,45 @@ significant problems that limit its effectiveness in accurately
 predicting weather patterns and thunderstorm activity. These problems
 include:
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi})}
-\item
-  \emph{Insufficient Spatial Resolution:} The existing meteorological
-  models used for forecasting in Almaty often have a coarse spatial
-  resolution. This limitation hampers their ability to capture local
-  variations in topography and atmospheric conditions accurately. As a
-  result, important microscale features that significantly influence
-  weather patterns and thunderstorm development, such as mountainous
-  terrain and localized wind patterns, are not adequately represented in
-  the overall forecasts {[}4{]}.
-\item
-  \emph{Inadequate Data Assimilation:} Accurate weather forecasting
-  relies heavily on assimilating various types of observational data,
-  such as satellite images, radar data, and ground-based measurements.
-  However, the current approach in Almaty struggles with effectively
-  incorporating these diverse data sources into the forecasting models.
-  This limitation leads to biases and errors in the initial conditions
-  of the models, which subsequently propagate and amplify throughout the
-  forecast period {[}5{]}.
-\item
-  \emph{Limited Representation of Atmospheric Processes:} Traditional
-  meteorological models used in Almaty often simplify or neglect certain
-  atmospheric processes that are crucial for accurate weather
-  prediction. For instance, convective processes that drive thunderstorm
-  activity are challenging to simulate accurately due to their highly
-  nonlinear nature. The current approach may not adequately capture the
-  complex interactions between moisture, temperature, and wind fields,
-  leading to inaccurate forecasts of thunderstorm occurrence, intensity,
-  and duration {[}6{]}.
-\item
-  \emph{Lack of Consideration for Local Effects:}
-  Almaty\textquotesingle s weather patterns are influenced by local
-  factors such as the city\textquotesingle s urban heat island effect,
-  lake-breeze circulation, and the proximity to mountain ranges.
-  However, the current approach may not adequately account for these
-  local effects, leading to biases in the forecasts. For example, the
-  urban heat island effect can significantly impact temperature
-  gradients, wind patterns, and the initiation and intensity of
-  thunderstorms, but it may be inadequately represented in the current
-  forecasting models {[}7{]}.
-\end{enumerate}
+1. \emph{Insufficient Spatial Resolution:} The existing meteorological
+models used for forecasting in Almaty often have a coarse spatial
+resolution. This limitation hampers their ability to capture local
+variations in topography and atmospheric conditions accurately. As a
+result, important microscale features that significantly influence
+weather patterns and thunderstorm development, such as mountainous
+terrain and localized wind patterns, are not adequately represented in
+the overall forecasts {[}4{]}.
 
-\begin{quote}
+2. \emph{Inadequate Data Assimilation:} Accurate weather forecasting
+relies heavily on assimilating various types of observational data,
+such as satellite images, radar data, and ground-based measurements.
+However, the current approach in Almaty struggles with effectively
+incorporating these diverse data sources into the forecasting models.
+This limitation leads to biases and errors in the initial conditions
+of the models, which subsequently propagate and amplify throughout the
+forecast period {[}5{]}.
+
+3. \emph{Limited Representation of Atmospheric Processes:} Traditional
+meteorological models used in Almaty often simplify or neglect certain
+atmospheric processes that are crucial for accurate weather
+prediction. For instance, convective processes that drive thunderstorm
+activity are challenging to simulate accurately due to their highly
+nonlinear nature. The current approach may not adequately capture the
+complex interactions between moisture, temperature, and wind fields,
+leading to inaccurate forecasts of thunderstorm occurrence, intensity,
+and duration {[}6{]}.
+
+4. \emph{Lack of Consideration for Local Effects:}
+Almaty\textquotesingle s weather patterns are influenced by local
+factors such as the city\textquotesingle s urban heat island effect,
+lake-breeze circulation, and the proximity to mountain ranges.
+However, the current approach may not adequately account for these
+local effects, leading to biases in the forecasts. For example, the
+urban heat island effect can significantly impact temperature
+gradients, wind patterns, and the initiation and intensity of
+thunderstorms, but it may be inadequately represented in the current
+forecasting models {[}7{]}.
+
 Our research is based on the database of weather measurements from rp5
 presented by the LLC "Weather Schedule". It contains worldwide data for
 open usage and is updated every 3 hours. Here, historical data for
@@ -191,216 +187,32 @@ intervals) and some data is logically unnecessary, like type of clouds.
 In our research, we will try to deal with different types of data,
 implement it, and analyze it. The following table contains data
 explanation.
+\end{multicols}
 
-{\bfseries Table 1 -- The embeddings for each column}
-\end{quote}
+\begin{table}[H]
+\caption*{Table 1 -- The embeddings for each column}
+\centering
+\begin{tabular}{|l|p{0.8\textwidth}|}
+\hline
+name & description                                                                                                                                                                    \\ \hline
+T    & Air Temperature (degrees Celsius) at a height of 2 meters above the ground                                                                                                     \\ \hline
+Po   & Atmospheric pressure at the station level (millimeters of mercury)                                                                                                             \\ \hline
+P    & Atmospheric pressure reduced to mean sea level (millimeters of mercury)                                                                                                        \\ \hline
+Pa   & Baric trend: change in atmospheric pressure over the last three hours (millimeters of mercury)                                                                                 \\ \hline
+U    & Relative humidity (\%) at a height of 2 meters above the ground                                                                                                                \\ \hline
+DD   & Wind direction (points) at an altitude of 10-12 meters above the Earth's surface, averaged over the 10-minute period immediately preceding the observation period              \\ \hline
+Ff   & Wind speed at an altitude of 10-12 meters above the Earth's surface, averaged over the 10- minute period immediately preceding the observation period (meters per second)      \\ \hline
+ff10 & The maximum value of the wind gust at altitude 10-12 meters above the Earth's surface in the 10-minute period immediately preceding the observation period (meters per second) \\ \hline
+ff3  & The maximum value of the wind gust at altitude 10-12 meters above the earth's surface in the period between deadlines (meters per second)                                      \\ \hline
+WW   & Current weather reported from the weather station                                                                                                                              \\ \hline
+Tn   & Minimum air temperature (degrees Celsius) for the past period (no more than 12 hours)                                                                                          \\ \hline
+Tx   & Maximum air temperature (degrees Celsius) for the past period (no more than 12 hours)                                                                                          \\ \hline
+VV   & Horizontal visibility range (km)                                                                                                                                               \\ \hline
+Td   & Dew point temperature at a height of 2 meters above the earth's surface (degrees Celsius)                                                                                      \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2233}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7767}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-name
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-description
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-T
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Air Temperature (degrees Celsius) at a height of 2 meters above the
-ground
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Po
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Atmospheric pressure at the station level
-
-(millimeters of mercury)
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-P
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Atmospheric pressure reduced to
-
-mean sea level (millimeters of mercury)
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Pa
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Baric trend: change
-
-in atmospheric pressure over the last three hours
-
-(millimeters of mercury)
-\end{quote}
-\end{minipage} \\
-\end{longtable}
-
-\begin{quote}
-{\bfseries Continuation of Table 1}
-\end{quote}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2191}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7809}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-U
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Relative humidity (\%) at a height of 2 meters
-
-above the ground
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-DD
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Wind direction (points) at an altitude of 10-12 meters above the
-Earth\textquotesingle s surface, averaged
-
-over the 10-minute period immediately
-
-preceding the observation period
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Ff
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Wind speed at an altitude of 10-12 meters above
-
-the Earth\textquotesingle s surface, averaged over the 10-
-
-minute period immediately
-
-preceding the observation period (meters per
-
-second)
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-ff10
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-The maximum value of the wind gust at altitude
-
-10-12 meters above the Earth\textquotesingle s surface in the 10-
-
-minute period immediately
-
-preceding the observation period (meters per
-
-second)
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-ff3
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-The maximum value of the wind gust at altitude
-
-10-12 meters above the earth\textquotesingle s surface in the
-
-period between deadlines (meters per second)
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-WW
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Current weather reported from
-
-the weather station
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Tn
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Minimum air temperature (degrees
-
-Celsius) for the past period (no more than 12
-
-hours)
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Tx
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Maximum air temperature (degrees
-
-Celsius) for the past period (no more than 12
-
-hours)
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-VV
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Horizontal visibility range (km)
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Td
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Dew point temperature at a height of 2 meters above
-
-the earth\textquotesingle s surface (degrees Celsius)
-\end{quote}
-\end{minipage} \\
-\end{longtable}
-
-\begin{quote}
+\begin{multicols}{2}
 {\bfseries Literature review.} Addressing these problems and improving the
 accuracy of weather and thunderstorm forecasts in Almaty requires the
 development of an advanced numerical forecasting model that incorporates
@@ -481,26 +293,23 @@ Additionally, some approaches may not be flexible enough to be turned
 into a near-real-time system, which can hinder their usefulness in
 providing timely forecasts. As such, there is a need for a system that
 can optimize these approaches for weather forecasting.
-\end{quote}
 
 Data
 
-\begin{quote}
 The dataset contains 29 columns of different data. In a Table 1 we
 mentioned only used ones, since many columns consists of unnecessary in
 prediction data. Some data became unnecessary due to overly biased
 results, some due to unimportance (type of clouds), some due to lots of
 missed values.
+\end{multicols}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{assets/36}
-	\caption*{}
+	\caption*{Figure 1 -- Correlation heatmap for all numerical and categorical features}
 \end{figure}
 
-{\bfseries Figure 1 -- Correlation heatmap for all numerical and
-categorical features}
-
+\begin{multicols}{2}
 After logical analysis, we began analyzing attributes by plotting the
 correlation heatmap for all remaining features in order to obtain the
 significant ones to the task of weather prediction (see Figure 1). To
@@ -518,120 +327,28 @@ following columns: \textquotesingle T\textquotesingle,
 \textquotesingle Td\textquotesingle. Since their pairwise correlation is
 between -0.1 and 0.1, and some of them considered to be used due to
 better overall model performance with them.
+\end{multicols}
 
-{\bfseries Table 2 -- Number of rows with missing values for given
-attributes}
-\end{quote}
+\begin{table}[H]
+\caption*{Table 2 -- Number of rows with missing values for given attributes}
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Column & Rows 				with NaN value \\ \hline
+T      & 0                       \\ \hline
+Po     & 1                       \\ \hline
+P      & 1                       \\ \hline
+Pa     & 4                       \\ \hline
+Ff     & 0                       \\ \hline
+Tn     & 2568                    \\ \hline
+Tx     & 2205                    \\ \hline
+VV     & 1331                    \\ \hline
+U      & 7                       \\ \hline
+Td     & 7                       \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4227}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5773}}@{}}
-\toprule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-\emph{{\bfseries Column}}
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-\emph{{\bfseries Rows with NaN value}}
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-T
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Po
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-P
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Pa
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-4
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Ff
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Tn
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-2568
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Tx
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-2205
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-VV
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-1331
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-U
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-7
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Td
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-7
-\end{quote}
-\end{minipage} \\
-\end{longtable}
-
-\begin{quote}
+\begin{multicols}{2}
 For left columns, we decided to approach to another method of data
 preprocessing -- by clearing missing values. As shown in Table 2 -- only
 2 of left columns are full, while others need to handle missing data.
@@ -648,7 +365,7 @@ contained data from 1\textsuperscript{st} of April 2022 to
 1\textsuperscript{st} of April 2023 to 31\textsuperscript{st} of March
 2024. Such decision was chosen due to similarity of time intervals,
 containing similar days of year.
-\end{quote}
+
 
 Methods and materials. First step was to scale our data for better model
 performance. We decided to use MinMaxScaler from SkLearn python library.
@@ -657,7 +374,7 @@ else in the range {[}-1, 1{]} if there are negative values in the
 dataset. In conclusion, model with scaled values performed much better
 than unscaled one, what can be seen in a final result.
 
-\begin{quote}
+
 Second step was to choose best-performing general model, which will be
 used in a future. So, during the training and prediction phases of
 study, we were able to inspect performance of several popular machine
@@ -731,128 +448,26 @@ special type of decision tree called the "leaf-wise" tree, which can
 lead to better accuracy with less memory consumption compared to
 traditional gradient boosting methods.
 
-{\bfseries Table 3 -- Model performance results after test training}
-\end{quote}
+\begin{table}[H]
+\caption*{Table 3 -- Model performance results after test training}
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Model name & Mean Squared Error \\ \hline
+GB Regressor & 0.740616 \\ \hline
+RF Regressor & 0.602757 \\ \hline
+Linear Regression & 3.430981 \\ \hline
+ElasticNet & 107.581766 \\ \hline
+SGD Regressor & 2.586797 \\ \hline
+Bayesian Ridge & 3.427670 \\ \hline
+SVR & 2.530081 \\ \hline
+CatBoost & 0.240654 \\ \hline
+Kernel Ridge & 2.453900 \\ \hline
+XGBoost & 0.678889 \\ \hline
+LightGBM & 0.637373 \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4567}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5433}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-Model name
-\end{quote}
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\begin{quote}
-Mean Squared Error
-\end{quote}
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-GB Regressor
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.740616
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-RF Regressor
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.602757
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Linear Regression
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-3.430981
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-ElasticNet
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-107.581766
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-SGD Regressor
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-2.586797
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Bayesian Ridge
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-3.427670
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-SVR
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-2.530081
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-CatBoost
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.240654
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-Kernel Ridge
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-2.453900
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-XGBoost
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.678889
-\end{quote}
-\end{minipage} \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-LightGBM
-\end{quote}
-\end{minipage} & \begin{minipage}[t]{\linewidth}\raggedright
-\begin{quote}
-0.637373
-\end{quote}
-\end{minipage} \\
-\end{longtable}
-
-\begin{quote}
 CatBoost model performed better than any other one with a mean squared
 error result of 0.240654. In our research we decided to further maintain
 CatBoost as main model.
@@ -862,7 +477,6 @@ applied to CatBoostRegressor to find the best hyperparameters for our
 final model. It seems that the parameter tuning yielded worse results as
 compared to the default setting. Therefore, default model will be used
 without any hyperparameter tuning.
-\end{quote}
 
 Results and Discussion. In result, we can see that XGBoost with LightGBM
 showed a bit worse performance. This means that for our data this
@@ -882,7 +496,7 @@ attributes in Table 2. Also, it is clearly seen that CatBoost performs
 much better without any model optimization and better suits to weather
 prediction task.
 
-\begin{quote}
+
 To conduct results, authors decided to test out Feature and SHAP
 importances. We made several tests and applied different weights to our
 model features. In a result, authors got a necessary for further
@@ -901,12 +515,9 @@ are provided below.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{assets/37}
-	\caption*{}
+	\includegraphics[width=0.4\textwidth]{assets/37}
+	\caption*{Figure 2 -- Sample of real and predicted temperatures comparison}
 \end{figure}
-
-{\bfseries Figure 2 -- Sample of real and predicted temperatures
-comparison}
 
 {\bfseries Conclusion.} This paper presents a detailed description of
 constructing a machine learning model for weather numerical forecasting
@@ -923,24 +534,23 @@ Almaty region as well. We can construct weather prediction applications
 for numerical forecasting, but as for now we have some technical
 limitations, like a lack of CPU to achieve better results in less
 performing time.
-\end{quote}
+\end{multicols}
 
+\begin{center}
 {\bfseries References}
+\end{center}
 
-\begin{quote}
+\begin{noparindent}
 1.P. Bauer, A. Thorpe, and G. Brunet, The quiet revolution of numerical
 weather prediction.// Nature. 2015.-Vol.525 (7567).-P. 47-55.
 DOI:10.1038/nature14956
-\end{quote}
+
 
 2.M. Holmstrom, D. Liu, and C. Vo, Machine learning applied to weather
 forecasting.// Meteorol. Appl.-2016.-Vol.10.- P.1-5, 2016. {[}Online{]}.
-Available:
+Available: \href{https://www.semanticscholar.org/paper/Machine-Learning-Applied-to-Weather-Forecasting-
+Holmstrom-Liu/e2ed8aba53b4688808d57a0512496beb3548fc2c}{https://www.semanticscholar.org/}
 
-https://www.semanticscholar.org/paper/Machine-Learning-Applied-to-Weather-Forecasting-
-Holmstrom-Liu/e2ed8aba53b4688808d57a0512496beb3548fc2c
-
-\begin{quote}
 3.A. Islam, S. Attwood, M. Braun, K. Kamp, and P. Aggarwal, Assessment
 of capabilities, needs of communities, opportunities and limitations of
 weather forecasting for coastal regions of Bangladesh. //WorldFish.-
@@ -949,6 +559,7 @@ weather forecasting for coastal regions of Bangladesh. //WorldFish.-
 4.R. Pielke and M. Uliasz, Use of meteorological models as input to
 regional and mesoscale air quality models-limitations and strengths,
 Atmospheric Environment.-1998.-Vol.32 (8).-P.1455--1466. DOI
+
 10.1016/S1352-2310(97)00140-4
 
 5.S. Ravela, K. Emanuel, D. McLaughlin Data assimilation by field
@@ -994,6 +605,7 @@ model//Atmospheric Research.-2015.- Vol.156.- P. 29-42.- DOI
 12.N. Chen, Z. Qian, I. T. Nabney, and X. Meng, Wind power forecasts
 using gaussian processes and numerical weather prediction //IEEE
 Transactions on Power Systems.-2013.- Vol. 29(2).- P.656 - 665 DOI
+
 10.1109/TPWRS.2013.2282366
 
 13.Naveen L, Mohan H.S, Atmospheric Weather Prediction Using various
@@ -1029,15 +641,20 @@ Learning Based Weather Prediction Model for Short Term Weather
 Prediction in Sri Lanka.// 2021 10th International Conference on
 Information and Automation for Sustainability (ICIAfS). DOI
 10.1109/ICIAfS52090.2021.9606077
+\end{noparindent}
 
 \emph{{\bfseries Information about authors}}
 
+\begin{noparindent}
 Kair D.- Kazakh-British Technical University, Almaty, Kazakhstan,
 e-mail: danikkair@gmail.com
+\end{noparindent}
 
 \emph{{\bfseries Сведения об авторе}}
 
-\emph{{\bfseries \hfill\break
-}}Каир Д.- Казахстанско-Британский Технический Университет,Алматы,
-Казахстан, e-mail: danikkair@gmail.com
-\end{quote}
+\begin{noparindent}
+Каир Д.- Казахстанско-Британский Технический Университет,Алматы,
+Казахстан, e-mail:
+
+danikkair@gmail.com
+\end{noparindent}

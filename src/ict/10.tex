@@ -1,8 +1,8 @@
 МРНТИ 20.15.05
 
-{\bfseries РАЗВЕРТЫВАНИЕ КОНТЕЙНЕРНЫХ ПРИЛОЖЕНИЙ С ПОМОЩЬЮ МАШИННОГО
-ОБУЧЕНИЯ: ОБЗОР И АНАЛИЗ}
+\sectionwithauthors{Л.Т. Кусепова, А.Б. Оспанова, А.Е. Назырова, Г.Т. Кусепова}{РАЗВЕРТЫВАНИЕ КОНТЕЙНЕРНЫХ ПРИЛОЖЕНИЙ С ПОМОЩЬЮ МАШИННОГО ОБУЧЕНИЯ: ОБЗОР И АНАЛИЗ}
 
+\begin{center}
 {\bfseries \textsuperscript{1,2}Л.Т. Кусепова, \textsuperscript{1}А.Б.
 Оспанова, \textsuperscript{1,2}А.Е. Назырова, \textsuperscript{2}Г.Т.
 Кусепова}
@@ -13,6 +13,7 @@
 Гумилева, Астана, Казахстан,
 
 e-mail: lazzatk@mail.ru
+\end{center}
 
 В связи с динамическим развитием и растущей сложностью систем необходимо
 постоянно выполнять поиск новых методов управления сервисами в облачных
@@ -44,7 +45,8 @@ Service. Методы машинного обучения могут быть и
 контейнеров, машинное обучение, облачные вычисления, предоставление
 ресурсов
 
-{\bfseries КОНТЕЙНЕРЛІК ҚОСЫМШАЛАРДЫ МАШИНАЛЫҚ ОҚЫТУ АРҚЫЛЫ ЖҮЗЕГЕ АСЫРУ:
+\begin{center}
+{\large\bfseries КОНТЕЙНЕРЛІК ҚОСЫМШАЛАРДЫ МАШИНАЛЫҚ ОҚЫТУ АРҚЫЛЫ ЖҮЗЕГЕ АСЫРУ:
 ШОЛУ ЖӘНЕ ТАЛДАУ}
 
 {\bfseries \textsuperscript{1,2}Л.Т. Кусепова, \textsuperscript{1}А.Б.
@@ -57,6 +59,7 @@ Service. Методы машинного обучения могут быть и
 Астана, Қазақстан,
 
 e-mail: lazzatk@mail.ru
+\end{center}
 
 Жүйелердің динамикалық дамуы мен күрделілігінің артуына байланысты
 бұлтты есептеулерде қызметтерді басқарудың жаңа әдістерін үнемі
@@ -87,7 +90,8 @@ Azure Kubernetes Service сияқты контейнерлер мен оркес
 {\bfseries Түйін сөздер:} контейнерлік технологиялар, контейнерлерді
 оркестрлеу, машиналық оқыту, бұлтты есептеулер, ресурстарды ұсыну
 
-{\bfseries DEPLOYING CONTAINER APPLICATIONS THROUGH MACHINE LEARNING:
+\begin{center}
+{\large\bfseries DEPLOYING CONTAINER APPLICATIONS THROUGH MACHINE LEARNING:
 REVIEW AND ANALYSIS}
 
 {\bfseries \textsuperscript{1,2}L.T. Kussepova, \textsuperscript{1}A.B.
@@ -100,6 +104,7 @@ Kussepova}
 Kazakhstan,
 
 e-mail: lazzatk@mail.ru
+\end{center}
 
 Due to the dynamic development and growing complexity of systems, it is
 necessary to constantly search for new methods for managing services in
@@ -128,6 +133,7 @@ clusters, and analyze workload behavior based on historical data.
 {\bfseries Keywords:} container technologies, container orchestration,
 machine learning, cloud computing, provision of resources
 
+\begin{multicols}{2}
 {\bfseries Введение.} Облачные технологии основаны на аспектах
 виртуализации, такие как виртуализация серверов, сети, хранилища данных,
 операционной среды и приложений, а также контейнеризация играют ключевую
@@ -167,10 +173,15 @@ machine learning, cloud computing, provision of resources
 легко настраивать, развертывать и обслуживать контейнерные приложения в
 облачных вычислениях. На рисунке 1 показана схема архитектуры
 оркестровки контейнеров на основе машинного обучения.
+\end{multicols}
 
-{\bfseries Рис. 1 - Эталонная архитектура оркестровки контейнеров на основе
-машинного обучения}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{assets/1000}
+	\caption*{Рис. 1 - Эталонная архитектура оркестровки контейнеров на основе машинного обучения}
+\end{figure}
 
+\begin{multicols}{2}
 В разделе архитектура приложения рисунка 1 представлены наиболее
 распространенные и определяющие состав контейнерные приложения, способы
 их развертывания, выполнения и обслуживания. Функциональные модули
@@ -386,10 +397,15 @@ Ahmad I. и другие авторы {[}13{]} исследовали ландш
 оркестрации. На основании изученных литератур по контейнеризации и
 использования в них методов машинного обучения были сформированы
 следующая эволюция технологий приведенные в рисунке 2.
+\end{multicols}
 
-{\bfseries Рис. 2 - Эволюция технологий оркестрации контейнеров, используя
-машинное обучение}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{assets/1001}
+	\caption*{Рис. 2 - Эволюция технологий оркестрации контейнеров, используя машинное обучение}
+\end{figure}
 
+\begin{multicols}{2}
 Проанализировав эволюцию использования машинного обучения в контейнерных
 приложениях с 2017 года по 2023 года, можно увидеть разнообразие моделей
 и алгоритмов, которые применяются для решения определенных задач, такие
@@ -399,7 +415,48 @@ Ahmad I. и другие авторы {[}13{]} исследовали ландш
 развитие методов машинного обучения в данной области отражает стремление
 к эффективному управлению контейнерными приложениями для улучшения их
 надежности и производительности.
+\end{multicols}
 
+\begin{table}[H]
+\caption*{Таблица 1 - Контейнеры на основе машинного обучения}
+\centering
+\begin{tabular}{|l|p{0.1\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.3\textwidth}|}
+\hline
+№ & Контейнер & Инструмент оркестрации контейнеров & Компоненты или алгоритм машинного обучения & Источник \\ \hline
+1 & Kubernetes & Kubeflow & Библиотеки HuggingFace, DeepSpeed, Megatron-LM & \href{https://www.kubeflow.org/docs/components/training/overview/}{https://www.kubeflow.org} \\ \hline
+2 & Kubernetes & Katib & Алгоритмы машинного обучения: Байесовская оптимизация, дерево оценок Парсена, случайный поиск и т.д. & \href{https://www.kubeflow.org/docs/components/katib/overview}{https://www.kubeflow.org} \\ \hline
+3 & Docker & Hugging Face Hub & Шаблон Argilla, Livebook & \href{https://www.docker.com/blog/build-machine-learning-apps-with-hugging-faces-docker-spaces/}{https://www.docker.com} \\ \hline
+4 & Docker & Datastax & Декларативный язык & \href{https://hub.docker.com/u/datastax?\_gl=1*sbe5u0*\_ga*OTU0NDcxNDk2LjE3MTUzMjQyNzE.*\_ga\_XJWPQMJYHQ*MTcxNTMyNDI3MC4xLjEuMTcxNTMyNDczMC4zOC4wLjA.}{https://hub.docker.com} \\ \hline
+5 & Docker & Контейнеры глубокого обучения AWS для PyTorch & SageMaker, EC2, ECS, EKS & \href{https://aws.amazon.com/marketplace/pp/prodview-sdoecebva2lui?sr=0-7\&ref\_=beagle\&applicationId=AWSMPContessa}{https://aws.amazon.com} \\ \hline
+6 & Prefect & Prefect & Prefect flow, Prefecr Cloud & \href{https://www.datacamp.com/tutorial/ml-workflow-orchestration-with-prefect}{https://www.datacamp.com} \\ \hline
+7 & Nomad & & Плагины устройств и поддержка графических процессоров & \href{https://developer.hashicorp.com/nomad/intro}{https://developer.hashicorp.com} \\ \hline
+8 & Red Hat OpenShift Service on AWS & Red Hat OpenShift AI & & \href{https://aws.amazon.com/marketplace/pp/prodview-co7uaxdm7qnkq}{https://aws.amazon.com} \\ \hline
+9 & Amazon Elastic Container Service (ECS) & Amazon ECS, Amazon S3 & Библиотека Ray Train & \href{https://aws.amazon.com/ru/blogs/containers/distributed-machine-learning-with-amazon-ecs/}{https://aws.amazon.com} \\ \hline
+10 & Google Kubernetes Engine & Kubernetes & PyTorch & \href{ https://cloud.google.com/deep-learning-containers/docs/kubernetes-container}{ https://cloud.google.com} \\ \hline
+11 & Azure Kubernetes Service & Kubernetes & AzureML & \href{https://learn.microsoft.com/en-us/azure/machine-learning/how-to-deploy-azure-kubernetes-service?view=azureml-api-1\&tabs=python}{https://learn.microsoft.com} \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption*{Таблица 2 - Проблемы и решаемые задачи при использовании контейнеров на основе машинного обучения}
+\centering
+\begin{tabular}{|r|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
+\hline
+\multicolumn{1}{|l|}{№} & Решаемые задачи & Проблемы и ограничения & Методы & Подходы и типы анализируемых данных \\ \hline
+1 & Развертывание приложений с использованием микросервисных приложений и контейнеров Docker & Высокие требования точности и скорости ответа системы & Сверточные нейронные сети, генетические алгоритмы, методы оптимизации, регрессионный анализ & Требования SLA, мониторинг ресурсов, анализ производительности \\ \hline
+2 & Планирование задач & Недостаток точности при изменяющихся условиях & Генетические алгоритмы, нейронные сети, методы оптимизации & Анализ загрузки, параметры выполнения, временные рамки выполнения \\ \hline
+3 & Размещение контейнеров для кластерных платформ & Планирование компонентов приложения, сложность масштабирования, ограниченные ресурсы & Кластеризация, обучение с подкреплением & Требования SLA, мониторинг ресурсов, анализ производительности \\ \hline
+4 & Распределение контейнеров по рабочим узлам и размещение оптимального количества контейнеров на физической машине & Масштабируемость, балансировка нагрузки, анализ ресурсов & Методы оптимизации, алгоритмы распределения ресурсов & Мониторинг ресурсов, анализ производительности \\ \hline
+5 & Расширение рабочей нагрузки & Обработка и анализ временных рядов с частотой обновления & Прогнозные модели, нейронные сети, машинное обучение с подкреплением & Исторические данные о нагрузке, производительность \\ \hline
+6 & Уменьшение фрагментации сети центров обработки данных и задержка обработки & Сложность в обработке больших объемов данных в реальном времени & Регрессионный анализ, машинное обучение с подкреплением, методы оптимизации & Сетевой трафик, время отклика, статистика потерь пакетов \\ \hline
+7 & Частота отказов физических узлов & Высокая стоимость обслуживания, недостаточная надежность & Методы обнаружения аномалий, алгоритмы мониторинга & Мониторинг состояния системы \\ \hline
+8 & Динамическая адаптация количеств активных узлов & Отсутствие эффективных механизмов автоматического масштабирования & Алгоритмы масштабирования & Распределение ресурсов и их ограничение, балансировка нагрузки \\ \hline
+9 & Временной интервал для выполнения задач размещения и миграции контейнера & Увеличение времени отклика, затраты на выделение ресурсов & Регрессионный анализ & Анализ нагрузки \\ \hline
+10 & Оптимизация использования времени и ресурсов & Неэффективное распределение задач & Методы оптимизации, алгоритмы планирования & Анализ загрузки и производительности \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{multicols}{2}
 {\bfseries Результаты и обсуждение.} Рассмотренные работы демонстрируют
 широкий спектр использования инструментов оркестрации контейнеров и
 алгоритмов машинного обучения, а также их применимости к конкретным
@@ -411,134 +468,6 @@ Ahmad I. и другие авторы {[}13{]} исследовали ландш
 и масштабируемость систем машинного обучения. Некоторые из них будет
 рассмотрена на нижеследующей таблице 1.
 
-{\bfseries Таблица 1 - Контейнеры на основе машинного обучения}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.0592}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1616}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1522}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2690}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3580}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-№
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Контейнер
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Инструмент оркестрации контейнеров
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Компоненты или алгоритм машинного обучения
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Источник
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-
-\item
-\end{enumerate}
-\end{minipage} & Kubernetes & Kubeflow & Библиотеки HuggingFace,
-DeepSpeed, Megatron-LM &
-https://www.kubeflow.org/docs/components/training/overview/ \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-
-\item
-\end{enumerate}
-\end{minipage} & Kubernetes & Katib & Алгоритмы машинного обучения:
-Байесовская оптимизация, дерево оценок Парсена, случайный поиск и т.д. &
-https://www.kubeflow.org/docs/components/katib/overview/ \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-
-\item
-\end{enumerate}
-\end{minipage} & Docker & Hugging Face Hub & Шаблон Argilla, Livebook &
-https://www.docker.com/blog/build-machine-learning-apps-with-hugging-faces-docker-spaces/ \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-
-\item
-\end{enumerate}
-\end{minipage} & Docker & Datastax & Декларативный язык &
-https://hub.docker.com/u/datastax?\_gl=1*sbe5u0*\_ga*OTU0NDcxNDk2LjE3MTUzMjQyNzE.*\_ga\_XJWPQMJYHQ*MTcxNTMyNDI3MC4xLjEuMTcxNTMyNDczMC4zOC4wLjA. \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
-
-\item
-\end{enumerate}
-\end{minipage} & Docker & Контейнеры глубокого обучения AWS для PyTorch
-& SageMaker, EC2, ECS, EKS &
-https://aws.amazon.com/marketplace/pp/prodview-sdoecebva2lui?sr=0-7\&ref\_=beagle\&applicationId=AWSMPContessa \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{5}
-
-\item
-\end{enumerate}
-\end{minipage} & Prefect & Prefect & Prefect flow, Prefecr Cloud &
-https://www.datacamp.com/tutorial/ml-workflow-orchestration-with-prefect \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{6}
-
-\item
-\end{enumerate}
-\end{minipage} & Nomad & & Плагины устройств и поддержка графических
-процессоров & https://developer.hashicorp.com/nomad/intro \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{7}
-
-\item
-\end{enumerate}
-\end{minipage} & Red Hat OpenShift Service on AWS & Red Hat OpenShift AI
-& & https://aws.amazon.com/marketplace/pp/prodview-co7uaxdm7qnkq \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{8}
-
-\item
-\end{enumerate}
-\end{minipage} & Amazon Elastic Container Service (ECS) & Amazon ECS,
-Amazon S3 & Библиотека Ray Train &
-https://aws.amazon.com/ru/blogs/containers/distributed-machine-learning-with-amazon-ecs/ \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{9}
-
-\item
-\end{enumerate}
-\end{minipage} & Google Kubernetes Engine & Kubernetes & PyTorch &
-https://cloud.google.com/deep-learning-containers/docs/kubernetes-container \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{10}
-
-\item
-\end{enumerate}
-\end{minipage} & Azure Kubernetes Service & Kubernetes & AzureML &
-https://learn.microsoft.com/en-us/azure/machine-learning/how-to-deploy-azure-kubernetes-service?view=azureml-api-1\&tabs=python \\
-\end{longtable}
-
 Рассмотренные результаты исследования подтверждают актуальность и
 важность применения методов машинного обучения в контейнеризации и
 оркестрации контейнеров. Одним из ключевых моментов является то, что
@@ -549,142 +478,6 @@ https://learn.microsoft.com/en-us/azure/machine-learning/how-to-deploy-azure-kub
 контейнерах. Следовательно, постоянное обучение моделей на основе новых
 данных и изменяющихся условий требует дальнейших исследований и
 разработок.
-
-{\bfseries Таблица 2 - Проблемы и решаемые задачи при использовании
-контейнеров на основе машинного обучения}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.0450}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2252}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2232}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2532}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2534}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-№
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Решаемые задачи
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Проблемы и ограничения
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Методы
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Подходы и типы анализируемых данных
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-
-\item
-\end{enumerate}
-\end{minipage} & Развертывание приложений с использованием
-микросервисных приложений и контейнеров Docker & Высокие требования
-точности и скорости ответа системы & Сверточные нейронные сети,
-генетические алгоритмы, методы оптимизации, регрессионный анализ &
-Требования SLA, мониторинг ресурсов, анализ производительности \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-
-\item
-\end{enumerate}
-\end{minipage} & Планирование задач & Недостаток точности при
-изменяющихся условиях & Генетические алгоритмы, нейронные сети, методы
-оптимизации & Анализ загрузки, параметры выполнения, временные рамки
-выполнения \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-
-\item
-\end{enumerate}
-\end{minipage} & Размещение контейнеров для кластерных платформ &
-Планирование компонентов приложения, сложность масштабирования,
-ограниченные ресурсы & Кластеризация, обучение с подкреплением &
-Требования SLA, мониторинг ресурсов, анализ производительности \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-
-\item
-\end{enumerate}
-\end{minipage} & Распределение контейнеров по рабочим узлам и размещение
-оптимального количества контейнеров на физической машине &
-Масштабируемость, балансировка нагрузки, анализ ресурсов & Методы
-оптимизации, алгоритмы распределения ресурсов & Мониторинг ресурсов,
-анализ производительности \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
-
-\item
-\end{enumerate}
-\end{minipage} & Расширение рабочей нагрузки & Обработка и анализ
-временных рядов с частотой обновления & Прогнозные модели, нейронные
-сети, машинное обучение с подкреплением & Исторические данные о
-нагрузке, производительность \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{5}
-
-\item
-\end{enumerate}
-\end{minipage} & Уменьшение фрагментации сети центров обработки данных и
-задержка обработки & Сложность в обработке больших объемов данных в
-реальном времени & Регрессионный анализ, машинное обучение с
-подкреплением, методы оптимизации & Сетевой трафик, время отклика,
-статистика потерь пакетов \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{6}
-
-\item
-\end{enumerate}
-\end{minipage} & Частота отказов физических узлов & Высокая стоимость
-обслуживания, недостаточная надежность & Методы обнаружения аномалий,
-алгоритмы мониторинга & Мониторинг состояния системы \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{7}
-
-\item
-\end{enumerate}
-\end{minipage} & Динамическая адаптация количеств активных узлов &
-Отсутствие эффективных механизмов автоматического масштабирования &
-Алгоритмы масштабирования & Распределение ресурсов и их ограничение,
-балансировка нагрузки \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{8}
-
-\item
-\end{enumerate}
-\end{minipage} & Временной интервал для выполнения задач размещения и
-миграции контейнера & Увеличение времени отклика, затраты на выделение
-ресурсов & Регрессионный анализ & Анализ нагрузки \\
-\begin{minipage}[t]{\linewidth}\raggedright
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{9}
-
-\item
-\end{enumerate}
-\end{minipage} & Оптимизация использования времени и ресурсов &
-Неэффективное распределение задач & Методы оптимизации, алгоритмы
-планирования & Анализ загрузки и производительности \\
-\end{longtable}
 
 {\bfseries Заключение.} Контейнеризация и оркестрация контейнеров является
 эффективными инструментами для развертывания и управления приложениями.
@@ -713,109 +506,136 @@ https://learn.microsoft.com/en-us/azure/machine-learning/how-to-deploy-azure-kub
 оперативно реагировать на проблемы и ограничения, позволяют на основании
 текущего состояния системы адаптировать нагрузки на инфраструктуру
 контейнеров и оптимизировать использование ресурсов.
+\end{multicols}
 
+\begin{center}
 {\bfseries References}
+\end{center}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Ye K., Ji Y. Performance tuning and modeling for big data applications
-  in docker containers //2017 International Conference on Networking,
-  Architecture, and Storage (NAS). - IEEE, 2017. -- P. 1-6.
-  DOI:10.1109/NAS.2017.8026871
-\item
-  Ye K., Liu Y., Xu G., Xu C. Z. Fault injection and detection for
-  artificial intelligence applications in container-based clouds //
-  Cloud Computing--CLOUD 2018: 11th International Conference, Held as
-  Part of the Services Conference Federation, SCF 2018, Seattle, WA,
-  USA, June 25--30, 2018, Proceedings 11. - Springer International
-  Publishing, 2018. - P. 112-127. DOI 10.1007/978-3-319-94295-7\_8
-\item
-  Ye K., Kou Y., Lu C., Wang Y., Xu C.Z. Modeling application
-  performance in docker containers using machine learning techniques
-  //2018 IEEE 24th International Conference on Parallel and Distributed
-  Systems (ICPADS). -- IEEE, 2018. -- P. 1-6. DOI
-  10.1109/PADSW.2018.8644581
-\item
-  Dartois J.E., Boukhobza J., Knefati A., Barais O. Investigating
-  machine learning algorithms for modeling ssd i/o performance for
-  container-based virtualization //IEEE transactions on cloud computing.
-  - 2019. - Vol. 9(3). -- P. 1103-1116.
-\item
-  Imdoukh M., Ahmad I., Alfailakawi M.G. Machine learning-based
-  auto-scaling for containerized applications //Neural Computing and
-  Applications. -- 2020. -- Vol. 32(13). -- P. 9745-9760. DOI
-  10.1007/s00521-019-04507-z
-\item
-  Doukha R., Mahmoudi S.A., Zbakh M., Manneback P. Deployment of
-  containerized deep learning applications in the cloud //2020 5th
-  International Conference on Cloud Computing and Artificial
-  Intelligence: Technologies and Applications (CloudTech). -- IEEE,
-  2020. -- P. 1-6. DOI 10.1109/CloudTech49835.2020.9365868
-\item
-  Shahriar H., Qian K., Zhang H. Learning Environment Containerization
-  of Machine Leaning for Cybersecurity //2020 IEEE 44th Annual
-  Computers, Software, and Applications Conference (COMPSAC). -- IEEE,
-  2020. -- С. 1131-1132. DOI 10.1109/COMPSAC48688.2020.0-105
-\item
-  Zhong Z., Xu M., Rodriguez M. A., Xu C., Buyya R. Machine
-  learning-based orchestration of containers: A taxonomy and future
-  directions //ACM Computing Surveys (CSUR). -- 2022. -- Vol. 54(10). --
-  P. 1-35.
-\item
-  Rovnyagin M.M., Hrapov A.S., Guminskaia A.V., Orlov A.P. Ml-based
-  heterogeneous container orchestration architecture //2020 IEEE
-  Conference of Russian Young Researchers in Electrical and Electronic
-  Engineering (EIConRus). - IEEE, 2020. - P. 477-481. DOI
-  10.1109/EIConRus49466.2020.9039033
-\item
-  Singh P. Deploy machine learning models to production. -Cham,
-  Switzerland: Springer,2021.
-\item
-  Bandari V. A comprehensive review of AI applications in Automated
-  Container Orchestration, Predictive maintenance, security and
-  compliance, resource optimization, and continuous Deployment and
-  Testing //International Journal of Intelligent Automation and
-  Computing. -- 2021. -- V. 4 (1). -- P. 1-19.
-\item
-  Chowdary M.N., Sankeerth B., Chowdary C.K., Gupta M. Accelerating the
-  Machine Learning Model Deployment using MLOps //Journal of Physics:
-  Conference Series. -- IOP Publishing, 2022. -- Vol. 2327(1). DOI
-  10.1088/1742-6596/2327/1/012027
-\item
-  Ahmad I., AlFailakawi M. G., AlMutawa A., Alsalman, L. Container
-  scheduling techniques: A survey and assessment //Journal of King Saud
-  University-Computer and Information Sciences. -- 2021. -- Vol. 34(7).
-  -- P. 3934-3947. DOI 10.1016/j.jksuci.2021.03.002
-\item
-  Yadav M. P., Rohit, Yadav D. K. Maintaining container sustainability
-  through machine learning //Cluster Computing. -- 2021. -- Vol. 24(4).
-  -- P. 3725-3750. DOI 10.1007/s10586-021-03359-4
-\item
-  Chiang R. C. Contention-aware container placement strategy for docker
-  swarm with machine learning based clustering algorithms //Cluster
-  Computing. -- 2020. -- Vol. 26(1). -- P. 13-23.
-\end{enumerate}
+\begin{noparindent}
+
+1.
+Ye K., Ji Y. Performance tuning and modeling for big data applications
+in docker containers //2017 International Conference on Networking,
+Architecture, and Storage (NAS). - IEEE, 2017. -- P. 1-6.
+
+DOI:10.1109/NAS.2017.8026871
+
+2.
+Ye K., Liu Y., Xu G., Xu C. Z. Fault injection and detection for
+artificial intelligence applications in container-based clouds //
+Cloud Computing--CLOUD 2018: 11th International Conference, Held as
+Part of the Services Conference Federation, SCF 2018, Seattle, WA,
+USA, June 25--30, 2018, Proceedings 11. - Springer International
+Publishing, 2018. - P. 112-127. DOI 10.1007/978-3-319-94295-7\_8
+
+3.
+Ye K., Kou Y., Lu C., Wang Y., Xu C.Z. Modeling application
+performance in docker containers using machine learning techniques
+//2018 IEEE 24th International Conference on Parallel and Distributed
+Systems (ICPADS). -- IEEE, 2018. -- P. 1-6. DOI
+10.1109/PADSW.2018.8644581
+
+4.
+Dartois J.E., Boukhobza J., Knefati A., Barais O. Investigating
+machine learning algorithms for modeling ssd i/o performance for
+container-based virtualization //IEEE transactions on cloud computing.
+- 2019. - Vol. 9(3). -- P. 1103-1116.
+
+5.
+Imdoukh M., Ahmad I., Alfailakawi M.G. Machine learning-based
+auto-scaling for containerized applications //Neural Computing and
+Applications. -- 2020. -- Vol. 32(13). -- P. 9745-9760. DOI
+10.1007/s00521-019-04507-z
+
+6.
+Doukha R., Mahmoudi S.A., Zbakh M., Manneback P. Deployment of
+containerized deep learning applications in the cloud //2020 5th
+International Conference on Cloud Computing and Artificial
+Intelligence: Technologies and Applications (CloudTech). -- IEEE,
+2020. -- P. 1-6. DOI 10.1109/CloudTech49835.2020.9365868
+
+7.
+Shahriar H., Qian K., Zhang H. Learning Environment Containerization
+of Machine Leaning for Cybersecurity //2020 IEEE 44th Annual
+Computers, Software, and Applications Conference (COMPSAC). -- IEEE,
+2020. -- С. 1131-1132. DOI 10.1109/COMPSAC48688.2020.0-105
+
+8.
+Zhong Z., Xu M., Rodriguez M. A., Xu C., Buyya R. Machine
+learning-based orchestration of containers: A taxonomy and future
+directions //ACM Computing Surveys (CSUR). -- 2022. -- Vol. 54(10). --
+P. 1-35.
+
+9.
+Rovnyagin M.M., Hrapov A.S., Guminskaia A.V., Orlov A.P. Ml-based
+heterogeneous container orchestration architecture //2020 IEEE
+Conference of Russian Young Researchers in Electrical and Electronic
+Engineering (EIConRus). - IEEE, 2020. - P. 477-481. DOI
+10.1109/EIConRus49466.2020.9039033
+
+10.
+Singh P. Deploy machine learning models to production. -Cham,
+Switzerland: Springer,2021.
+
+11.
+Bandari V. A comprehensive review of AI applications in Automated
+Container Orchestration, Predictive maintenance, security and
+compliance, resource optimization, and continuous Deployment and
+Testing //International Journal of Intelligent Automation and
+Computing. -- 2021. -- V. 4 (1). -- P. 1-19.
+
+12.
+Chowdary M.N., Sankeerth B., Chowdary C.K., Gupta M. Accelerating the
+Machine Learning Model Deployment using MLOps //Journal of Physics:
+Conference Series. -- IOP Publishing, 2022. -- Vol. 2327(1). DOI
+10.1088/1742-6596/2327/1/012027
+
+13.
+Ahmad I., AlFailakawi M. G., AlMutawa A., Alsalman, L. Container
+scheduling techniques: A survey and assessment //Journal of King Saud
+University-Computer and Information Sciences. -- 2021. -- Vol. 34(7).
+-- P. 3934-3947. DOI 10.1016/j.jksuci.2021.03.002
+
+14.
+Yadav M. P., Rohit, Yadav D. K. Maintaining container sustainability
+through machine learning //Cluster Computing. -- 2021. -- Vol. 24(4).
+-- P. 3725-3750. DOI 10.1007/s10586-021-03359-4
+
+15.
+Chiang R. C. Contention-aware container placement strategy for docker
+swarm with machine learning based clustering algorithms //Cluster
+Computing. -- 2020. -- Vol. 26(1). -- P. 13-23.
+\end{noparindent}
 
 \emph{{\bfseries Сведения об авторах}}
 
+\begin{noparindent}
 Кусепова Л.Т. -Международный университет Астана, Евразийский
-национальный университет им. Л.Н.Гумилева, Астана, Казахстан,
+национальный университет им.
+
+Л.Н.Гумилева, Астана, Казахстан,
 e-mail:lazzatk@mail.ru;
 
 Оспанова А.Б. -Евразийский национальный университет им. Л.Н.Гумилева,
-кандидат физико-математических наук, Астана, Казахстан,
+кандидат физико- математических наук, Астана, Казахстан,
 e-mail:o.ademi111@gmail.com;
 
 Назырова А.Е.-Международный университет Астана, Евразийский национальный
-университет им. Л.Н.Гумилева, Астана, Казахстан,
+университет им.
+
+Л.Н.Гумилева, Астана, Казахстан,
 e-mail:Ayzhan.nazyrova@gmail.com;
 
 Кусепова Г.Т.-Евразийский национальный университет им. Л.Н.Гумилева,
-Астана, Казахстан, e-mail:gulzat.kussepova@gmail.com
+Астана, Казахстан,
+
+e-mail:gulzat.kussepova@gmail.com
+\end{noparindent}
 
 \emph{{\bfseries Information about the authors}}
 
+\begin{noparindent}
 Kusepova L.T.- Astana International University, L.N. Gumilyov Eurasian
 National University, Astana, Kazakhstan, e-mail:lazzatk@mail.ru;
 
@@ -828,4 +648,7 @@ National University, Astan, Kazakhstan,
 e-mail:;Ayzhan.nazyrova@gmail.com;
 
 Kussepova G.T. - L.N. Gumilyov Eurasian National University, Astana,
-Kazakhstan, e-mail: gulzat.kussepova@gmail.com
+Kazakhstan, e-mail:
+
+gulzat.kussepova@gmail.com
+\end{noparindent}
