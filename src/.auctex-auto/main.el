@@ -1,5 +1,3 @@
-;; -*- lexical-binding: t; -*-
-
 (TeX-add-style-hook
  "main"
  (lambda ()
@@ -13,7 +11,7 @@
    (TeX-run-style-hooks
     "latex2e"
     "src/packages"
-    "src/chem/6"
+    "src/chem/10"
     "book"
     "bk10"))
  :latex)
