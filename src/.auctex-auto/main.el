@@ -13,7 +13,7 @@
    (TeX-run-style-hooks
     "latex2e"
     "src/packages"
-    "src/pish/6"
+    "src/ekon/chronika"
     "book"
     "bk10"))
  :latex)
