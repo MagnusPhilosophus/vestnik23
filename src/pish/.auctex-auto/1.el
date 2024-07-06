@@ -1,5 +1,3 @@
-;; -*- lexical-binding: t; -*-
-
 (TeX-add-style-hook
  "1"
  (lambda ()

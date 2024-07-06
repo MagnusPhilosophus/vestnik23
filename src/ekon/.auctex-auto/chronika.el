@@ -1,5 +1,5 @@
 (TeX-add-style-hook
- "1"
+ "chronika"
  (lambda ()
    (TeX-add-symbols
     "cleardoublepage"))

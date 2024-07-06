@@ -106,21 +106,21 @@
 
 \usepackage{mdframed}
 
+\renewcommand{\part}[1]{\addcontentsline{toc}{part}{#1}}
+
 \newcommand{\sectionwithauthors}[2]{%
-  \addcontentsline{toc}{section}{#1 \\ #2}%
   \section*{#2}%
-  \setcounter{figure}{0}
-  \setcounter{table}{0}
-  \setcounter{equation}{0}
+  \addcontentsline{toc}{section}{%
+    \protect\numberline{}%
+    #1 \\ % Authors
+    \protect\numberline{}%
+    \normalfont\normalsize\itshape #2 % Section Title
+  }%
+  \setcounter{figure}{0}%
+  \setcounter{table}{0}%
+  \setcounter{equation}{0}%
 }
 
-\newcommand{\shortsectionwithauthors}[3]{%
-  \addcontentsline{toc}{section}{#1 \\ #3}%
-  \section*{#2}%
-  \setcounter{figure}{0}
-  \setcounter{table}{0}
-  \setcounter{equation}{0}
-}
 % Front page
 \usepackage{pdfpages}
 
@@ -149,4 +149,5 @@
 \newcommand{\tsb}[1]{\textsubscript{#1}}
 
 \usepackage{makecell}
-\renewcommand{\part}[1]{\addcontentsline{toc}{part}{#1}}
+
+\newcommand{\envelope}{\textsuperscript{\includegraphics[width=1em]{envelope}}}

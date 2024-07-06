@@ -1,5 +1,3 @@
-;; -*- lexical-binding: t; -*-
-
 (TeX-add-style-hook
  "packages"
  (lambda ()
@@ -42,13 +40,13 @@
     "pdfpages"
     "caption")
    (TeX-add-symbols
-    '("part" 1)
     '("tsb" 1)
     '("tsp" 1)
-    '("shortsectionwithauthors" 3)
     '("sectionwithauthors" 2)
+    '("part" 1)
     '("chaptermark" 1)
-    '("sectionmark" 1))
+    '("sectionmark" 1)
+    "envelope")
    (LaTeX-add-environments
     "noparindent")
    (LaTeX-add-polyglossia-langs
