@@ -1,16 +1,35 @@
 (TeX-add-style-hook
  "main"
  (lambda ()
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "href")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
     "src/packages"
+    "src/first_pages"
+    "src/ict/1"
+    "src/ict/2"
+    "src/ict/3"
+    "src/ict/4"
+    "src/ict/5"
+    "src/ict/6"
+    "src/ict/7"
+    "src/ict/8"
+    "src/ict/9"
+    "src/ict/10"
+    "src/ict/11"
+    "src/ict/12"
+    "src/ict/13"
+    "src/ict/14"
+    "src/ict/15"
+    "src/ict/16"
+    "src/ict/17"
+    "src/ict/18"
     "src/chem/1"
     "src/chem/2"
     "src/chem/3"
@@ -26,6 +45,30 @@
     "src/chem/13"
     "src/chem/14"
     "src/chem/15"
+    "src/pish/1"
+    "src/pish/2"
+    "src/pish/3"
+    "src/pish/4"
+    "src/pish/5"
+    "src/pish/6"
+    "src/gorn/1"
+    "src/gorn/2"
+    "src/gorn/3"
+    "src/gorn/4"
+    "src/gorn/5"
+    "src/gorn/6"
+    "src/gorn/7"
+    "src/gorn/8"
+    "src/gorn/9"
+    "src/gorn/10"
+    "src/gorn/11"
+    "src/ekon/1"
+    "src/ekon/2"
+    "src/ekon/3"
+    "src/ekon/4"
+    "src/ekon/5"
+    "src/ekon/chronika"
+    "src/last_page"
     "book"
     "bk10"))
  :latex)
